@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/initialise.php';
 
-$penal = json_decode(file_get_contents('../db/penalSearch.json'), true);
+$penal = $pg->penalCode();
 
 // GET Types
 
@@ -11,8 +11,6 @@ if (isset($_REQUEST['getType'])) {
 	$getType = $_REQUEST['getType'];
 
 	if ($getType == 'getCrime') {
-
-		$chargesDrug = [601, 602, 603, 604, 605, 606];
 
 		$crimeID = $_REQUEST['crimeID'];
 
@@ -34,7 +32,7 @@ if (isset($_REQUEST['getType'])) {
 			$outputOffence[] .= $crimeOffenceBool;
 		}
 
-		if (in_array($crimeID, $chargesDrug) && $crime['drugs']) {
+		if (in_array($crimeID, $pg->chargesDrug) && $crime['drugs']) {
 			$crimeDrugSubstanceCategories = $crime['drugs'];
 			foreach ($crimeDrugSubstanceCategories as $crimeDrugSubstanceCategory => $crimeDrug) {
 				$outputDrugSubstanceCategories[] .= $crimeDrug;
@@ -73,7 +71,7 @@ if (isset($_REQUEST['getType'])) {
 }
 
 
-if(isset($_POST['openStatus'])) {
+if (isset($_POST['openStatus'])) {
 	$guidelineDropdownStatus = $_POST['openStatus'] ?? 0;
 	setCookiePost('openStatus', $guidelineDropdownStatus);
 }
@@ -116,7 +114,7 @@ if (isset($_POST['generatorType'])) {
 	$postInputEvidenceImageArray = $_POST['inputEvidenceImage'] ?? array();
 	$postInputEvidenceImageArray = array_values(array_filter($postInputEvidenceImageArray));
 	$postInputVehRO = $_POST['inputVehRO'] ?? $defaultRegisteredOwner;
-	
+
 
 	// Session Variables
 	$generatedReportType = '';
@@ -127,6 +125,11 @@ if (isset($_POST['generatorType'])) {
 	$generatedArrestChargeList = '';
 	$generatedArrestChargeTotals = '';
 
+
+	if ($generatorType == 'ArrestChargesTest') {
+		echo json_encode($pg->processCharges(), JSON_PRETTY_PRINT);
+		die();
+	}
 
 	if ($generatorType == 'TrafficReport') {
 
@@ -155,7 +158,7 @@ if (isset($_POST['generatorType'])) {
 		setCookiePost('officerRankArray', $postInputRankArray[0]);
 		setCookiePost('officerBadgeArray', $postInputBadgeArray[0]);
 		setCookiePost('defName', $postInputDefName);
-		
+
 		// Officer Resolver
 		$officers = '';
 		foreach ($postInputNameArray as $iOfficer => $officer) {
@@ -672,7 +675,6 @@ COUNTY OF LOS SANTOS[/b]
 
 			$charges = $_POST['inputCrime'];
 
-			$chargesDrug = [601, 602, 603, 604, 605, 606];
 			$multiDimensionalCrimeTimes = [412];
 			$bailArray = [];
 			// Charge List Builder
@@ -687,7 +689,7 @@ COUNTY OF LOS SANTOS[/b]
 				$chargeSubstanceCategory = $_POST['inputCrimeSubstanceCategory'][$iCharge];
 				$bailCost = [];
 
-				if (in_array($chargeID, $chargesDrug)) {
+				if (in_array($chargeID, $pg->chargesDrug)) {
 					$chargeFine[] = $charge['fine'][$chargeSubstanceCategory];
 					$chargeFineFull = '$' . number_format($chargeFine[$iCharge]);
 					$drugChargeTitle = ' (Category ' . $chargeSubstanceCategory . ')';
@@ -798,7 +800,7 @@ COUNTY OF LOS SANTOS[/b]
 				$pleaPre = $_POST['inputPleaPre'] ?: '';
 
 				// Time Builder
-				if (in_array($chargeID, $chargesDrug)) {
+				if (in_array($chargeID, $pg->chargesDrug)) {
 					$days[] = ($charge['time'][$chargeSubstanceCategory]['days'] / $chargeReduction);
 					$hours[] = ($charge['time'][$chargeSubstanceCategory]['hours'] / $chargeReduction);
 					$mins[] = ($charge['time'][$chargeSubstanceCategory]['min'] / $chargeReduction);
@@ -827,7 +829,7 @@ COUNTY OF LOS SANTOS[/b]
 				$chargeTitle[] = '<span class="style-underline chargeCopy" data-clipboard-target="#charge-' . $chargeID . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $chargeID . '">' . $chargeType . $chargeClass . ' ' . $chargeID . '. ' . $chargeName . $chargeOffenceFull . $drugChargeTitle . '</span></span>';
 
 				//Auto bail
-				if (in_array($chargeID, $chargesDrug) && $pleaPre == 2) {
+				if (in_array($chargeID, $pg->chargesDrug) && $pleaPre == 2) {
 					$autoBailCost = $charge['bail']['cost'][$chargeSubstanceCategory];
 					$autoBailRaw = $charge['bail']['auto'][$chargeSubstanceCategory];
 				} elseif ($pleaPre == 2) {
@@ -960,6 +962,8 @@ COUNTY OF LOS SANTOS[/b]
 		} else {
 			$showGeneratedArrestChargeTables = false;
 		}
+		$_SESSION['plea'] = $pleaPre;
+	
 	}
 
 	if ($generatorType == 'ParkingTicket') {
@@ -1099,86 +1103,143 @@ COUNTY OF LOS SANTOS[/b]
 	//[LSDA:] Petition for bail
 	if ($generatorType == 'BailPetition') {
 		$generatedThreadTitle = '[CFXXX-' . date("y") . '] State of San Andreas v. ' . $_POST["inputDefName"];
-
-		$chargesList = array_key_exists("inputCrime", $_POST)?arrayMap($_POST['inputCrime'], 'UNKNOWN CHARGE'):[];
+		$internalCharges = "";
 		$chargesGroup = "";
-		$inputCrimeClass = array_key_exists("inputCrimeClass", $_POST)?arrayMap($_POST['inputCrimeClass'], 0):[];
-		
-		$chargesDrug = [601, 602, 603, 604, 605, 606];
-		$multiDimensionalCrimeTimes = [412];
-		$bailArray = [];
+		$action = $_POST["inputApproveBail"];
+		$defendant = $_POST["inputDefName"];
+
 		$bond = 0;
+		$hours = 0;
+		$days = 0;
+		$fine = 0;
+
 		// Charge List Builder
-		foreach ($chargesList as $iCharge => $crime) {
-		
-			$charge = $penal[$crime];
-			$chargeTitle = $charge['charge'];
-			$chargeType = $charge['type'];
-			$chargeName = $charge['charge'];
-			$chargeID = $charge['id'];
-
-			$chargeClass = '?';
-			$chargeSubstanceCategory = $_POST['inputCrimeSubstanceCategory'][$iCharge];
-			
-
-			if (!empty($inputCrimeClass[$iCharge])) {
-				$chargeClass = $pg->getCrimeClass($inputCrimeClass[$iCharge]);
-			}
-			if (in_array($chargeID, $chargesDrug)) {
-				$autoBailCost = $charge['bail']['cost'][$chargeSubstanceCategory];
-			} else {
-				$autoBailCost = $charge['bail']['cost'];
-			}
-			
-			$chargesGroup.='<li style="background-color:#fafafa;color:#555555;font-size:14px;">
-			<strong>'. $chargeType . $chargeClass . ' ' . $chargeID . '. ' . $chargeName . $chargeOffenceFull . $drugChargeTitle .' - $'.number_format($autoBailCost*10, 0, '.', ',').' ($'.number_format($autoBailCost, 0, '.', ',').')</strong>
-			</li>';
-
-			$bond += $autoBailCost;
-		
+		foreach ($pg->processCharges() as $iCharge => $charge) {
+			$internalCharges .="[*]".$charge['type'] . $charge['class'] . ' ' . $charge['id'] . '. ' . $charge["name"] . "
+";
+			$bond += $charge["autoBailCost"];
+			$days += $charge["time"]["days"];
+			$hours += $charge["time"]["hours"];
+			$fine += $charge["fine"];
 		}
+
+		$days += floor($hours/24); 
+		$hours = fmod($hours, 24);
 
 
 		$conditionsGroup = '';
 		foreach (arrayMap($_POST["inputReason"], "") as $value) {
-			if(!empty($value)){
-				$conditionsGroup.= '<li style="background-color:#fafafa;color:#555555;font-size:14px;">
-				<strong>'.substr($da->getBailReason($value),1).'</strong>
+			if (!empty($value)) {
+				$conditionsGroup .= '<li style="color:#555555;font-size:14px;">
+				<strong>' . substr($da->getBailReason($value), 1) . '</strong>
 				</li>';
 			}
 		}
 
-		$generatedReport = '
-			
-			<p style="text-align:center;">
-<u><strong><span style="font-size:24px;">Superior Court of San Andreas</span></strong></u>
-</p>
-<p style="text-align:center;">
-<a href="https://i.imgur.com/tNqYJgz.png" title="Enlarge image" data-wrappedlink="" data-ipslightbox="" data-ipslightbox-group="undefined"><img alt="tNqYJgz.png" class="ipsImage ipsImage_thumbnailed" data-ratio="100.00" height="260" width="260" src="https://i.imgur.com/tNqYJgz.png"></a></p>
-<p style="text-align:center;">
-<u><strong><span style="font-size:18px;">Criminal Division</span></strong></u>
-</p>
-<hr><p style="text-align:center;">
-<span style="font-size:20px;"><strong>Petition for Bail</strong></span>
-</p>
-<p style="background-color:#fafafa;color:#555555;font-size:14px;">
-By decree of the State of San Andreas Penal Code and enforcement&nbsp;authority of the San Andreas State Constitution, defendant&nbsp;<strong>' . $_POST["inputDefName"] . '</strong><span>&nbsp;</span>has been officially arrested by law enforcement entities of the state, and is expected to face the following charges;
-</p>
-<hr style="background-color:#fafafa;color:#555555;font-size:14px;"><ul style="background-color:#fafafa;color:#555555;font-size:14px;">
-'.$chargesGroup.'
-<li style="background-color:#fafafa;color:#555555;font-size:14px;">
-<strong>Bail Total: '.($bond == 0?"ROR":"$".number_format($bond*10, 0, '.', ',')).' | Total for Bond: '.($bond == 0?"ROR":"$".number_format($bond, 0, '.', ',')).'</strong>
-</li>
-</ul><hr style="background-color:#fafafa;color:#555555;font-size:14px;"><p style="background-color:#fafafa;color:#555555;font-size:14px;">
-In response to these charges&nbsp;the District Attorney\'s Office is requesting the court to grant bail for the defendant, as we enter our pre-trial stage and compile all necessary evidence and facts of the case to present an official arraignment. In the official opinion of the District Attorney\'s Office in relation to the charges, we are recommending that bail be '.($_POST["inputApproveBail"]==1?"<b>NOT</b> ":"").'given on the following conditions;
-</p>
-<hr style="background-color:#fafafa;color:#555555;font-size:14px;"><ul style="background-color:#fafafa;color:#555555;font-size:14px;">
-'.$conditionsGroup.'
-</ul><hr style="background-color:#fafafa;color:#555555;font-size:14px;"><p style="background-color:#fafafa;color:#555555;font-size:14px;">
-<span style="background-color:#fafafa;color:#555555;font-size:14px;">The District Attorney\'s Office affirms that all information submitted is accurate, and truthful given all the information and evidence available, and has been affirmed by '.$pg->getRank($_POST["inputRank"]).'<span>&nbsp;</span></span><strong style="background-color:#fafafa;color:#555555;font-size:14px;">'.$_POST["employeeName"].'</strong><span style="background-color:#fafafa;color:#555555;font-size:14px;"><span>&nbsp;</span>that this shall be the official bail petition&nbsp;submitted for the approval of the&nbsp;Superior Court.&nbsp;</span>
-</p>';
-		$redirectPath = "report";
+		switch ($action) {
+			case 1:
+				$total = 'grant bail';
+				$bailLong = "That Defendant shall deposit, with the clerk of the court, \$".$bond." as bail security indicated on his bail bond with the following conditions:";
+				break;
+			case 0:
+				$total = 'release the defendant on their own recognizance';
+				$bailLong = "That Defendant shall be released without bail on their own recognizance.";
+
+				break;
+			case 2:
+				$total = 'commit the defendant into custody';
+				$bailLong = "That Defendant shall not be granted bail and instead be committed to custody for the following reasons:";
+
+				break;
+		}
+
+		$generatedThreadTitle = '[' . date("y") . 'GJCR' . str_pad($_POST["petitionNumber"], 5, "0", STR_PAD_LEFT) . '] People of the State of San Andreas v. ' . $_POST["inputDefName"];
+		$defendant = $_POST["inputDefName"];
+
+		$generatedReport = $c->form('templates/generators/lsda/formats/arraignment', '', [
+			"charges" => $pg->processCharges(),
+			"defendant" => $defendant,
+			"pg" => $pg,
+			"motion_name" => "<strong>ARRAIGNMENT</strong>",
+			"filler"=> $pg->getRank($_POST["inputRank"]). " ". $_POST["employeeName"],
+			"exhibits"=> $_POST["exhibits"],
+			"bailSummary"=> $total,
+			"bailLong"=> $bailLong,
+			"bailMoney"=> $bond,
+			"bailReasons"=> $conditionsGroup,
+			"fine"=> $fine, 
+			"days"=> $days,
+			"hours"=> $hours
+
+		], false);
+
+		$extra = "[divbox=white]
+[center][b]CASE INFORMATION:[/b][/center]
+
+[b]Defendant Name:[/b] " . $defendant . "
+[b]Docket Number:[/b] [url=INSERT THE URL TO THE CASE ON GTAW FORUMS HERE]".$generatedThreadTitle."[/url]
+[b]Post Arrest Submission:[/b] [url=https://mdc.gta.world/postarrest/view/".$_POST["pasID"]."]ACCESS[/url]
+
+[b]Trial Deputy:[/b] " . $_POST["employeeName"] . " 
+[hr]
+[center][b][u]CHARGES BROUGHT AGAINST THE DEFENDANT:[/u][/b][/center]
+[list]
+"
+. $internalCharges ."
+[/list]
+[hr]
+[center][b][u]TRIAL INFORMATION:[/u][/b][/center]
+[b]Strategy (Optional):[/b] Briefly explain your trial strategy or seek advice from senior prosecutors.
+[/divbox]";
+
+		$redirectPath = "court";
 	}
+
+
+	//LSDA Dismissal Petition
+	if ($generatorType == 'DA_DismissalPetition') {
+		$generatedThreadTitle = '[' . date("y") . 'GJCR' . str_pad($_POST["petitionNumber"], 5, "0", STR_PAD_LEFT) . '] People of the State of San Andreas v. ' . $_POST["inputDefName"];
+		$chargesGroup = "";
+		$defendant = $_POST["inputDefName"];
+
+		$generatedReport = $c->form('templates/generators/lsda/formats/dismissal', '', [
+			"charges" => $pg->processCharges(),
+			"defendant" => $defendant,
+			"pg" => $pg,
+			"motion_name" => "<strong>MOTION TO DISMISS</strong>",
+			"filler"=> $pg->getRank($_POST["inputRank"]). " ". $_POST["employeeName"]
+
+		], false);
+		$redirectPath = "court";
+	}
+	//LSDA Dismissal Petition - Speedy Trial
+	if ($generatorType == 'JSA_SpeedyTrial') {
+		$generatedThreadTitle = '[' . date("y") . 'GJCR' . str_pad($_POST["petitionNumber"], 5, "0", STR_PAD_LEFT) . '] People of the State of San Andreas v. ' . $_POST["inputDefName"];
+		$chargesGroup = "";
+		$defendant = $_POST["inputDefName"];
+
+		$generatedReport = $c->form('templates/generators/lsda/formats/dismissal', '', [
+			"charges" => $pg->processCharges(),
+			"defendant" => $defendant,
+			"pg" => $pg,
+			"motion_name" => "<strong>MOTION TO DISMISS</strong><br>SPEEDY TRIAL<br>VIOLATION",
+			"filler"=> $_POST["employeeName"]
+
+		], false);
+		$redirectPath = "court";
+	}
+
+
+	if(empty($generatedReport)){
+		if(file_exists(dirname(__FILE__).'/forms-backend/'.$generatorType.'.php'))
+			include (dirname(__FILE__).'/forms-backend/'.$generatorType.'.php');
+
+			//echo dirname(__FILE__).'/forms-backend/'.$generatorType.'.php';
+			//echo $generatedReport;
+		//die;
+	}
+
+
 
 	// Generator Finalisation
 	$_SESSION['generatedReport'] = $generatedReport;
@@ -1189,10 +1250,20 @@ In response to these charges&nbsp;the District Attorney\'s Office is requesting 
 	$_SESSION['generatedArrestChargeList'] = $generatedArrestChargeList;
 	$_SESSION['generatedArrestChargeTotals'] = $generatedArrestChargeTotals;
 	$_SESSION['arrestChargeList'] = $arrestChargeList;
-	$_SESSION['plea'] = $pleaPre;
 
 	// Redirect
 	switch ($redirectPath) {
+		case 'court':
+			//header('Location: /paperwork-generators/generated-court');
+			echo $c->form("templates/generated-court", "", [
+				"courtURL" => "https://forum.gta.world/en/forum/389-criminal-division/",
+				"extra" => empty($extra)?null:$extra,
+				"g"=> $g,
+				"type"=> $type,
+				"title"=> $generatedThreadTitle,
+				"report"=> $generatedReport,
+			], false);
+			return;
 		case 'report':
 			header('Location: /paperwork-generators/generated-report');
 			break;
@@ -1282,7 +1353,7 @@ function setCookiePost($inputCookie, $inputVariable)
 			break;
 		case 'openStatus':
 			$cookie = 'openStatus';
-			break;	
+			break;
 		case 'inputTDPatrolReportURL':
 			$cookie = 'inputTDPatrolReportURL';
 			$time = $iTime;
