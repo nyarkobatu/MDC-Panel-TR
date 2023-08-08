@@ -29,9 +29,9 @@
 			"0": "/b The plea system functions via an OOC system as mandated by Legal Faction Management, you are therefor asked for your plea via /b chat.",
 			"1": "/b You are able to plea guilty, not guilty or no-contest to the charges that I've listed to you, the courts are roleplayed via the GTA:W forums, therefor all the roleplay in regards to your case will be done via the forums.",
 			"2": "/b Guilty -- Means you accept all the charges and there will NOT be a case on the GTA:W Forums, you are UNABLE to appeal the charges and you'll be placed into jail for the minimum calculated time of the charges.",
-			"3": "/b Not Guilty -- Means you do not accept the charges and there WILL be a case on the GTA:W Forums, you will have the chance to ask for a public defender, however, you won't be released from jail until the case is resolved.",
+			"3": "/b Not Guilty -- Means you do not accept the charges and there WILL be a case on the GTAW Forums, you will have the chance to ask for a public defender. Autobail is available for most crimes, otherwise you will be held at least until the case begins.",
 			"4": "/b No Contest -- Means you do not accept nor deny the charges and you have a chance to appeal the case within 30 days by contacting a lawyer yourself, you will be placed into jail for the maximum calculated time of the charges.",
-			"5": "Is there anything that you'd like for me to explain additionally?"
+			"5": "/b You can find more information of each plea at https://gtaw.link/plea. Is there anything that you'd like for me to explain additionally?"
 		}
 	},
 	"4": {
