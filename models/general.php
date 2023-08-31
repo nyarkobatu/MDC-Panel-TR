@@ -25,8 +25,8 @@ class General {
 			case 'url-penal-code':				return 'https://forum.gta.world/en/topic/78852-san-andreas-penal-code/';
 			case 'url-bail-schedule':			return 'https://docs.google.com/spreadsheets/d/1jlu8AltrHmOR192CAhznfsfZBxrv6_EMGuXFW7SwRdU/';
 			case 'url-bbcoderip':				return 'https://bbcode.booskit.dev/';
-			case 'special-notification': 		return 'new-web-host-08292023';
-			case 'special-notification-msg':	return 'Within the upcoming days, we are changing webhosts to another provider, this should come with only a hours downtime but depending on complications may cause a couple of days downtime.';
+			case 'special-notification': 		return 'new-web-host-08312023';
+			case 'special-notification-msg':	return 'The web host has been changed, some people may have trouble accessing the website, they may need to flush their DNS. Enjoy!';
 			default: break;
 		}
 	}
