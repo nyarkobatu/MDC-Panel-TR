@@ -1778,6 +1778,56 @@
 	},
 	"205": {
 		"id": "205",
+		"charge": "Involuntary Manslaughter",
+		"type": "F",
+		"class": {
+			"A": true,
+			"B": false,
+			"C": false
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 8,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 7,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "N/A"
+	},
+	"206": {
+		"id": "206",
 		"charge": "Assault",
 		"type": "M",
 		"class": {
@@ -1826,8 +1876,8 @@
         },
 		"extra": "N/A"
 	},
-	"206": {
-		"id": "206",
+	"207": {
+		"id": "207",
 		"charge": "Assault with a Deadly Weapon",
 		"type": "F",
 		"class": {
@@ -1876,8 +1926,8 @@
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
-	"207": {
-		"id": "207",
+	"208": {
+		"id": "208",
 		"charge": "Battery",
 		"type": "M",
 		"class": {
@@ -1926,8 +1976,8 @@
         },
 		"extra": "N/A"
 	},
-	"208": {
-		"id": "208",
+	"209": {
+		"id": "209",
 		"charge": "Aggravated Battery",
 		"type": "F",
 		"class": {
@@ -1976,8 +2026,8 @@
         },
 		"extra": ""
 	},
-	"209": {
-		"id": "209",
+	"210": {
+		"id": "210",
 		"charge": "Kidnapping",
 		"type": "F",
 		"class": {
@@ -2021,8 +2071,8 @@
         },
 		"extra": "N/A"
 	},
-	"210": {
-		"id": "210",
+	"211": {
+		"id": "211",
 		"charge": "Human Trafficking",
 		"type": "F",
 		"class": {
@@ -2066,8 +2116,8 @@
         },
 		"extra": "N/A"
 	},
-	"211": {
-		"id": "211",
+	"212": {
+		"id": "212",
 		"charge": "Unlawful Imprisonment",
 		"type": "M",
 		"class": {
@@ -2116,8 +2166,8 @@
         },
 		"extra": "N/A"
 	},
-	"212": {
-		"id": "212",
+	"213": {
+		"id": "213",
 		"charge": "Torture",
 		"type": "F",
 		"class": {
@@ -2161,8 +2211,8 @@
         },
 		"extra": "N/A"
 	},
-	"213": {
-		"id": "213",
+	"214": {
+		"id": "214",
 		"charge": "Criminal Threats",
 		"type": "M",
 		"class": {
@@ -2211,8 +2261,8 @@
         },
 		"extra": ""
 	},
-	"214": {
-		"id": "214",
+	"215": {
+		"id": "215",
 		"charge": "Robbery",
 		"type": "F",
 		"class": {
@@ -2261,8 +2311,8 @@
         },
 		"extra": "N/A"
 	},
-	"215": {
-		"id": "215",
+	"216": {
+		"id": "216",
 		"charge": "Armed Robbery",
 		"type": "F",
 		"class": {
@@ -2311,8 +2361,8 @@
         },
 		"extra": "N/A"
 	},
-	"216": {
-		"id": "216",
+	"217": {
+		"id": "217",
 		"charge": "Rape",
 		"type": "F",
 		"class": {
@@ -2361,8 +2411,8 @@
         },
 		"extra": "This offense is on the Penal Code for strictly IC purposes. Considering the server rules banning such offenses, actual enforcement/prosecution of this charge shall be forbidden."
 	},
-	"217": {
-		"id": "217",
+	"218": {
+		"id": "218",
 		"charge": "Statutory Rape",
 		"type": "F",
 		"class": {
@@ -2411,8 +2461,8 @@
         },
 		"extra": "This offense is on the Penal Code for strictly IC purposes. Considering the server rules banning such offenses, actual enforcement/prosecution of this charge shall be forbidden."
 	},
-	"218": {
-		"id": "218",
+	"219": {
+		"id": "219",
 		"charge": "Sexual Battery",
 		"type": "F",
 		"class": {
@@ -2461,8 +2511,8 @@
         },
 		"extra": "N/A"
 	},
-	"219": {
-		"id": "219",
+	"220": {
+		"id": "220",
 		"charge": "Harassment",
 		"type": "M",
 		"class": {
@@ -2511,8 +2561,8 @@
         },
 		"extra": "N/A"
 	},
-    "220": {
-		"id": "220",
+    "221": {
+		"id": "221",
 		"charge": "Domestic Violence",
 		"type": "M",
 		"class": {
