@@ -949,7 +949,7 @@ COUNTY OF LOS SANTOS[/b]
 
 			//Total Bail
 			$bailCostTotal = '$' . number_format(array_sum($bailCost));
-			if (in_array(0, $bailArray)) {
+			/*if (in_array(0, $bailArray)) {
 				$bailState = "NOT ELIGIBLE";
 				$bailStateColour = "danger";
 				$bailStateIcon = 'minus-circle';
@@ -965,7 +965,15 @@ COUNTY OF LOS SANTOS[/b]
 				$bailState = "N/A";
 				$bailStateColour = "muted";
 				$bailStateIcon = 'minus-circle';
-			};
+			};*/
+
+
+			//TEMP
+			$bailState = "OUTDATED";
+			$bailStateColour = "muted";
+			$bailStateIcon = 'minus-circle';
+			//END - TEMP
+
 			$bailStatusFull = '<span class="badge badge-' . $bailStateColour . '"><i class="fas fa-fw fa-' . $bailStateIcon . ' mr-1"></i>' . $bailState . '</span>';
 
 			// Totals Row Builder
@@ -976,7 +984,7 @@ COUNTY OF LOS SANTOS[/b]
 					<td>' . $chargeImpoundTotal . '</td>
 					<td>' . $chargeSuspensionTotal . '</td>
 					<td>' . $bailCostTotal . '</td>
-					<td>' . $bailStatusFull . '</td>
+					<td>' . $bailStatusFull. '</td>
 				</tr>';
 
 			// Session Builder
@@ -984,6 +992,18 @@ COUNTY OF LOS SANTOS[/b]
 			$generatedArrestChargeList = $rowBuilder;
 			$generatedArrestChargeTotals = $rowBuilderTotals;
 			$arrestChargeList = $chargeTitle;
+
+			/*return $c->form('templates/generators/form-arrest-report', '', [
+				"charges" => $pg->processCharges(),
+				"chargeTable" => $generatedArrestChargeList,
+				"pg" => $pg,
+				"chargeTableTotals" => "rowBuilderTotals",
+				"arrestChargeList"=> $chargeTitle,
+				"c"=>$c,
+				"g"=>$g,
+				"showChargeTable"=> true
+	
+			], false);*/
 		} else {
 			$showGeneratedArrestChargeTables = false;
 		}

@@ -214,7 +214,7 @@ class PaperworkGenerators
 	public function rankChooser($cookie, $faction = 'all')
 	{
 
-		$ranks = file('resources/ranksList.txt');
+		$ranks = file(dirname(__FILE__,2).'/resources/ranksList.txt');
 		$rankCount = 0;
 
 		$groupCookie = '';
@@ -240,6 +240,7 @@ class PaperworkGenerators
 			</optgroup>';
 		}
 		if ($faction == "all") $faction = array_keys($this->factions);
+		else if ($faction == "LEO") $faction = ["LSPD","LSSD","SFM","SAPR","SADOC","SAAA"];
 		else if (gettype($faction) == "string") $faction = [$faction];
 
 
@@ -249,6 +250,7 @@ class PaperworkGenerators
 			if (array_key_exists($faccion, $this->factions)) {
 				$output = '<optgroup label="' . $this->factions[$faccion]["name"] . '">';
 				foreach ($this->factions[$faccion]["ranks"] as $value) {
+					if(array_key_exists($value, $ranks))
 					$output  .= '<option value="' . $value . '">' . $ranks[$value] . '</option>';
 				}
 				$output .=  '</optgroup>';

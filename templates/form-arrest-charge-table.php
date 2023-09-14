@@ -33,49 +33,50 @@
 		<?= $chargeTableTotals ?>
 	</tbody>
 </table>
-<details id="guidelineDropdown" class="card text-white bg-info p-2 text-center"
-<?php
-	$openStatus = $g->findCookie('openStatus');
-	if ($openStatus == 1) {
-		echo "open";
-	}
-?>
->
+<details id="guidelineDropdown" class="card text-white bg-info p-2 text-center" <?php
+																				$openStatus = $g->findCookie('openStatus');
+																				if ($openStatus == 1) {
+																					echo "open";
+																				}
+																				?>>
 	<summary>Arrest & Charging Guidelines</summary>
 	<div class="card text-white bg-info">
 		<div class="card-body">
 			<h4 class="card-title text-center font-weight-bold"><i class="mr-2 fas fa-fw fa-info-circle"></i>Arresting & Charging</h4>
 			<h5 class="card-title text-center">Rules & Guidelines</h5>
-			<div class="card-text text-center">			
-				<div class="row">				
+			<div class="card-text text-center">
+				<div class="row">
 					<div class="col-8 mx-auto text-centre">
 						<h6>When arresting & charging someone, the following guidelines must be followed by the Law Enforcement Personnel performing the arrest. This will act as a barrier for protection and failure to follow these rules may result in administrative punishment.</h6>
-						
+
 					</div>
 				</div>
 			</div>
 			<hr>
-			<div class="card-text text-center">			
-				<div class="row">								
-					<div class="col-8 mx-auto text-centre">	
-					<h5>The following only applies to <strong>Not Guilty</strong> pleas:</h6>
-					</div>	
+			<div class="card-text text-center">
+				<div class="row">
+					<div class="col-8 mx-auto text-centre">
+						<h5>The following only applies to <strong>Not Guilty</strong> pleas:</h6>
+					</div>
 					<div class="col-8 mx-auto text-left">
 						<ul>
-							<li>If they are eligible for bail as outlined by the <a href="https://docs.google.com/spreadsheets/d/1jlu8AltrHmOR192CAhznfsfZBxrv6_EMGuXFW7SwRdU/edit#gid=35191157"> <strong>outlined conditions</strong></a>, the defendant must be presented with the option to bail out of prison. </a></li>
-							<li>They <strong>must</strong> pay the bail in full prior to being released.</li>
-							<li>If they do not wish to take bail, are unable to pay it or do not meet conditions for bail. they are to be imprisoned for <strong>9999</strong> days.</li>
+							<div style="background-color: salmon; opacity:25%; border-radius:5px;">
+								<li>If they are eligible for bail as outlined by the <a href="<?= $g->getSettings('url-bail-schedule'); ?>"> <strong>outlined conditions</strong></a>, the defendant must be presented with the option to bail out of prison. </a></li>
+								<li>They <strong>must</strong> pay the bail in full, or bond (10% from the full amount) prior to being released.</li>
+								<li>If they do not wish to take bail, are unable to pay it or do not meet conditions for bail. they are to be imprisoned for <strong>9999</strong> days.</li>
+							</div>
+							<li ><b style="background-color:yellow; color:red;">Please review the <a href="<?= $g->getSettings('url-bail-schedule'); ?>"> <strong>bail schedule</strong></a> before taking further action.</b></li>
 							<li>The District Attorney's Office must be informed (via the Post Arrest Submission system) that the defendant has pled Not Guilty and the bail conditions must be relayed to the District Attorney's Office.</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<hr>
-			<div class="card-text text-center">			
-				<div class="row">								
-					<div class="col-8 mx-auto text-centre">	
-					<h5>The following only applies to <strong>No Contest</strong> and </strong>Guilty</strong> pleas:</h6>
-					</div>	
+			<div class="card-text text-center">
+				<div class="row">
+					<div class="col-8 mx-auto text-centre">
+						<h5>The following only applies to <strong>No Contest</strong> and </strong>Guilty</strong> pleas:</h6>
+					</div>
 					<div class="col-8 mx-auto text-left">
 						<ul>
 							<li>No arest can exceed <strong>20 days</strong> This is the maximum arrest length.</li>
@@ -86,11 +87,11 @@
 				</div>
 			</div>
 			<hr>
-			<div class="card-text text-center">			
-				<div class="row">								
-					<div class="col-8 mx-auto text-centre">	
-					<h5>The following only applies to <strong>No Contest</strong> pleas:</h6>
-					</div>	
+			<div class="card-text text-center">
+				<div class="row">
+					<div class="col-8 mx-auto text-centre">
+						<h5>The following only applies to <strong>No Contest</strong> pleas:</h6>
+					</div>
 					<div class="col-8 mx-auto text-left">
 						<ul>
 							<li>The defendant must be charged with the <strong>maximum sentence</strong> for each of the charges brought against them.</li>
@@ -100,11 +101,11 @@
 				</div>
 			</div>
 			<hr>
-			<div class="card-text text-center">			
-				<div class="row">								
-					<div class="col-8 mx-auto text-centre">	
-					<h5>The following only applies to <strong>Guilty</strong> pleas:</h6>
-					</div>	
+			<div class="card-text text-center">
+				<div class="row">
+					<div class="col-8 mx-auto text-centre">
+						<h5>The following only applies to <strong>Guilty</strong> pleas:</h6>
+					</div>
 					<div class="col-8 mx-auto text-left">
 						<ul>
 							<li>The defendant must be charged with the <strong>minimum sentence</strong> for each of the charges brought against them.</li>
