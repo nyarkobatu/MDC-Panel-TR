@@ -2,7 +2,7 @@
 	<h1><i class="fas fa-fw fa-user-lock mr-2"></i>Petition for bail Generator</h1>
 	<hr>
 	<form action="/paperwork-generators/form-processor" method="POST">
-		<input type="hidden" id="generatorType" name="generatorType" value="BailPetition">
+		<input type="hidden" id="generatorType" name="generatorType" value="LSDA_BailPetition">
 		<div class="form-row">
 			<?php
 			// Form - Textfield - Suspect's Name
