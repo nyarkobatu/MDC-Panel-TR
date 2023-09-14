@@ -60,3 +60,16 @@ Judge
 Supervising Judge
 Presiding Judge
 Chief Justice
+Correction Officer I
+Correction Officer II
+Correction Officer III
+Parole Agent I
+Parole Agent II
+Parole Agent III
+Special Agent
+Sergeant
+Lieutenant
+Captain
+Associate Warden
+Chief Deputy Warden
+Warden

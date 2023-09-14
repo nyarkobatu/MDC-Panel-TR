@@ -1,4 +1,23 @@
 {
+	"2.4.4": {
+		"id": "2.4.4",
+		"date": "14/SEP/2023",
+		"changes": {
+			"0": "General - Implemented support for the new faction San Andreas Department of Corrections.",
+			"1": "General - Changed San Andreas Park Rangers to San Andreas State Parks.",
+			"2": "General - Linked factions SANFIRE, SASP, SADOC to the sidebar.",
+			"3": "General - Linked St3fan's Toolbox to the sidebar.",
+			"4": "Useful Resources - Updated the bbcode.rip link to the newest link that now works",
+			"5": "Paperwork Generators - Updated the Los Santos Sheriff's Department's generators to be bug-free and a lot more user friendly."
+		}
+	},
+	"2.4.3": {
+		"id": "2.4.3",
+		"date": "04/SEP/2023",
+		"changes": {
+			"0": "Penal Code - Addition of the new Voluntary & Involuntary manslaughter charges."
+		}
+	},
 	"2.4.2": {
 		"id": "2.4.2",
 		"date": "04/MAR/2023",
@@ -21,7 +40,7 @@
 			"0": "General - Added the possibility of having a legal character (attorney) stored as a cookie, will be used for judicial petition generators.",
 			"1": "General - Added a link to LSDA forums on the sidebar.",
 			"2": "Judicial Generators - Added petition for bail generator for LSDA.",
-			"3": "Paperwork generators - Changed the way in which forms marked as \"report\" are copied, to be able to be used directly on GTAW forums. ",
+			"3": "Paperwork Generators - Changed the way in which forms marked as \"report\" are copied, to be able to be used directly on GTAW forums. ",
 			"4": "Arrest Calculator - Plea field in the arrest report will now auto populate.",
 			"5": "Arrest Calculator - Post arrest submissions removed as it is now handled by the MDC.",
 			"6": "Arrest Calculator - Updated Rules & Guidelines",

@@ -66,21 +66,6 @@
 						<i class="fas fa-fw fa-clipboard mr-2"></i><span class="icon-text">Trespass Notice</span>
 					</a>
 				</li>
-				<li>
-					<a class="nav-link" href="/paperwork-generators/lspd/death-report">
-						<i class="fas fa-fw fa-skull mr-2"></i><span class="icon-text">LSPD - Death Report</span>
-					</a>
-				</li>
-				<li>
-					<a class="nav-link" href="/paperwork-generators/lssd/incident-report">
-						<i class="fas fa-fw fa-clipboard-list mr-2"></i><span class="icon-text">LSSD - Incident Report</span>
-					</a>
-				</li>
-				<li>
-					<a class="nav-link" href="/paperwork-generators/lssd/uof-report">
-						<i class="fas fa-fw fa-fist-raised mr-2"></i><span class="icon-text">LSSD - Use of Force Report</span>
-					</a>
-				</li>
 			</ul>
 		</li>
 		<li class="nav-item">
@@ -105,6 +90,21 @@
 			</a>
 		</li>
 		<li class="nav-item">
+			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sanfire') ?>">
+				<img class="mr-2" src="/images/Logo-SANFIRE.png" alt="SANFIRE Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">SANFIRE<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sasp') ?>">
+				<img class="mr-2" src="/images/Logo-SASP.png" alt="SASP Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">SASP<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sadoc') ?>">
+				<img class="mr-2" src="/images/Logo-SADOC.png" alt="SADOC Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">SADOC<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
+			</a>
+		</li>
+		<li class="nav-item">
 			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-lsfd') ?>">
 				<img class="mr-2" src="/images/Logo-LSFD.png" alt="LSFD Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">LSFD<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
 			</a>
@@ -112,6 +112,11 @@
 		<li class="nav-item">
 			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-lsda') ?>">
 				<img class="mr-2" src="/images/Logo-LSDA.png" alt="LSDA Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">LSDA<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-st3fan') ?>">
+				<img class="mr-2" src="/images/Logo-St3fan.png" alt="St3fan Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">St3fan's Toolbox<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
 			</a>
 		</li>
 		<hr class="my-3">

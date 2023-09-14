@@ -41,19 +41,19 @@
 			'hintClass' => ''
 		));
 		if ($detailed_info) {
-			// Form - Textfield - Date of Birth
+			// Form - Textfield - Age
 			$c->form('textfield', 'forms', array(
 				'size' => '2',
 				'type' => 'text',
-				'label' => '<label>Date of Birth</label>',
+				'label' => '<label>Age</label>',
 				'icon' => 'calendar',
 				'class' => '',
 				'id' => 'inputDoB',
 				'name' => 'inputDoB'.$array,
 				'value' => '',
-				'placeholder' => 'DD/MMM/YYYY',
-				'tooltip' => 'DD/MMM/YYYY Format',
-				'attributes' => 'required',
+				'placeholder' => '##',
+				'tooltip' => 'Number Format',
+				'attributes' => '',
 				'style' => 'text-transform: uppercase;'
 			));
 			// Form - Textfield - Phone Number
@@ -68,7 +68,7 @@
 				'value' => '',
 				'placeholder' => '#######',
 				'tooltip' => 'Person - Phone',
-				'attributes' => 'required',
+				'attributes' => '',
 				'style' => 'text-transform: uppercase;'
 			));
 			// Form - Textfield - Residence
@@ -83,7 +83,7 @@
 				'value' => '',
 				'placeholder' => '1000 Grove Street',
 				'tooltip' => 'Person - Residence',
-				'attributes' => 'required',
+				'attributes' => '',
 				'style' => ''
 			));
 		}

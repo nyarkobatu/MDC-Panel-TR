@@ -389,28 +389,37 @@ if (isset($_POST['generatorType'])) {
 		$inputEvidenceBox = array_values(array_filter($inputEvidenceBox));
 		$inputNarrative = $_POST['inputNarrative'] ?: '';
 		$inputIncidentTitle = $_POST['inputIncidentTitle'] ?: '';
+		$inputReportingDistrict = $_POST['inputReportingDistrict'];
+		$inputCrime = arrayMap($_POST['inputCrime'], 'UNKNOWN CHARGE');
+		$inputCrimeClass = arrayMap($_POST['inputCrimeClass'], 0);
 
 		// Set Cookies
 		setCookiePost('callSign', $postInputCallsign);
 		setCookiePost('officerNameArray', $postInputNameArray[0]);
 		setCookiePost('officerRankArray', $postInputRankArray[0]);
-		setCookiePost('officerBadgeArray', $postInputBadgeArray[0]);
 		setCookiePost('defName', $postInputDefName);
 		setCookiePost('defNameURL', $postInputDefName);
 
 		// Officer Resolver
 		$officers = '';
 		foreach ($postInputNameArray as $iOfficer => $officer) {
-			$officers .= resolverOfficerBB($officer, $postInputRankArray[$iOfficer], $postInputBadgeArray[$iOfficer]);
+			$officers .= resolverOfficerBB($officer, $postInputRankArray[$iOfficer]);
 		}
+
+		// Get rid of comma at the end
+		$officers = substr($officers, 0, -2);
 
 		// Person Resolver
 		$persons = '';
+		$index = 0;
 		if (!empty($inputPersonName)) {
 			foreach ($inputPersonName as $indPerson => $person) {
+				$inputPhone[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
+				$inputDoB[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
+				$inputResidence[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
 				$persons .= '[u]Person #' .	$index + 1	. ' - ' . $person . '[/u]
 [b]Classification:[/b] ' . $pg->getClassification($inputClassificationArray[$indPerson]) . '
-[b]Date of Birth:[/b] ' . strtoupper($inputDoB[$indPerson]) . '
+[b]Age:[/b] ' . $inputDoB[$indPerson] . '
 [b]Phone Number:[/b] ' . $inputPhone[$indPerson] . '
 [b]Residence:[/b] ' . $inputResidence[$indPerson] . '
 [b]Relation to Incident:[/b] ' . $inputRelation[$indPerson] . '
@@ -427,7 +436,7 @@ if (isset($_POST['generatorType'])) {
 			$evidenceImage = '';
 			foreach ($postInputEvidenceImageArray as $eImgID => $image) {
 				$evidenceImageCount = $eImgID + 1;
-				$evidenceImage .= '[altspoiler="EXHIBIT - Photograph #' . $evidenceImageCount . '"][img]' . $image . '[/img][/altspoiler]';
+				$evidenceImage .= '[altspoiler="EXHIBIT Photograph ' . $evidenceImageCount . '"][img]' . $image . '[/img][/altspoiler]';
 			}
 		}
 
@@ -437,7 +446,7 @@ if (isset($_POST['generatorType'])) {
 			$evidenceBox = '';
 			foreach ($inputEvidenceBox as $eBoxID => $box) {
 				$evidenceBoxCount = $eBoxID + 1;
-				$evidenceBox .= '[altspoiler="EXHIBIT - Description #' . $evidenceBoxCount . '"]' . $box . '[/altspoiler]';
+				$evidenceBox .= '[altspoiler="EXHIBIT Description ' . $evidenceBoxCount . '"]' . $box . '[/altspoiler]';
 			}
 		}
 
@@ -445,11 +454,27 @@ if (isset($_POST['generatorType'])) {
 			$evidenceImage = 'No Evidence Submitted.';
 		}
 
+		// Crime Resolver
+		$charges = '';
+		foreach ($inputCrime as $iCrime => $crime) {
+			$charge = $penal[$crime];
+			$chargeTitle = $charge['charge'];
+			$chargeType = $charge['type'];
+			$chargeClass = '?';
+			if (!empty($inputCrimeClass[$iCrime])) {
+				$chargeClass = $pg->getCrimeClass($inputCrimeClass[$iCrime]);
+			}
+			$charges .= $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . ', ';
+		}
+
+		// Get rid of comma at the end
+		$charges = substr($charges, 0, -2);
+
 		// Report Builder
 		$redirectPath = redirectPath(2);
 		$generatedReportType = 'Incident Report';
 		$generatedThreadURL = 'https://lssd.gta.world/posting.php?mode=post&f=1188';
-		$generatedThreadTitle = '[IR] ' . $inputIncidentTitle . ' - ' . $postInputStreet . ', ' . $postInputDistrict . ' - ' . strtoupper($postInputDate);
+		$generatedThreadTitle = '[IR] ' . $inputIncidentTitle . ', ' . $pg->getSheriffsReportingDistrict($inputReportingDistrict) . ' - ' . strtoupper($postInputDate);
 		$generatedReport = '
 [font=Arial][color=black]
 
@@ -465,7 +490,7 @@ COUNTY OF LOS SANTOS[/b]
 
 [indent]
 [b]Time & Date:[/b] ' . $postInputTime . ', ' . strtoupper($postInputDate) . '
-[b]Penal Code (if Criminal):[/b] N/A
+[b]Penal Code:[/b] '. $charges .'
 [b]Location:[/b] ' . $postInputStreet . ', ' . $postInputDistrict . '
 
 [b]Filed By:[/b] ' . $officers . '
@@ -1315,10 +1340,10 @@ function resolverOfficer($name, $rank, $badge)
 	return '<strong>' . $pg->getRank($rank) . ' ' . $name . '</strong> (<strong>#' . $badge . '</strong>), ';
 }
 
-function resolverOfficerBB($name, $rank, $badge)
+function resolverOfficerBB($name, $rank)
 {
 
 	global $pg;
 
-	return '[b]' . $pg->getRank($rank) . ' ' . $name . '[/b] ([b]#' . $badge . '[/b]), ';
+	return $pg->getRank($rank) . ' ' . $name . ', ';
 }

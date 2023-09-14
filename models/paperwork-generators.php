@@ -6,34 +6,35 @@ class PaperworkGenerators
 		"LSPD" => ["name" => "Los Santos Police Department", "ranks" => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]],
 		"LSSD" => ["name" => "Los Santos Sheriff's Department", "ranks" => [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]],
 		"SFM" => ["name" => "State Fire Marshal", "ranks" => [30, 31, 32, 33, 34]],
-		"SAPR" => ["name" => "San Andreas Park Rangers", "ranks" => [35, 36, 37, 38, 39, 40, 41, 42, 43, 44]],
+		"SAPR" => ["name" => "San Andreas State Parks", "ranks" => [35, 36, 37, 38, 39, 40, 41, 42, 43, 44]],
 		"LSPE" => ["name" => "Los Santos Parking Enforcement", "ranks" => [45, 46, 47]],
 		"SAAA" => ["name" => "San Andreas Aviation Administration", "ranks" => [48, 49, 50]],
 		"LSDA" => ["name" => "Los Santos District Attorney's Office", "ranks" => [52, 53, 54, 55]],
 		"JSA" => ["name" => "Judiciary of San Andreas", "ranks" => [56, 57, 58, 59, 60, 61]],
+		"SADOC" => ["name" => "San Andreas Department of Corrections", "ranks" => [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]],
 	];
 
 
-	private $penal_ls = null;
+	private $penal = null;
 	private $penal_lc = null;
 	public function __construct()
 	{
-		$this->penal_ls = json_decode(file_get_contents(dirname(__FILE__, 2) . '/db/penalSearch_LS.json'), true);
+		$this->penal = json_decode(file_get_contents(dirname(__FILE__, 2) . '/db/penalSearch.json'), true);
 		$this->penal_lc = json_decode(file_get_contents(dirname(__FILE__, 2) . '/db/penalSearch_LC.json'), true);
 	}
 
 
-	public function penalCode($server = "LS")
+	public function penalCode($server = "BASE")
 	{
 		if (strtoupper($server) == "LC")
 			return $this->penal_lc;
-		return $this->penal_ls;
+		return $this->penal;
 	}
 
 	public $chargesDrug = [601, 602, 603, 604, 605, 606];
 
 
-	public function processCharges($prefix = "inputCrime", $server = "LS")
+	public function processCharges($prefix = "inputCrime", $server = "BASE")
 	{
 		$charges = [];
 		$penal = $this->penalCode($server);
@@ -276,6 +277,25 @@ class PaperworkGenerators
 		return '<optgroup label="Classifications">' . $group . '</optgroup>';
 	}
 
+	public function pSheriffsReportingDistricts()
+	{
+
+		$reportingDistricts = file('resources/sheriffsReportingDistricts.txt');
+		$reportingDistrictsCount = 0;
+		$group = '';
+
+		foreach ($reportingDistricts as $reportingDistrict) {
+
+			$statement = '<option value="' . $reportingDistrictsCount . '">' . $reportingDistrict . '</option>';
+
+			$group .= $statement;
+
+			$reportingDistrictsCount++;
+		}
+
+		return '<optgroup label="Reporting District">' . $group . '</optgroup>';
+	}
+
 	public function sStatusChooser()
 	{
 
@@ -314,6 +334,15 @@ class PaperworkGenerators
 
 		return $classifications[$input];
 	}
+
+	public function getSheriffsReportingDistrict($input)
+	{
+
+		$reportingDistricts = file($_SERVER['DOCUMENT_ROOT'] . '/resources/sheriffsReportingDistricts.txt', FILE_IGNORE_NEW_LINES);
+
+		return $reportingDistricts[$input];
+	}
+
 
 	public function getStatus($input)
 	{
