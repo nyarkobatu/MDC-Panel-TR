@@ -33,9 +33,14 @@ class Content {
 
 			// Start output buffering
 			ob_start();
+			try {
+				include $root.$directory.$file.'.php';
+			} catch (\Throwable $th) {
+				throw $th;
+			}
 
 			// Include the template file
-			include $root.$directory.$file.'.php';
+			
 
 			// End buffering and return its contents
 			$output = ob_get_clean();

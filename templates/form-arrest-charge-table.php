@@ -53,7 +53,10 @@
 				</div>
 			</div>
 			<hr>
+
+			<?php if($plea == 2){?>
 			<div class="card-text text-center">
+				
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
 						<h5>The following only applies to <strong>Not Guilty</strong> pleas:</h6>
@@ -71,7 +74,7 @@
 					</div>
 				</div>
 			</div>
-			<hr>
+			<?php } else if($plea == 3||$plea == 4){?>
 			<div class="card-text text-center">
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
@@ -86,7 +89,7 @@
 					</div>
 				</div>
 			</div>
-			<hr>
+			<?php } if($plea == 3){?>
 			<div class="card-text text-center">
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
@@ -100,7 +103,7 @@
 					</div>
 				</div>
 			</div>
-			<hr>
+			<?php } if($plea == 1){?>
 			<div class="card-text text-center">
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
@@ -113,6 +116,7 @@
 					</div>
 				</div>
 			</div>
+			<?php } ?>
 		</div>
 	</div>
 </details>

@@ -993,17 +993,20 @@ COUNTY OF LOS SANTOS[/b]
 			$generatedArrestChargeTotals = $rowBuilderTotals;
 			$arrestChargeList = $chargeTitle;
 
-			/*return $c->form('templates/generators/form-arrest-report', '', [
+			
+			echo $c->form('templates/generators/form-arrest-report', '', [
 				"charges" => $pg->processCharges(),
 				"chargeTable" => $generatedArrestChargeList,
 				"pg" => $pg,
-				"chargeTableTotals" => "rowBuilderTotals",
+				"chargeTableTotals" => $rowBuilderTotals,
 				"arrestChargeList"=> $chargeTitle,
 				"c"=>$c,
 				"g"=>$g,
-				"showChargeTable"=> true
+				"showChargeTable"=> true,
+				"plea"=> $pleaPre
 	
-			], false);*/
+			], false);
+			return;
 		} else {
 			$showGeneratedArrestChargeTables = false;
 		}

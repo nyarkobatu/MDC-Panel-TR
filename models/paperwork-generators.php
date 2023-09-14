@@ -263,7 +263,7 @@ class PaperworkGenerators
 	public function pClassificationChooser()
 	{
 
-		$classifications = file('resources/classificationsList.txt');
+		$classifications = file(dirname(__FILE__,2).'/resources/classificationsList.txt');
 		$classificationsCount = 0;
 		$group = '';
 
@@ -282,7 +282,7 @@ class PaperworkGenerators
 	public function pSheriffsReportingDistricts()
 	{
 
-		$reportingDistricts = file('resources/sheriffsReportingDistricts.txt');
+		$reportingDistricts = file(dirname(__FILE__,2).'/resources/sheriffsReportingDistricts.txt');
 		$reportingDistrictsCount = 0;
 		$group = '';
 
@@ -301,7 +301,7 @@ class PaperworkGenerators
 	public function sStatusChooser()
 	{
 
-		$statuses = file('resources/statusList.txt');
+		$statuses = file(dirname(__FILE__,2).'/resources/statusList.txt');
 		$statusesCount = 0;
 		$group = '';
 
@@ -514,7 +514,7 @@ class PaperworkGenerators
 	public function listChooser($list, $plea = null)
 	{
 
-		$listEntries = file('resources/' . $list . '.txt');
+		$listEntries = file(dirname(__FILE__,2).'/resources/' . $list . '.txt');
 		$entriesCount = 1;
 		$optionValue = true;
 
@@ -572,7 +572,7 @@ class PaperworkGenerators
 	public function tintChooser()
 	{
 
-		$tints = file('resources/tintsList.txt');
+		$tints = file(dirname(__FILE__,2).'/resources/tintsList.txt');
 
 		$groupTintLegal = '';
 		$groupTintIllegal = '';
@@ -838,7 +838,7 @@ class ParkingTicketGenerator extends PaperworkGenerators
 	public function illegalParkingChooser()
 	{
 
-		$illegalParkingReasons = file('resources/illegalParkingList.txt');
+		$illegalParkingReasons = file(dirname(__FILE__,2).'/resources/illegalParkingList.txt');
 		$illegalParkingReasonsCount = 0;
 
 		$groupVehicleStatus = '';
