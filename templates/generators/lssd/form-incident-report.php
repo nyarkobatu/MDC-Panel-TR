@@ -161,7 +161,7 @@
 <!-- COPY SLOTS -->
 <?php
 	// OFFICER SLOT
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/copy-slots/officer.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/copy-slots/officer-nobadge.php';
 
 	// PERSON SLOT
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/copy-slots/person.php';
