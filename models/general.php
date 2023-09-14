@@ -7,7 +7,7 @@ class General {
 		switch ($setting) {
 			case 'site-live':					return true;
 			case 'site-name':					return 'MDC Panel';
-			case 'site-version':				return '2.4.3';
+			case 'site-version':				return '2.4.4';
 			case 'site-url':					return $_SERVER['SERVER_NAME'];
 			case 'site-logo':					return '/images/MDC-Panel.svg';
 			case 'site-favicon':				return '/images/MDC-Panel-Favicon.svg';
@@ -22,9 +22,13 @@ class General {
 			case 'url-lssd':					return 'https://lssd.gta.world';
 			case 'url-lsfd':					return 'https://lsfd.gta.world';
 			case 'url-lsda':					return 'https://lsda.gta.world';
+			case 'url-sadoc':					return 'https://sadoc.gta.world';
+			case 'url-sanfire':					return 'https://sfm.gta.world';
+			case 'url-sasp':					return 'https://sasp.gta.world';
 			case 'url-penal-code':				return 'https://forum.gta.world/en/topic/78852-san-andreas-penal-code/';
 			case 'url-bail-schedule':			return 'https://docs.google.com/spreadsheets/d/1jlu8AltrHmOR192CAhznfsfZBxrv6_EMGuXFW7SwRdU/';
-			case 'url-bbcoderip':				return 'https://bbcode.booskit.dev/';
+			case 'url-bbcoderip':				return 'https://booskit-bbcode.netlify.app/';
+			case 'url-st3fan':					return 'https://st3fannl.nl/gtaw/';
 			case 'special-notification': 		return 'bail-schedule-outdated-09132023';
 			case 'special-notification-msg':	return 'Bail schedule is outdated! I wasn\'t given a headsup :c - It\'ll take some time for me to update it.';
 			default: break;

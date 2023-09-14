@@ -17,13 +17,29 @@
 				'g' => $g,
 				'pg' => $pg,
 				'c' => $c,
-				'badge' => true,
+				'badge' => false,
 				'slots' => true,
 				'faction' => "LSSD"
 
 			));
 			// Section - Location
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/sections/location.php';
+			// Form - List - Reporting District
+			echo('<div class="form-row">');
+				$c->form('list', 'forms', array(
+					'size' => '4',
+					'label' => '<label>Reporting District of Incident</label>',
+					'icon' => 'map',
+					'class' => 'selectpicker',
+					'id' => 'inputReportingDistrict',
+					'name' => 'inputReportingDistrict',
+					'attributes' => 'required',
+					'title' => 'Select Reporting District',
+					'list' => $pg->pSheriffsReportingDistricts(),
+					'hint' => '',
+					'hintClass' => ''
+				));
+			echo('</div>');
 			// Section - Involved Persons
 			$c->form('person', 'sections', array(
 				'g' => $g,
@@ -34,6 +50,49 @@
 				'slots' => true,
 			));
 		?>
+		<hr>
+		<h4><i class="fas fa-fw fa-gavel mr-2"></i>Suspected Crimes</h4>
+		<div class="form-row groupSlotCitation crimeSelectorGroup">
+		<?php
+			// Form - List - Citation
+			$c->form('list', 'forms', array(
+				'size' => '6',
+				'label' => '<label>Charge</label>',
+				'icon' => 'gavel',
+				'class' => 'selectpicker inputCrimeSelector',
+				'id' => 'inputCrime-1',
+				'name' => 'inputCrime[]',
+				'attributes' => 'required data-live-search="true"',
+				'title' => 'Select Charge',
+				'list' => $pg->chargeChooser('generic'),
+				'hint' => '',
+				'hintClass' => ''
+			));
+			// Form - List - Citation Class
+			$c->form('list', 'forms', array(
+				'size' => '3',
+				'label' => '<label>Class</label>',
+				'icon' => 'ellipsis-v',
+				'class' => 'selectpicker inputCrimeClassSelector',
+				'id' => 'inputCrimeClass-1',
+				'name' => 'inputCrimeClass[]',
+				'attributes' => 'required',
+				'title' => 'Select Class',
+				'list' => '',
+				'hint' => '',
+				'hintClass' => ''
+			));
+			// Form - Options Add - Citation
+			$c->form('options', 'forms', array(
+				'size' => '3',
+				'label' => '<label>Options</label>',
+				'action' => 'addCitation',
+				'colour' => 'success',
+				'icon' => 'fa-plus-square',
+				'text' => 'Charge'
+			));
+		?>
+		</div>
 		<hr>
 		<h4><i class="fas fa-fw fa-receipt mr-2"></i>Incident Details</h4>
 		<div class="form-row">
@@ -160,6 +219,48 @@
 		'colour' => 'danger',
 		'icon' => 'fa-minus-square',
 		'text' => 'Description'
+	));
+?>
+
+<!-- COPY SLOT - Charge -->
+<div class="container copyGroupSlotCitation" style="display: none;">
+<?php
+	// Form - List - Charge
+	$c->form('list', 'forms', array(
+		'size' => '6',
+		'label' => '',
+		'icon' => 'gavel',
+		'class' => 'select-picker-copy inputCrimeSelector',
+		'id' => 'inputCrime-',
+		'name' => 'inputCrime[]',
+		'attributes' => 'required data-live-search="true"',
+		'title' => 'Select Charge',
+		'list' => $pg->chargeChooser('traffic'),
+		'hint' => '',
+		'hintClass' => ''
+	));
+	// Form - List - Charge Class
+	$c->form('list', 'forms', array(
+		'size' => '3',
+		'label' => '',
+		'icon' => 'ellipsis-v',
+		'class' => 'select-picker-copy inputCrimeClassSelector',
+		'id' => 'inputCrimeClass-',
+		'name' => 'inputCrimeClass[]',
+		'attributes' => 'required',
+		'title' => 'Select Class',
+		'list' => '',
+		'hint' => '',
+		'hintClass' => ''
+	));
+	// Form - Options Remove - Charge
+	$c->form('options', 'forms', array(
+		'size' => '3',
+		'label' => '',
+		'action' => 'removeCitation',
+		'colour' => 'danger',
+		'icon' => 'fa-minus-square',
+		'text' => 'Citation'
 	));
 ?>
 </div>
