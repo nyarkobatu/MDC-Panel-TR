@@ -5,7 +5,8 @@
 		"changes": {
 			"0": "General - Improved backend handling of factions / definitions, so that it's all in one place.",
 			"1": "Pull Request - Merged pull request <u><a href=\"https://github.com/biscuitgtaw/MDC-Panel/pull/14\">#14</a></u> with contributed improvements to the site.",
-			"2": "Paperwork Generators - Made minor adjustments to the arrest reports with the disclaimer to utilize first or third person."
+			"2": "Pull Request - Merged pull request <u><a href=\"https://github.com/biscuitgtaw/MDC-Panel/pull/13\">#13</a></u> with contributed improvements to the site.",
+			"3": "Paperwork Generators - Made minor adjustments to the arrest reports with the disclaimer to utilize first or third person."
 		}
 	},
 	"2.4.4": {
