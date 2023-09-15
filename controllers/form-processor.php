@@ -933,7 +933,9 @@ COUNTY OF LOS SANTOS[/b]
 
 			// Total Impound Time
 			$chargeImpoundTotal = number_format(array_sum($chargeImpound));
-			if ($chargeImpoundTotal != 0) {
+			if ($chargeImpoundTotal > 14) {
+				$chargeImpoundTotal = '14 Days';
+			} elseif ($chargeImpoundTotal != 0) {
 				$chargeImpoundTotal .= $chargeImpoundTotal == 1 ? ' Day' : ' Days';
 			} else {
 				$chargeImpoundTotal = 'No Impounds';
@@ -941,7 +943,9 @@ COUNTY OF LOS SANTOS[/b]
 
 			// Total Suspension Time
 			$chargeSuspensionTotal = number_format(array_sum($chargeSuspension));
-			if ($chargeSuspensionTotal != 0) {
+			if ($chargeSuspensionTotal > 14) {
+				$chargeSuspensionTotal = '14 Days';
+			} elseif ($chargeSuspensionTotal != 0) {
 				$chargeSuspensionTotal .= $chargeSuspensionTotal == 1 ? ' Day' : ' Days';
 			} else {
 				$chargeSuspensionTotal = 'No Suspensions';
