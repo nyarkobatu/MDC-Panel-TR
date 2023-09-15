@@ -2,17 +2,7 @@
 
 class PaperworkGenerators
 {
-	private $factions = [
-		"LSPD" => ["name" => "Los Santos Police Department", "ranks" => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]],
-		"LSSD" => ["name" => "Los Santos Sheriff's Department", "ranks" => [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]],
-		"SFM" => ["name" => "State Fire Marshal", "ranks" => [30, 31, 32, 33, 34]],
-		"SAPR" => ["name" => "San Andreas State Parks", "ranks" => [35, 36, 37, 38, 39, 40, 41, 42, 43, 44]],
-		"LSPE" => ["name" => "Los Santos Parking Enforcement", "ranks" => [45, 46, 47]],
-		"SAAA" => ["name" => "San Andreas Aviation Administration", "ranks" => [48, 49, 50]],
-		"LSDA" => ["name" => "Los Santos District Attorney's Office", "ranks" => [52, 53, 54, 55]],
-		"JSA" => ["name" => "Judiciary of San Andreas", "ranks" => [56, 57, 58, 59, 60, 61]],
-		"SADOC" => ["name" => "San Andreas Department of Corrections", "ranks" => [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]],
-	];
+	private $factions = FACTIONS;
 
 
 	private $penal = null;
@@ -31,7 +21,7 @@ class PaperworkGenerators
 		return $this->penal;
 	}
 
-	public $chargesDrug = [601, 602, 603, 604, 605, 606];
+	public $chargesDrug = CHARGES_DRUG;
 
 
 	public function processCharges($prefix = "inputCrime", $server = "BASE")
@@ -240,7 +230,7 @@ class PaperworkGenerators
 			</optgroup>';
 		}
 		if ($faction == "all") $faction = array_keys($this->factions);
-		else if ($faction == "LEO") $faction = ["LSPD","LSSD","SFM","SAPR","SADOC","SAAA"];
+		else if ($faction == "LEO") $faction = FACTIONS_LEO;
 		else if (gettype($faction) == "string") $faction = [$faction];
 
 
@@ -358,8 +348,8 @@ class PaperworkGenerators
 	{
 
 		$chargeEntries = $this->penalCode($server);
-		$disabledCharges = [000, 423];
-		$trafficCharges = [401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426];
+		$disabledCharges = CHARGES_DISABLED;
+		$trafficCharges = CHARGES_TRAFFIC;
 
 		$charges = '';
 

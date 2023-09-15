@@ -18,7 +18,7 @@
 				'c' => $c,
 				'badge' => true,
 				'slots' => false,
-				"faction"=> ["LSPE", "LSPD", "LSSD", "SAPR", "SFM"]
+				"faction" => FACTIONS_PARKING_ENFORCEMENT,
 			));
 			// Section - Vehicle
 			$c->form('vehicle', 'sections', array(

@@ -5,32 +5,32 @@ class General {
 	public function getSettings($setting) {
 		
 		switch ($setting) {
-			case 'site-live':					return true;
-			case 'site-name':					return 'MDC Panel';
-			case 'site-version':				return '2.4.4';
+			case 'site-live':					return SITE_LIVE;
+			case 'site-name':					return SITE_NAME;
+			case 'site-version':				return SITE_VERSION;
 			case 'site-url':					return $_SERVER['SERVER_NAME'];
-			case 'site-logo':					return '/images/MDC-Panel.svg';
-			case 'site-favicon':				return '/images/MDC-Panel-Favicon.svg';
-			case 'site-image':					return '/images/MDC-Panel-OG.png';
-			case 'site-description':			return 'MDC Panel - Multi-functional tools, generators, and resources for official government use.';
-			case 'site-discord-contact':		return 'Biscuit#0001';
-			case 'url-github':					return 'https://github.com/biscuitgtaw/MDC-Panel';
-			case 'url-discord':					return 'https://discord.gg/rxfYd23TNz';
-			case 'url-mdc':						return 'https://mdc.gta.world';
-			case 'url-cad':						return 'https://cad.gta.world';
-			case 'url-lspd':					return 'https://lspd.gta.world';
-			case 'url-lssd':					return 'https://lssd.gta.world';
-			case 'url-lsfd':					return 'https://lsfd.gta.world';
-			case 'url-lsda':					return 'https://lsda.gta.world';
-			case 'url-sadoc':					return 'https://sadcr.gta.world';
-			case 'url-sanfire':					return 'https://sfm.gta.world';
-			case 'url-sasp':					return 'https://saparks.gta.world';
-			case 'url-penal-code':				return 'https://forum.gta.world/en/topic/78852-san-andreas-penal-code/';
-			case 'url-bail-schedule':			return 'https://docs.google.com/spreadsheets/d/1qm04NZm-HEy-vdW2liNWcdok7eXFGty_rO-dA1H_k0g/';
-			case 'url-bbcoderip':				return 'https://booskit-bbcode.netlify.app/';
-			case 'url-st3fan':					return 'https://st3fannl.nl/gtaw/';
-			case 'special-notification': 		return 'bail-schedule-outdated-09132023';
-			case 'special-notification-msg':	return 'Bail schedule is outdated! I wasn\'t given a headsup :c - It\'ll take some time for me to update it.';
+			case 'site-logo':					return SITE_LOGO;
+			case 'site-favicon':				return SITE_FAVICON;
+			case 'site-image':					return SITE_IMAGE;
+			case 'site-description':			return SITE_DESCRIPTION;
+			case 'site-discord-contact':		return SITE_DISCORD_CONTACT;
+			case 'url-github':					return URL_GITHUB;
+			case 'url-discord':					return URL_DISCORD;
+			case 'url-mdc':						return URL_MDC;
+			case 'url-cad':						return URL_CAD;
+			case 'url-lspd':					return URL_LSPD;
+			case 'url-lssd':					return URL_LSSD;
+			case 'url-lsfd':					return URL_LSFD;
+			case 'url-lsda':					return URL_LSDA;
+			case 'url-sadcr':					return URL_SADCR;
+			case 'url-sfm':						return URL_SFM;
+			case 'url-sasp':					return URL_SASP;
+			case 'url-penal-code':				return URL_PENAL_CODE;
+			case 'url-bail-schedule':			return URL_BAIL_SCHEDULE;
+			case 'url-bbcoderip':				return URL_BBCODERIP;
+			case 'url-st3fan':					return URL_ST3FAN;
+			case 'special-notification': 		return SPECIAL_NOTIFICATION_COOKIE;
+			case 'special-notification-msg':	return SPECIAL_NOTIFICATION_MESSAGE;
 			default: break;
 		}
 	}

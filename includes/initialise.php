@@ -7,6 +7,7 @@
 	$root = $_SERVER['DOCUMENT_ROOT'];
 
 	// Required Models
+	require_once $root . '/includes/constants.php';
 	require_once $root . '/models/general.php';
 	require_once $root . '/models/content.php';
 	require_once $root . '/models/paperwork-generators.php';

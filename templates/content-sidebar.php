@@ -90,7 +90,7 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sanfire') ?>">
+			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sfm') ?>">
 				<img class="mr-2" src="/images/Logo-SANFIRE.png" alt="SANFIRE Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">SANFIRE<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
 			</a>
 		</li>
@@ -100,8 +100,8 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sadoc') ?>">
-				<img class="mr-2" src="/images/Logo-SADOC.png" alt="SADOC Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">SADOC<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
+			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-sadcr') ?>">
+				<img class="mr-2" src="/images/Logo-SADOC.png" alt="SADCR Logo" width="16px" style="margin-top: -4px" /><span class="icon-text">SADCR<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
 			</a>
 		</li>
 		<li class="nav-item">

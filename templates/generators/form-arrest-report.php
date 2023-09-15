@@ -60,7 +60,8 @@
 					'rows' => '4',
 					'placeholder' => 'Arrest Narrative',
 					'attributes' => 'required',
-					'hint' => '<strong>Describe the events leading up to the arrest in third person and in chronological order, explaining all charges.</strong>'
+					'hint' => '<strong>LSPD:</strong> Describe the events leading up to the arrest in <strong>third person</strong> and in chronological order, explaining all charges.<br/>
+							   <strong>LSSD:</strong> Describe the events leading up to the arrest in <strong>first person</strong> and in chronological order, explaining all charges.'
 				));
 			?>
 		</div>

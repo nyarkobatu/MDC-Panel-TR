@@ -121,9 +121,9 @@
 				'id' => 'inputNarrative',
 				'name' => 'inputNarrative',
 				'rows' => '4',
-				'placeholder' => 'On September 11th of 20XX, there was an incident that took place in XXXXX where X shot X.',
+				'placeholder' => 'Narrative',
 				'attributes' => 'required',
-				'hint' => '<strong>Enter a detailed account of the incident.</strong>'
+				'hint' => 'Enter the detailed account of the incident in <strong>first person</strong> and in chronological order.'
 			));
 		?>
 		</div>
