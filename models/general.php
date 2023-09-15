@@ -22,11 +22,11 @@ class General {
 			case 'url-lssd':					return 'https://lssd.gta.world';
 			case 'url-lsfd':					return 'https://lsfd.gta.world';
 			case 'url-lsda':					return 'https://lsda.gta.world';
-			case 'url-sadoc':					return 'https://sadoc.gta.world';
+			case 'url-sadoc':					return 'https://sadcr.gta.world';
 			case 'url-sanfire':					return 'https://sfm.gta.world';
-			case 'url-sasp':					return 'https://sasp.gta.world';
+			case 'url-sasp':					return 'https://saparks.gta.world';
 			case 'url-penal-code':				return 'https://forum.gta.world/en/topic/78852-san-andreas-penal-code/';
-			case 'url-bail-schedule':			return 'https://docs.google.com/spreadsheets/d/1jlu8AltrHmOR192CAhznfsfZBxrv6_EMGuXFW7SwRdU/';
+			case 'url-bail-schedule':			return 'https://docs.google.com/spreadsheets/d/1qm04NZm-HEy-vdW2liNWcdok7eXFGty_rO-dA1H_k0g/';
 			case 'url-bbcoderip':				return 'https://booskit-bbcode.netlify.app/';
 			case 'url-st3fan':					return 'https://st3fannl.nl/gtaw/';
 			case 'special-notification': 		return 'bail-schedule-outdated-09132023';

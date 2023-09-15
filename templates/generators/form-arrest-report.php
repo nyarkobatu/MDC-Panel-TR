@@ -23,7 +23,8 @@
 				'pg' => $pg,
 				'c' => $c,
 				'badge' => true,
-				'slots' => true
+				'slots' => true,
+				"faction"=> "LEO"
 			));
 		?>
 		<hr>

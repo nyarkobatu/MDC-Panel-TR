@@ -949,7 +949,7 @@ COUNTY OF LOS SANTOS[/b]
 
 			//Total Bail
 			$bailCostTotal = '$' . number_format(array_sum($bailCost));
-			if (in_array(0, $bailArray)) {
+			/*if (in_array(0, $bailArray)) {
 				$bailState = "NOT ELIGIBLE";
 				$bailStateColour = "danger";
 				$bailStateIcon = 'minus-circle';
@@ -965,7 +965,15 @@ COUNTY OF LOS SANTOS[/b]
 				$bailState = "N/A";
 				$bailStateColour = "muted";
 				$bailStateIcon = 'minus-circle';
-			};
+			};*/
+
+
+			//TEMP
+			$bailState = "OUTDATED";
+			$bailStateColour = "muted";
+			$bailStateIcon = 'minus-circle';
+			//END - TEMP
+
 			$bailStatusFull = '<span class="badge badge-' . $bailStateColour . '"><i class="fas fa-fw fa-' . $bailStateIcon . ' mr-1"></i>' . $bailState . '</span>';
 
 			// Totals Row Builder
@@ -976,7 +984,7 @@ COUNTY OF LOS SANTOS[/b]
 					<td>' . $chargeImpoundTotal . '</td>
 					<td>' . $chargeSuspensionTotal . '</td>
 					<td>' . $bailCostTotal . '</td>
-					<td>' . $bailStatusFull . '</td>
+					<td>' . $bailStatusFull. '</td>
 				</tr>';
 
 			// Session Builder
@@ -984,6 +992,21 @@ COUNTY OF LOS SANTOS[/b]
 			$generatedArrestChargeList = $rowBuilder;
 			$generatedArrestChargeTotals = $rowBuilderTotals;
 			$arrestChargeList = $chargeTitle;
+
+			
+			echo $c->form('templates/generators/form-arrest-report', '', [
+				"charges" => $pg->processCharges(),
+				"chargeTable" => $generatedArrestChargeList,
+				"pg" => $pg,
+				"chargeTableTotals" => $rowBuilderTotals,
+				"arrestChargeList"=> $chargeTitle,
+				"c"=>$c,
+				"g"=>$g,
+				"showChargeTable"=> true,
+				"plea"=> $pleaPre
+	
+			], false);
+			return;
 		} else {
 			$showGeneratedArrestChargeTables = false;
 		}
@@ -1125,100 +1148,6 @@ COUNTY OF LOS SANTOS[/b]
 	}
 
 
-	//[LSDA:] Petition for bail
-	if ($generatorType == 'BailPetition') {
-		$generatedThreadTitle = '[CFXXX-' . date("y") . '] State of San Andreas v. ' . $_POST["inputDefName"];
-		$internalCharges = "";
-		$chargesGroup = "";
-		$action = $_POST["inputApproveBail"];
-		$defendant = $_POST["inputDefName"];
-
-		$bond = 0;
-		$hours = 0;
-		$days = 0;
-		$fine = 0;
-
-		// Charge List Builder
-		foreach ($pg->processCharges() as $iCharge => $charge) {
-			$internalCharges .="[*]".$charge['type'] . $charge['class'] . ' ' . $charge['id'] . '. ' . $charge["name"] . "
-";
-			$bond += $charge["autoBailCost"];
-			$days += $charge["time"]["days"];
-			$hours += $charge["time"]["hours"];
-			$fine += $charge["fine"];
-		}
-
-		$days += floor($hours/24); 
-		$hours = fmod($hours, 24);
-
-
-		$conditionsGroup = '';
-		foreach (arrayMap($_POST["inputReason"], "") as $value) {
-			if (!empty($value)) {
-				$conditionsGroup .= '<li style="color:#555555;font-size:14px;">
-				<strong>' . substr($da->getBailReason($value), 1) . '</strong>
-				</li>';
-			}
-		}
-
-		switch ($action) {
-			case 1:
-				$total = 'grant bail';
-				$bailLong = "That Defendant shall deposit, with the clerk of the court, \$".$bond." as bail security indicated on his bail bond with the following conditions:";
-				break;
-			case 0:
-				$total = 'release the defendant on their own recognizance';
-				$bailLong = "That Defendant shall be released without bail on their own recognizance.";
-
-				break;
-			case 2:
-				$total = 'commit the defendant into custody';
-				$bailLong = "That Defendant shall not be granted bail and instead be committed to custody for the following reasons:";
-
-				break;
-		}
-
-		$generatedThreadTitle = '[' . date("y") . 'GJCR' . str_pad($_POST["petitionNumber"], 5, "0", STR_PAD_LEFT) . '] People of the State of San Andreas v. ' . $_POST["inputDefName"];
-		$defendant = $_POST["inputDefName"];
-
-		$generatedReport = $c->form('templates/generators/lsda/formats/arraignment', '', [
-			"charges" => $pg->processCharges(),
-			"defendant" => $defendant,
-			"pg" => $pg,
-			"motion_name" => "<strong>ARRAIGNMENT</strong>",
-			"filler"=> $pg->getRank($_POST["inputRank"]). " ". $_POST["employeeName"],
-			"exhibits"=> $_POST["exhibits"],
-			"bailSummary"=> $total,
-			"bailLong"=> $bailLong,
-			"bailMoney"=> $bond,
-			"bailReasons"=> $conditionsGroup,
-			"fine"=> $fine, 
-			"days"=> $days,
-			"hours"=> $hours
-
-		], false);
-
-		$extra = "[divbox=white]
-[center][b]CASE INFORMATION:[/b][/center]
-
-[b]Defendant Name:[/b] " . $defendant . "
-[b]Docket Number:[/b] [url=INSERT THE URL TO THE CASE ON GTAW FORUMS HERE]".$generatedThreadTitle."[/url]
-[b]Post Arrest Submission:[/b] [url=https://mdc.gta.world/postarrest/view/".$_POST["pasID"]."]ACCESS[/url]
-
-[b]Trial Deputy:[/b] " . $_POST["employeeName"] . " 
-[hr]
-[center][b][u]CHARGES BROUGHT AGAINST THE DEFENDANT:[/u][/b][/center]
-[list]
-"
-. $internalCharges ."
-[/list]
-[hr]
-[center][b][u]TRIAL INFORMATION:[/u][/b][/center]
-[b]Strategy (Optional):[/b] Briefly explain your trial strategy or seek advice from senior prosecutors.
-[/divbox]";
-
-		$redirectPath = "court";
-	}
 
 
 	//LSDA Dismissal Petition
