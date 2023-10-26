@@ -115,7 +115,7 @@
 					'attributes' => 'required',
 					'title' => 'Select Prison Assignment',
 					'list' => $pg->listChooser('prisonAssignmentList'),
-					'hint' => '<span class="d-block text-center"><strong>N/A</strong>: Only when <u>optionally</u> arresting a suspect in a holding cell at a station (<strong>This does not apply for LSPD; all arrests must be sent to prison.</strong>).</span>
+					'hint' => '<span class="d-block text-center"><strong>N/A</strong>: Only when <u>optionally</u> arresting a misdemeanor suspect in a holding cell at a station (<strong>This does not apply for LSPD; all arrests must be sent to prison.</strong>).</span>
 					<hr>
 					<strong><span style="color: #FF7800">Male</span></strong>: Male suspects above the age of 18.<br>
 					<strong><span style="color: #A600FF">Female</span></strong>: Female suspects above the age of 18.<br>
