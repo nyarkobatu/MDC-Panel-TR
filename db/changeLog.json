@@ -1,4 +1,12 @@
 {
+	"2.4.6": {
+		"id": "2.4.6",
+		"date": "26/OCT/2023",
+		"changes": {
+			"0": "Penal Code - Added the following charges as declared under DCRA and EFCA <strong>127</strong>, <strong>128</strong>, <strong>129</strong>, <strong>130</strong>, <strong>131</strong> (drug charge), <strong>132</strong>, <strong>133</strong>, <strong>134</strong>.",
+			"1": "Paperwork Generators - The arrest reports now no longer require bracelets and wristbands, instead it'll now ask for the prisoner's assignment."
+		}
+	},
 	"2.4.5": {
 		"id": "2.4.5",
 		"date": "15/SEP/2023",

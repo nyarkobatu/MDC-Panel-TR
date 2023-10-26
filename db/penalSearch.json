@@ -1591,6 +1591,444 @@
         },
 		"extra": "N/A"
 	},
+	"127": {
+		"id": "127",
+		"charge": "Violation of EFCE Act - Signal Jamming",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 6,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 4
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+	},
+	"128": {
+		"id": "128",
+		"charge": "Violation of EFCE Act - Card Skimming",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 6,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 4
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+	},
+	"129": {
+		"id": "129",
+		"charge": "Violation of EFCE Act - Vehicle Tracking",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 6
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "N/A"
+	},
+	"130": {
+		"id": "130",
+		"charge": "Rescuing A Prisoner",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 7,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 9,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 4
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "N/A"
+	},
+	"131": {
+		"id": "131",
+		"charge": "Bringing Contraband Into A Correctional Facility",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"A": {
+				"days": 7,
+				"hours": 0,
+				"min": 0
+			},
+			"B": {
+				"days": 6,
+				"hours": 0,
+				"min": 0
+			},
+			"C": {
+				"days": 5,
+				"hours": 0,
+				"min": 0
+			},
+			"D": {
+				"days": 4,
+				"hours": 0,
+				"min": 0
+			},
+			"T": {
+				"days": 1,
+				"hours": 0,
+				"min": 0
+			}
+		},
+        "bail": {
+            "auto": {
+                "A": 2,
+                "B": 2,
+                "C": 2,
+                "D": 2,
+                "T": 2
+            },
+            "cost": {
+                "A": 75000,
+                "B": 47500,
+                "C": 47500,
+                "D": 47500,
+                "T": 47500
+            }
+        },
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 5
+		},
+		"fine": {
+			"A": 45000,
+			"B": 37500,
+			"C": 30000,
+			"D": 22500,
+			"T": 8000
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"extra": "N/A",
+		"drugs": {
+			"1": "A",
+			"2": "B",
+			"3": "C",
+			"4": "D",
+			"5": "T"
+		}
+	},
+	"132": {
+		"id": "132",
+		"charge": "Possession Of Communications In A Correctional Facility",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 0,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 1000,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "N/A"
+	},
+	"133": {
+		"id": "133",
+		"charge": "Possession Of Tobacco In A Correctional Facility",
+		"type": "I",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 0,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 1000,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+	},
+	"134": {
+		"id": "134",
+		"charge": "Possession Of Handcuff Keys In A Correctional Facility",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 1,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 1000,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": 0,
+            "cost": 0            
+        },
+		"extra": "N/A"
+	},
 	"201": {
 		"id": "201",
 		"charge": "Capital Murder",
@@ -1728,7 +2166,7 @@
 	},
 	"204": {
 		"id": "204",
-		"charge": "Manslaughter",
+		"charge": "Voluntary Manslaughter",
 		"type": "F",
 		"class": {
 			"A": true,

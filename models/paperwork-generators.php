@@ -509,8 +509,7 @@ class PaperworkGenerators
 		$optionValue = true;
 
 		switch ($list) {
-			case 'braceletList':
-			case 'wristbandList':
+			case 'prisonAssignmentList':
 				$output = '';
 				$entriesCount = 0;
 				break;
@@ -676,48 +675,36 @@ class PaperworkGenerators
 class ArrestReportGenerator extends PaperworkGenerators
 {
 
-	public function getBracelet($input)
+	public function getPrisonAssignment($input)
 	{
 
 		switch ($input) {
 			case 1:
-				$bracelet = 'White';
-				$color = '#808080';
+				$assignment = 'Male Housing Unit';
+				$color = '#FF7800';
 				break;
 			case 2:
-				$bracelet = 'Orange';
-				$color = '#FF8000';
+				$assignment = 'Female Housing Unit';
+				$color = '#A600FF';
+				break;
+			case 3:
+				$assignment = 'Minor Housing Unit';
+				$color = '#00A0FF';
+				break;
+			case 4:
+				$assignment = 'Solitary Housing Unit';
+				$color = '#FF0000';
+				break;
+			case 4:
+				$assignment = 'Protective Custody';
+				$color = '#FFEC00';
 				break;
 			default:
 				$bracelet = 'UNKNOWN';
 				$color = 'inherit';
 				break;
 		}
-		return '<span style="color: ' . $color . '!important;">' . $bracelet . '</span> Bracelet';
-	}
-
-	public function getWristband($input)
-	{
-
-		switch ($input) {
-			case 1:
-				$wristband = 'Red';
-				$color = '#C80000';
-				break;
-			case 2:
-				$wristband = 'Blue';
-				$color = '#0000C8';
-				break;
-			case 3:
-				$wristband = 'Yellow';
-				$color = '#ffbf40';
-				break;
-			default:
-				$wristband = 'UNKNOWN';
-				$color = 'inherit';
-				break;
-		}
-		return '<span style="color: ' . $color . '!important;">' . $wristband . '</span> Wristband';
+		return 'Assigned to <span style="color: ' . $color . '!important;">' . $assignment . '</span>';
 	}
 
 	public function getPlea($input, $suspect)

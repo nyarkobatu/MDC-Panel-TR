@@ -107,36 +107,21 @@
 				// Form - List - Wristband
 				$c->form('list', 'forms', array(
 					'size' => '4',
-					'label' => '<label>Wristband</label>',
-					'icon' => 'ring',
+					'label' => '<label>Prison Assignment</label>',
+					'icon' => 'trailer',
 					'class' => 'selectpicker',
-					'id' => 'inputWristband',
-					'name' => 'inputWristband',
+					'id' => 'inputPrisonAssignment',
+					'name' => 'inputPrisonAssignment',
 					'attributes' => 'required',
-					'title' => 'Select Wristband',
-					'list' => $pg->listChooser('wristbandList'),
-					'hint' => '<span class="d-block text-center"><strong>N/A</strong>: Only when arresting at Level I Lockups.</span>
+					'title' => 'Select Prison Assignment',
+					'list' => $pg->listChooser('prisonAssignmentList'),
+					'hint' => '<span class="d-block text-center"><strong>N/A</strong>: Only when arresting a suspect in a holding cell at a station (misdemeanors).</span>
 					<hr>
-					<strong><span style="color: rgba(200,0,0,255)">Red Wristband</span></strong>: Violent charges.<br>
-					<strong><span style="color: rgba(0,0,200,255)">Blue Wristband</span></strong>: Non-violent charges.<br>
-					<strong><span style="color: #FFBF40;">Yellow Wristband</span></strong>: Medical related concerns. (Terminally Ill, Contageous Disease, etc).',
-					'hintClass' => 'text-left'
-				));
-				// Form - List - Bracelet
-				$c->form('list', 'forms', array(
-					'size' => '4',
-					'label' => '<label>Bracelet</label>',
-					'icon' => 'ring',
-					'class' => 'selectpicker',
-					'id' => 'inputBracelet',
-					'name' => 'inputBracelet',
-					'attributes' => 'required',
-					'title' => 'Select Bracelet',
-					'list' => $pg->listChooser('braceletList'),
-					'hint' => '<span class="d-block text-center"><strong class="text-center">N/A</strong>: Only when arresting at Level I Lockups.</span>
-					<hr>
-					<strong><span style="color: #808080;">White Bracelet:</span></strong> General inmate population.<br>
-					<strong><span style="color: #FF8000;">Orange Bracelet:</span></strong> Juveniles (Male and Female)<br>',
+					<strong><span style="color: #FF7800">Male</span></strong>: Male suspects above the age of 18.<br>
+					<strong><span style="color: #A600FF">Female</span></strong>: Female suspects above the age of 18.<br>
+					<strong><span style="color: #00A0FF">Minor</span></strong>: Suspects below the age of 18.<br>
+					<strong><span style="color: #FF0000">Solitary Housing Unit</span></strong>: Suspects arrested for additional crimes in prison.<br>
+					<strong><span style="color: #FFEC00">Protective Custody</span></strong>: Suspects that have previously been or are currently employed government officials or suspects that are deemed to have their life at risk.',
 					'hintClass' => 'text-left'
 				));
 				// Form - List - Plea

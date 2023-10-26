@@ -56,7 +56,7 @@
 
     const SITE_LIVE = true;
     const SITE_NAME = 'MDC Panel';
-    const SITE_VERSION = '2.4.5';
+    const SITE_VERSION = '2.4.6';
     const SITE_LOGO = '/images/MDC-Panel.svg';
     const SITE_FAVICON = '/images/MDC-Panel-Favicon.svg';
     const SITE_IMAGE = '/images/MDC-Panel-OG.png';
@@ -99,8 +99,8 @@
     |
     */
 
-    const SPECIAL_NOTIFICATION_COOKIE = 'bail-schedule-outdated-09132023';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'Bail schedule is outdated! I wasn\'t given a headsup :c - It\'ll take some time for me to update it.';
+    const SPECIAL_NOTIFICATION_COOKIE = 'bail-schedule-outdated-26102023';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'Bail schedule is still outdated, it\'s a lot of work and I need to get around to doing it one day.';
 
     /*
     |--------------------------------------------------------------------------
@@ -135,6 +135,6 @@
     |
     */
 
-    const CHARGES_DRUG = [601, 602, 603, 604, 605, 606];
+    const CHARGES_DRUG = [131, 601, 602, 603, 604, 605, 606];
     const CHARGES_TRAFFIC = [401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426];
     const CHARGES_DISABLED = [000, 423];

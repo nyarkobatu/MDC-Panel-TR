@@ -213,8 +213,7 @@ if (isset($_POST['generatorType'])) {
 		$inputNarrative = $_POST['inputNarrative'] ?: 'UNKNOWN NARRATIVE';
 		$inputEvidence = $_POST['inputEvidence'] ?: '';
 		$inputDashcam = $_POST['inputDashcam'] ?: '';
-		$inputWristband = $_POST['inputWristband'] ?: 0;
-		$inputBracelet = $_POST['inputBracelet'] ?: 0;
+		$inputPrisonAssignment = $_POST['inputPrisonAssignment'] ?: 0;
 		$inputPlea = $_POST['inputPlea'] ?: 0;
 
 		$suspectURL = str_replace(' ', '_', $postInputDefName);
@@ -245,12 +244,12 @@ if (isset($_POST['generatorType'])) {
 		$evidence2 = (empty($inputEvidence)) ? 'N/A' : '[b]Supporting Evidence[/b]: ' . ($inputEvidence);
 		$dashboard = (empty($inputDashcam)) ? '' : '<br><br><u><strong>Dashboard Camera:</strong></u><br>' . $pg->getDashboardCamera($inputDashcam);
 
-		// Wristband & Bracelet Resolver
-		$wristbandBracelet = '';
-		if ($inputWristband != 0 || $inputBracelet != 0) {
-			$wristbandBracelet = '<u><strong>Processing Details:</strong></u><br><strong>' . $ar->getBracelet($inputBracelet) . ' & ' . $ar->getWristband($inputWristband) . '</strong>.';
+		// Processing Details Resolver
+		$processingDetails = '';
+		if ($inputPrisonAssignment != 0) {
+			$processingDetails = '<u><strong>Processing Details:</strong></u><br><strong>' . $ar->getPrisonAssignment($inputPrisonAssignment) . '</strong>.';
 		}
-		$processingBands = '<br><br>' . $wristbandBracelet . '<br>';
+		$processingDetails = '<br><br>' . $processingDetails . '<br>';
 
 		// Plea Resolver
 		$plea = $ar->getPlea($inputPlea, $postInputDefName);
@@ -266,7 +265,7 @@ if (isset($_POST['generatorType'])) {
 		// Report Builder
 		$redirectPath = redirectPath(1);
 		$generatedReportType = 'Arrest Report';
-		$generatedReport = $officers . 'under the callsign ' . $callsign . ' on the ' . $datetime . '. Conducted an arrest on ' . $suspect . ', the apprehension took place on ' . $location . $narrative . $evidence . $dashboard . $processingBands . $plea;
+		$generatedReport = $officers . 'under the callsign ' . $callsign . ' on the ' . $datetime . '. Conducted an arrest on ' . $suspect . ', the apprehension took place on ' . $location . $narrative . $evidence . $dashboard . $processingDetails . $plea;
 		$showGeneratedArrestChargeTables = $_SESSION['showGeneratedArrestChargeTables'];
 		$generatedArrestChargeList = $_SESSION['generatedArrestChargeList'];
 		$generatedArrestChargeTotals = $_SESSION['generatedArrestChargeTotals'];
