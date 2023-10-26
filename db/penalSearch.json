@@ -40,7 +40,7 @@
 		},
         "bail": {
             "auto": 0,
-            "cost": 0            
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -89,8 +89,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Required Court Case"
 	},
@@ -139,8 +139,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Required Court Case"
 	},
@@ -189,8 +189,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Required Court Case"
 	},
@@ -240,8 +240,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 10000            
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -290,8 +290,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 6000            
+            "auto": true,
+            "cost": 60000
         },
 		"extra": "N/A"
 	},
@@ -340,8 +340,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 40000            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -390,8 +390,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 20000            
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	},
@@ -440,8 +440,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 30000            
+            "auto": true,
+            "cost": 300000
         },
 		"extra": "N/A"
 	},
@@ -490,8 +490,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 15000            
+            "auto": true,
+            "cost": 150000
         },
 		"extra": "N/A"
 	},
@@ -540,8 +540,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 5000           
+            "auto": true,
+            "cost": 50000
         },
 		"extra": "N/A"
 	},
@@ -590,8 +590,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 15000            
+            "auto": true,
+            "cost": 150000
         },
         
 		"extra": "N/A"
@@ -641,8 +641,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": 2,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -686,8 +686,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 7000            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "This offense will go through a court case by mandatory requirement only if applied for bail violations."
 	},
@@ -736,8 +736,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 8000            
+            "auto": true,
+            "cost": 80000
         },
 		"extra": "N/A"
 	},
@@ -786,8 +786,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 25000            
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "N/A"
 	},
@@ -836,8 +836,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 25000            
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -886,8 +886,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 25000            
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -936,8 +936,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -987,7 +987,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 60000            
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -1036,8 +1036,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 5000            
+            "auto": true,
+            "cost": 50000
         },
 		"extra": "N/A"
 	},
@@ -1086,8 +1086,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 15000            
+            "auto": true,
+            "cost": 150000
         },
 		"extra": "N/A"
 	},
@@ -1136,8 +1136,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0            
+            "auto": true,
+            "cost": 90000
         },
 		"extra": "N/A"
 	},
@@ -1186,8 +1186,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 15000            
+            "auto": true,
+            "cost": 150000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -1236,8 +1236,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": 2,
+            "cost": 500000 
         },
 		"extra": "N/A"
 	},
@@ -1286,8 +1286,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000            
+            "auto": false,
+            "cost": 350000
         },
 		"extra": "N/A"
 	},
@@ -1336,8 +1336,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -1386,8 +1386,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -1436,8 +1436,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -1486,8 +1486,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0            
+            "auto": true,
+            "cost": 350000
         },
 		"extra": "N/A"
 	},
@@ -1536,8 +1536,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 5000            
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -1586,8 +1586,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": 2,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -1636,8 +1636,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -1686,8 +1686,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -1736,8 +1736,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -1786,8 +1786,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -1834,18 +1834,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 2,
-                "B": 2,
-                "C": 2,
-                "D": 2,
-                "T": 2
+                "A": false,
+                "B": false,
+                "C": false,
+                "D": false,
+                "T": false
             },
             "cost": {
-                "A": 75000,
-                "B": 47500,
-                "C": 47500,
-                "D": 47500,
-                "T": 47500
+                "A": 0,
+                "B": 0,
+                "C": 0,
+                "D": 0,
+                "T": 0
             }
         },
 		"points": {
@@ -1924,8 +1924,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -1974,8 +1974,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -2024,8 +2024,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -2069,10 +2069,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
-		"extra": "(( This will go through court case by mandatory requirement in the event of a Character Kill (CK) ))"
+		"extra": "(( CK = Required Case ))"
 	},
 	"202": {
 		"id": "202",
@@ -2114,10 +2114,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
+            "auto": false,
             "cost": 0            
         },
-		"extra": "(( This will go through court case by mandatory requirement in the event of a Character Kill (CK) ))"
+		"extra": "(( CK = Required Case ))"
 	},
 	"203": {
 		"id": "203",
@@ -2159,10 +2159,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
-		"extra": "(( This will go through court case by mandatory requirement in the event of a Character Kill (CK) ))"
+		"extra": "(( CK = Required Case ))"
 	},
 	"204": {
 		"id": "204",
@@ -2209,8 +2209,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0    
         },
 		"extra": "N/A"
 	},
@@ -2259,8 +2259,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": 2,
+            "cost": 1500000
         },
 		"extra": "N/A"
 	},
@@ -2309,8 +2309,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 20000            
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	},
@@ -2360,7 +2360,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 35000            
+            "cost": 750000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -2409,8 +2409,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 15000            
+            "auto": true,
+            "cost": 150000
         },
 		"extra": "N/A"
 	},
@@ -2459,10 +2459,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": 2,
+            "cost": 600000
         },
-		"extra": ""
+		"extra": "N/A"
 	},
 	"210": {
 		"id": "210",
@@ -2504,8 +2504,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -2549,8 +2549,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -2599,8 +2599,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 75000            
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -2644,8 +2644,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -2694,8 +2694,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 0            
+            "auto": true,
+            "cost": 500000
         },
 		"extra": ""
 	},
@@ -2744,8 +2744,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000            
+            "auto": true,
+            "cost": 600000
         },
 		"extra": "N/A"
 	},
@@ -2794,8 +2794,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 50000            
+            "auto": true,
+            "cost": 800000
         },
 		"extra": "N/A"
 	},
@@ -2844,10 +2844,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
-		"extra": "This offense is on the Penal Code for strictly IC purposes. Considering the server rules banning such offenses, actual enforcement/prosecution of this charge shall be forbidden."
+		"extra": "N/A"
 	},
 	"218": {
 		"id": "218",
@@ -2894,10 +2894,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
-		"extra": "This offense is on the Penal Code for strictly IC purposes. Considering the server rules banning such offenses, actual enforcement/prosecution of this charge shall be forbidden."
+		"extra": "N/A"
 	},
 	"219": {
 		"id": "219",
@@ -2944,8 +2944,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0            
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -2994,8 +2994,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0            
+            "auto": true,
+            "cost": 50000
         },
 		"extra": "N/A"
 	},
@@ -3045,7 +3045,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 40000            
+            "cost": 120000
         },
 		"extra": "N/A"
 	},
@@ -3090,9 +3090,9 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 120000            
+            "cost": 200000
         },
-		"extra": "BAIL IS $20,000 TO $120,000 DEPENDING ON DAMAGE"
+		"extra": "N/A"
 	},
 	"302": {
 		"id": "302",
@@ -3139,8 +3139,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 40000            
+            "auto": true,
+            "cost": 400000
         },
 		"extra": "N/A"
 	},
@@ -3190,7 +3190,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 45000            
+            "cost": 450000
         },
 		"extra": "N/A"
 	},
@@ -3239,8 +3239,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 20000            
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	},
@@ -3289,8 +3289,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0           
+            "auto": true,
+            "cost": 25000
         },
 		"extra": "N/A"
 	},
@@ -3339,8 +3339,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 30000         
+            "auto": true,
+            "cost": 300000
         },
 		"extra": "N/A"
 	},
@@ -3389,8 +3389,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 40000            
+            "auto": true,
+            "cost": 400000
         },
 		"extra": "N/A"
 	},
@@ -3439,8 +3439,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 50000
         },
 		"extra": "N/A"
 	},
@@ -3489,8 +3489,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -3539,8 +3539,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -3589,8 +3589,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -3639,8 +3639,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000         
+            "auto": true,
+            "cost": 3500000
         },
 		"extra": "N/A"
 	},
@@ -3690,7 +3690,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 35000         
+            "cost": 35000
         },
 		"extra": "N/A"
 	},
@@ -3739,8 +3739,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 60000
         },
 		"extra": "N/A"
 	},
@@ -3789,8 +3789,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -3839,8 +3839,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 40000         
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	},
@@ -3889,8 +3889,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 20000         
+            "auto": true,
+            "cost": 400000
         },
 		"extra": "N/A"
 	},
@@ -3939,10 +3939,10 @@
 			"3": 3
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 80000
         },
-		"extra": "Refer to Judiciary for Sentencing Enhancements"
+		"extra": "N/A"
 	},
 	"405": {
 		"id": "405",
@@ -4112,8 +4112,8 @@
 			"3": 7
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -4279,7 +4279,7 @@
 			"2": 0,
 			"3": 0
 		},
-		"extra": "(( Tints of Level 1 and 2 are considered illegal, unless stated otherwise by exemption laws. )) "
+		"extra": "N/A"
 	},
 	"413": {
 		"id": "413",
@@ -4321,8 +4321,8 @@
 			"3": 7
 		},
         "bail": {
-            "auto": 2,
-            "cost": 20000         
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -4371,8 +4371,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 50000         
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -4421,8 +4421,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 60000         
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -4676,8 +4676,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 50000         
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -4726,8 +4726,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 110000         
+            "auto": true,
+            "cost": 1250000
         },
 		"extra": "N/A"
 	},
@@ -4776,10 +4776,10 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 80000         
+            "auto": true,
+            "cost": 800000
         },
-		"extra": "(( Charge is currently suspended. DO NOT charge this on any person. )) "
+		"extra": "(( Charge is suspended. ))"
 	},
 	"424": {
 		"id": "424",
@@ -4826,8 +4826,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0         
+            "auto": 2,
+            "cost": 4000000
         },
 		"extra": "N/A"
 	},
@@ -4958,8 +4958,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 30000         
+            "auto": true,
+            "cost": 300000
         },
 		"extra": "N/A"
 	},
@@ -5008,8 +5008,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 20000         
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	},
@@ -5058,8 +5058,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 15000         
+            "auto": true,
+            "cost": 150000
         },
 		"extra": "N/A"
 	},
@@ -5108,8 +5108,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 40000         
+            "auto": true,
+            "cost": 400000
         },
 		"extra": "N/A"
 	},
@@ -5158,8 +5158,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0         
+            "auto": 2,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -5208,8 +5208,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 45000         
+            "auto": true,
+            "cost": 450000
         },
 		"extra": "N/A"
 	},
@@ -5258,8 +5258,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 45000         
+            "auto": true,
+            "cost": 450000
         },
 		"extra": "N/A"
 	},
@@ -5308,8 +5308,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0         
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -5358,8 +5358,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 0,
-            "cost": 0         
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "N/A"
 	},
@@ -5408,8 +5408,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 80000
         },
 		"extra": "N/A"
 	},
@@ -5458,8 +5458,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 50000
         },
 		"extra": "N/A"
 	},
@@ -5508,8 +5508,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 50000         
+            "auto": true,
+            "cost": 50000
         },
 		"extra": "N/A"
 	},
@@ -5556,18 +5556,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 2,
-                "B": 2,
-                "C": 2,
-                "D": 2,
-                "T": 2
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 75000,
-                "B": 47500,
-                "C": 47500,
-                "D": 47500,
-                "T": 47500
+                "A": 750000,
+                "B": 475000,
+                "C": 475000,
+                "D": 475000,
+                "T": 475000
             }
         },
 		"points": {
@@ -5644,18 +5644,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 1,
-                "B": 1,
-                "C": 1,
-                "D": 1,
-                "T": 1
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 15000,
-                "B": 10000,
-                "C": 6500,
-                "D": 0,
-                "T": 0
+                "A": 150000,
+                "B": 100000,
+                "C": 60000,
+                "D": 35000,
+                "T": 20000
             }
         },
 		"points": {
@@ -5732,18 +5732,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 1,
-                "B": 1,
-                "C": 1,
-                "D": 1,
-                "T": 1
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 25000,
-                "B": 15000,
-                "C": 8000,
-                "D": 5000,
-                "T": 3500
+                "A": 250000,
+                "B": 150000,
+                "C": 80000,
+                "D": 50000,
+                "T": 30000
             }
         },
 		"points": {
@@ -5820,18 +5820,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 1,
-                "B": 1,
-                "C": 1,
-                "D": 1,
-                "T": 1
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 35000,
-                "B": 25000,
-                "C": 16000,
-                "D": 10000,
-                "T": 7000
+                "A": 350000,
+                "B": 250000,
+                "C": 160000,
+                "D": 100000,
+                "T": 70000
             }
         },
 		"points": {
@@ -5908,18 +5908,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 2,
-                "B": 1,
-                "C": 1,
-                "D": 1,
-                "T": 1
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 40000,
-                "B": 25000,
-                "C": 15000,
-                "D": 10000,
-                "T": 8000
+                "A": 400000,
+                "B": 250000,
+                "C": 150000,
+                "D": 100000,
+                "T": 80000
             }
         },
 		"points": {
@@ -5996,18 +5996,18 @@
 		},
         "bail": {
             "auto": {
-                "A": 1,
-                "B": 1,
-                "C": 1,
-                "D": 1,
-                "T": 1
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 50000,
-                "B": 30000,
-                "C": 25000,
-                "D": 15000,
-                "T": 10000
+                "A": 500000,
+                "B": 300000,
+                "C": 250000,
+                "D": 150000,
+                "T": 100000
             }
         },
 		"points": {
@@ -6081,8 +6081,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 25000
         },
 		"extra": "N/A"
 	},
@@ -6132,8 +6132,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000         
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	},
@@ -6182,8 +6182,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -6226,10 +6226,6 @@
 			"2": 0,
 			"3": 0
 		},
-        "bail": {
-            "auto": 2,
-            "cost": 0         
-        },
 		"extra": "N/A"
 	},
 	"612": {
@@ -6312,6 +6308,10 @@
 			"2": 0,
 			"3": 0
 		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
 		"extra": "N/A"
 	},
 	"701": {
@@ -6359,8 +6359,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 50000         
+            "auto": true,
+            "cost": 400000
         },
 		"extra": "N/A"
 	},
@@ -6409,8 +6409,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 40000         
+            "auto": true,
+            "cost": 400000
         },
 		"extra": "N/A"
 	},
@@ -6459,8 +6459,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 45000         
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -6510,7 +6510,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 40000         
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -6559,8 +6559,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 50000         
+            "auto": true,
+            "cost": 800000
         },
 		"extra": "N/A"
 	},
@@ -6609,8 +6609,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 35000         
+            "auto": true,
+            "cost": 350000
         },
 		"extra": "N/A"
 	},
@@ -6659,8 +6659,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 15000         
+            "auto": true,
+            "cost": 350000
         },
 		"extra": "N/A"
 	},
@@ -6709,8 +6709,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 20000         
+            "auto": true,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -6759,8 +6759,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 25000         
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "N/A"
 	},
@@ -6809,8 +6809,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 0         
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -6859,8 +6859,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 50000         
+            "auto": true,
+            "cost": 800000
         },
 		"extra": "N/A"
 	},
@@ -6909,8 +6909,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 1,
-            "cost": 20000         
+            "auto": true,
+            "cost": 200000
         },
 		"extra": "N/A"
 	}

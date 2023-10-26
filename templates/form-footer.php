@@ -56,6 +56,28 @@
 			});
 		})
 
+		// Charging Guidelines Dropdown
+		$('#guidelineBailDropdown').on('toggle', function() {
+			let openBailStatus = 0;
+			if($('#guidelineBailDropdown').prop('open')){
+				openBailStatus = 1;
+			} else {
+				openBailStatus = 0;
+			}
+
+			$.ajax({
+				type: "POST",
+				url: "/controllers/form-processor.php",
+				data: {
+					openBailStatus: openBailStatus
+				},
+				dataType: "text",
+				success: function (response) {
+					
+				}
+			});
+		})
+
 		// Traffic Report & Arrest Report Generators
 
 			//  Traffic Report & Arrest Report Generators - Dynamic Crime Selector

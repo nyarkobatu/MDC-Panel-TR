@@ -1,4 +1,11 @@
 {
+	"2.4.7": {
+		"id": "2.4.7",
+		"date": "26/OCT/2023",
+		"changes": {
+			"0": "Paperwork Generators - Added automatic bail condition calculations to arrest reports."
+		}
+	},
 	"2.4.6": {
 		"id": "2.4.6",
 		"date": "26/OCT/2023",
