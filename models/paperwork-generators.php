@@ -700,7 +700,7 @@ class ArrestReportGenerator extends PaperworkGenerators
 				$color = '#FFEC00';
 				break;
 			default:
-				$bracelet = 'UNKNOWN';
+				$assignment = 'UNKNOWN';
 				$color = 'inherit';
 				break;
 		}
