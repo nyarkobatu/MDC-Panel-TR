@@ -155,7 +155,7 @@ The bail/bond cost is <strong>not</strong> the total cost of all charges as that
 						<?php if($bailState == "NOT ELIGIBLE") { ?>
 						<ol>
 							<li>Please inform the suspect that they are <?php echo($bailStatusFull) ?> for bail or bond conditions and if they wish to proceed with the arrest.</li>
-							<textarea class="form-control textboxRP" readonly="">/b Your charges unfortunately make you not eligible for bail/bond conditions which means you will be arrested pending your forum court case, do you wish to proceed?</textarea>
+							<textarea class="form-control textboxRP" readonly="">/b Your charges unfortunately make you not eligible for automatic bail/bond conditions which means you will be arrested pending your forum court case, you may be offered bail by a judge on the forums, do you wish to proceed?</textarea>
 							<li>Afterwards, if they answer in the affirmative, you are to arrest them for <strong>9999</strong> days.</li>
 							<li>Get the suspect's forum name and discord name before proceeding to submit the arrest report.</li>
 						</ol>
