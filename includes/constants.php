@@ -100,7 +100,7 @@
     */
 
     const SPECIAL_NOTIFICATION_COOKIE = 'dsk22-30102023';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'Rest in peace DSK22, you will always be honored and missed ❤️.';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'Rest in peace DSK22, you will always be honored and missed ❤️';
 
     /*
     |--------------------------------------------------------------------------
