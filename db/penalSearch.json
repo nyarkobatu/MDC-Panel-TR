@@ -1636,8 +1636,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": true,
+            "cost": 75000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -1686,8 +1686,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": true,
+            "cost": 75000
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -1736,8 +1736,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": true,
+            "cost": 75000
         },
 		"extra": "N/A"
 	},
@@ -1786,8 +1786,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": 2,
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -1834,18 +1834,18 @@
 		},
         "bail": {
             "auto": {
-                "A": false,
-                "B": false,
-                "C": false,
-                "D": false,
-                "T": false
+                "A": true,
+                "B": true,
+                "C": true,
+                "D": true,
+                "T": true
             },
             "cost": {
-                "A": 0,
-                "B": 0,
-                "C": 0,
-                "D": 0,
-                "T": 0
+                "A": 250000,
+                "B": 250000,
+                "C": 250000,
+                "D": 250000,
+                "T": 250000
             }
         },
 		"points": {
@@ -1924,8 +1924,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "N/A"
 	},
@@ -2024,8 +2024,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": true,
+            "cost": 250000
         },
 		"extra": "N/A"
 	},
