@@ -86,7 +86,7 @@
 			$c->form('options', 'forms', array(
 				'size' => '3',
 				'label' => '<label>Options</label>',
-				'action' => 'addCitation',
+				'action' => 'addCharge',
 				'colour' => 'success',
 				'icon' => 'fa-plus-square',
 				'text' => 'Charge'
