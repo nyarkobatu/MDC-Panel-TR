@@ -223,7 +223,7 @@
 ?>
 
 <!-- COPY SLOT - Charge -->
-<div class="container copyGroupSlotCitation" style="display: none;">
+<div class="container copyGroupSlotCharge" style="display: none;">
 <?php
 	// Form - List - Charge
 	$c->form('list', 'forms', array(
