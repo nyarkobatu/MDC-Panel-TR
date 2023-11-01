@@ -52,7 +52,7 @@
 		?>
 		<hr>
 		<h4><i class="fas fa-fw fa-gavel mr-2"></i>Suspected Crimes</h4>
-		<div class="form-row groupSlotCitation crimeSelectorGroup">
+		<div class="form-row groupSlotCharge crimeSelectorGroup">
 		<?php
 			// Form - List - Citation
 			$c->form('list', 'forms', array(
