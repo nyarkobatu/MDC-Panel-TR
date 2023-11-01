@@ -257,7 +257,7 @@
 	$c->form('options', 'forms', array(
 		'size' => '3',
 		'label' => '',
-		'action' => 'removeCitation',
+		'action' => 'removeCharge',
 		'colour' => 'danger',
 		'icon' => 'fa-minus-square',
 		'text' => 'Citation'
