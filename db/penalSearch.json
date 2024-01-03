@@ -2029,6 +2029,206 @@
         },
 		"extra": "N/A"
 	},
+	"135": {
+		"id": "135",
+		"charge": "Murder of a Peace Officer Canine",
+		"type": "F",
+		"class": {
+			"A": true,
+			"B": false,
+			"C": false
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 7,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 7,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 15,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"136": {
+		"id": "136",
+		"charge": "Aggravated Battery of a Peace Officer Canine",
+		"type": "F",
+		"class": {
+			"A": true,
+			"B": false,
+			"C": false
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 2,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 2,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 4,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"137": {
+		"id": "137",
+		"charge": "Battery of a Peace Officer Canine",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": true,
+			"C": false
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 6,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 0,
+			"hours": 6,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"138": {
+		"id": "138",
+		"charge": "Obstruction of a Peace Officer Canine",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 0,
+			"min": 25
+		},
+		"maxtime": {
+			"days": 0,
+			"hours": 0,
+			"min": 25
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 2500,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
 	"201": {
 		"id": "201",
 		"charge": "Capital Murder",
@@ -6911,6 +7111,56 @@
         "bail": {
             "auto": true,
             "cost": 200000
+        },
+		"extra": "N/A"
+	},
+	"713": {
+		"id": "713",
+		"charge": "Possession Of Deadly Weapons In A Correctional Facility",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 7,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 9,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 4
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	}
