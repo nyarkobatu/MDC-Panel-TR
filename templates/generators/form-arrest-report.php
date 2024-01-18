@@ -120,8 +120,8 @@
 					<strong><span style="color: #FF7800">Male</span></strong>: Male suspects above the age of 18.<br>
 					<strong><span style="color: #A600FF">Female</span></strong>: Female suspects above the age of 18.<br>
 					<strong><span style="color: #00A0FF">Minor</span></strong>: Suspects below the age of 18.<br>
-					<strong><span style="color: #FF0000">Solitary Housing Unit</span></strong>: Suspects arrested for additional crimes in prison.<br>
-					<strong><span style="color: #FFEC00">Protective Custody</span></strong>: Suspects that have previously been or are currently employed government officials or suspects that are deemed to have their life at risk.',
+					<strong><span style="color: #FF0000">Solitary Housing Unit</span></strong>: Suspects arrested for additional crimes in prison.<br> 
+					<strong><span style="color: #FFEC00">Protective Custody</span></strong>: Suspects that have previously been or are currently employed government officials or suspects that are deemed to have their life at risk. Also suspects with an INDEF-PC caution tag.',
 					'hintClass' => 'text-left'
 				));
 				// Form - List - Plea
