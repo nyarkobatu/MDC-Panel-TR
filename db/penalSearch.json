@@ -741,12 +741,12 @@
         },
 		"extra": "N/A"
 	},
-	"112": {
-		"id": "112",
-		"charge": "Obstruction of Public Duty",
+	"112F": {
+		"id": "112F",
+		"charge": "Obstruction of Public Duty (Felony)",
 		"type": "F",
 		"class": {
-			"A": false,
+			"A": true,
 			"B": true,
 			"C": false
 		},
@@ -756,17 +756,17 @@
 			"3": false
 		},
 		"time": {
-			"days": 1,
+			"days": 0,
 			"hours": 0,
-			"min": 0
+			"min": 25
 		},
 		"maxtime": {
-			"days": 4,
-			"hours": 0,
+			"days": 0,
+			"hours": 4,
 			"min": 0
 		},
 		"points": {
-			"A": 0,
+			"A": 4,
 			"B": 3,
 			"C": 0
 		},
@@ -789,7 +789,57 @@
             "auto": true,
             "cost": 250000
         },
-		"extra": "N/A"
+		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+	},
+	"112M": {
+		"id": "112M",
+		"charge": "Obstruction of Public Duty (Misdemeanor)",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 0,
+			"min": 25
+		},
+		"maxtime": {
+			"days": 0,
+			"hours": 0,
+			"min": 25
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": true,
+            "cost": 250000
+        },
+		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
 	"113M": {
 		"id": "113M",
