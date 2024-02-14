@@ -28,11 +28,14 @@ Division Chief
 Assistant Sheriff
 Undersheriff
 Sheriff
-Probationary Fire Marshal
-Fire Marshal
-Senior Fire Marshal
-Deputy Chief Fire Marshal
-Chief Fire Marshal
+Deputy Fire Marshal Trainee
+Deputy Fire Marshal
+Deputy Fire Marshal II
+Deputy Fire Marshal III
+Division Chief
+Assistant State Fire Marshal
+State Fire Marshal
+Director
 Cadet
 Ranger
 Senior Ranger

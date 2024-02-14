@@ -1,4 +1,11 @@
 {
+	"2.4.8": {
+		"id": "2.4.8",
+		"date": "14/FEB/2024",
+		"changes": {
+			"0": "General - Updated the SFM ranks so it's up-to-date."
+		}
+	},
 	"2.4.7": {
 		"id": "2.4.7",
 		"date": "26/OCT/2023",

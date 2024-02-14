@@ -56,7 +56,7 @@
 
     const SITE_LIVE = true;
     const SITE_NAME = 'MDC Panel';
-    const SITE_VERSION = '2.4.7';
+    const SITE_VERSION = '2.4.8';
     const SITE_LOGO = '/images/MDC-Panel.svg';
     const SITE_FAVICON = '/images/MDC-Panel-Favicon.svg';
     const SITE_IMAGE = '/images/MDC-Panel-OG.png';
@@ -114,13 +114,13 @@
     const FACTIONS = [
 		"LSPD" => ["name" => "Los Santos Police Department", "ranks" => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]],
 		"LSSD" => ["name" => "Los Santos Sheriff's Department", "ranks" => [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]],
-		"SFM" => ["name" => "State Fire Marshal", "ranks" => [30, 31, 32, 33, 34]],
-		"SAPR" => ["name" => "San Andreas State Parks", "ranks" => [35, 36, 37, 38, 39, 40, 41, 42, 43, 44]],
-		"LSPE" => ["name" => "Los Santos Parking Enforcement", "ranks" => [45, 46, 47]],
-		"SAAA" => ["name" => "San Andreas Aviation Administration", "ranks" => [48, 49, 50]],
-		"LSDA" => ["name" => "Los Santos District Attorney's Office", "ranks" => [52, 53, 54, 55]],
-		"JSA" => ["name" => "Judiciary of San Andreas", "ranks" => [56, 57, 58, 59, 60, 61]],
-		"SADOC" => ["name" => "San Andreas Department of Corrections", "ranks" => [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]],
+		"SFM" => ["name" => "State Fire Marshal", "ranks" => [30, 31, 32, 33, 34, 35, 36, 37]],
+		"SAPR" => ["name" => "San Andreas State Parks", "ranks" => [38, 39, 40, 41, 42, 43, 44, 45, 46, 47]],
+		"LSPE" => ["name" => "Los Santos Parking Enforcement", "ranks" => [48, 49, 50]],
+		"SAAA" => ["name" => "San Andreas Aviation Administration", "ranks" => [51, 52, 53]],
+		"LSDA" => ["name" => "Los Santos District Attorney's Office", "ranks" => [55, 56, 57, 58]],
+		"JSA" => ["name" => "Judiciary of San Andreas", "ranks" => [59, 60, 61, 62, 63, 64]],
+		"SADOC" => ["name" => "San Andreas Department of Corrections", "ranks" => [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78]],
 	];
 
     const FACTIONS_LEO = ["LSPD", "LSSD", "SFM", "SAPR", "SADOC", "SAAA"];
