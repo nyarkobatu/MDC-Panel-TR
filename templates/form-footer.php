@@ -128,7 +128,7 @@
 			// Traffic Report & Arrest Report Generators - Officers Slots
 			(function() {
 				
-				let $maxSlots = 4;
+				let $maxSlots = 500;
 				let $group = '.groupSlotOfficer';
 				let $class = $group.replace('.', '');
 				let $add = '.addOfficer';
