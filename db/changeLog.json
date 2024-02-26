@@ -1,4 +1,11 @@
 {
+	"2.4.9": {
+		"id": "2.4.9",
+		"date": "26/FEB/2024",
+		"changes": {
+			"0": "Paperwork Generators - Created a new private and internal SEB Incident Log generator."
+		}
+	},
 	"2.4.8": {
 		"id": "2.4.8",
 		"date": "14/FEB/2024",
