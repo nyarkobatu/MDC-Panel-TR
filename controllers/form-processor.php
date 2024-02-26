@@ -392,8 +392,9 @@ if (isset($_POST['generatorType'])) {
 		// Officer Resolver
 		$officers = '';
 		foreach ($postInputNameArray as $iOfficer => $officer) {
-			$officers .= resolverOfficerBB($officer, $postInputRankArray[$iOfficer]);
+			$officers .= resolverOfficerList($officer, $postInputRankArray[$iOfficer]);
 		}
+
 	
 		// Report Builder
 		$redirectPath = redirectPath(2);
@@ -1471,4 +1472,12 @@ function resolverOfficerBB($name, $rank)
 	global $pg;
 
 	return $pg->getRank($rank) . ' ' . $name . ', ';
+}
+
+function resolverOfficerList($name, $rank)
+{
+
+	global $pg;
+
+	return '[*] ' . $pg->getRank($rank) . ' ' . $name . ' ';
 }
