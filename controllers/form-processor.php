@@ -374,6 +374,79 @@ if (isset($_POST['generatorType'])) {
 		$generatedReport = str_replace('				', '', $generatedReport);
 	}
 
+	if ($generatorType == 'SEBIncidentLog') {
+
+		// Variables
+		$inputDateTime = strtoupper($_POST['inputDateTime']) ?: '';
+		$inputActivationNumber = strtoupper($_POST['inputActivationNumber']) ?: '';
+		$inputIncidentType = strtoupper($_POST['inputIncidentType']) ?: '';
+		$inputRequestingUnit = strtoupper($_POST['inputRequestingUnit']) ?: '';
+		$inputAuthorizedBy = strtoupper($_POST['inputAuthorizedBy']) ?: '';
+	
+		$inputIncidentCommander = $_POST['inputIncidentCommander'] ?: 'N/A';
+		$inputTeamCommander = $_POST['inputTeamCommander'] ?: 'N/A';
+		$inputTeamLeader = $_POST['inputTeamLeader'] ?: '';
+	
+		$inputNarrative = $_POST['inputNarrative'] ?: '';
+
+		// Officer Resolver
+		$officers = '';
+		foreach ($postInputNameArray as $iOfficer => $officer) {
+			$officers .= resolverOfficerBB($officer, $postInputRankArray[$iOfficer]);
+		}
+	
+		// Report Builder
+		$redirectPath = redirectPath(2);
+		$generatedReportType = 'SEB Incident Log';
+		$generatedThreadURL = 'https://lssd.gta.world/viewforum.php?f=456';
+		$generatedThreadTitle = '[IL#'. $inputActivationNumber .'] ' . strtoupper($postInputStreet) . ', ' . $inputIncidentType;
+		$generatedReport = '
+	[hr][/hr]
+	[center][b][size=125]LOS SANTOS COUNTY SHERIFF\'S DEPARTMENT
+	SPECIAL ENFORCEMENT BUREAU[/size][/b]
+	[size=110]SPECIAL WEAPONS TEAM INCIDENT LOG[/size][/center]
+	[hr][/hr]
+	[divbox=black][color=white][b][center]INCIDENT INFORMATION[/center][/b][/color][/divbox]
+	[table=Arial][tr]
+	[td][b]DATE & TIME:[/b][/td]
+	[td][b]S.E.B. ACTIVATION NO.:[/b][/td]
+	[td][b]LOCATION:[/b][/td]
+	[/tr]
+	[tr]
+	[td]' . $inputDateTime . '[/td]
+	[td]' . $inputActivationNumber . '[/td]
+	[td]' . strtoupper($postInputStreet) . ', ' . strtoupper($postInputDistrict) . '[/td]
+	[/tr]
+	[tr]
+	[td][b]TYPE OF INCIDENT:[/b][/td]
+	[td][b]STATION/UNIT REQUESTING:[/b][/td]
+	[td][b]AUTHORIZED BY:[/b][/td]
+	[/tr]
+	[tr]
+	[td]' . $inputIncidentType . '[/td]
+	[td]' . $inputRequestingUnit . '[/td]
+	[td]' . $inputAuthorizedBy . '[/td]
+	[/tr][/table]
+	
+	[divbox=black][color=white][b][center]PERSONNEL[/center][/b][/color][/divbox]
+	[divbox=white][center][size=85][b]PERSONNEL LOG[/b][/size][/center]
+	[size=85][u][b]FIELD/SEB COMMAND[/b][/u]
+	[list]
+	[*][b]Incident Commander:[/b] ' . $inputIncidentCommander . '
+	[*][b]Team Commander:[/b] ' . $inputTeamCommander . '
+	[*][b]Team Leader:[/b] ' . $inputTeamLeader . '
+	[/list]
+	[u][b]RESPONDING PERSONNEL[/b][/u]
+	[list]' . $officers . '[/list][/size]
+	[/divbox]
+	
+	[divbox=black][color=white][b][center]NARRATIVE[/center][/b][/color][/divbox]
+	[divbox=white][center][size=85][b]INCIDENT NARRATIVE & EXTERNAL REFERENCES[/b][/size][/center]
+	[size=85]' . $inputNarrative . '[/size][/divbox]
+		';
+		$generatedReport = str_replace('	', '', $generatedReport);
+	}	
+
 	if ($generatorType == 'IncidentReport') {
 
 		// Variables

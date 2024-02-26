@@ -44,7 +44,7 @@
 			break;
 		case '/paperwork-generators/lspd/uof-report':
 				$url = "/templates/generators/lspd/form-uof-report.php";
-				break;
+			break;
 		case '/paperwork-generators/parking-ticket':
 			$url = "/templates/generators/form-parking-ticket.php";
 			break;
@@ -62,6 +62,9 @@
 			break;
 		case '/paperwork-generators/lssd/incident-report':
 			$url = "/templates/generators/lssd/form-incident-report.php";
+			break;
+		case '/paperwork-generators/lssd/seb-log':
+			$url = "/templates/generators/lssd/form-seb-log.php";
 			break;
 		case '/paperwork-generators/lssd/uof-report':
 			$url = "/templates/generators/lssd/form-uof-report.php";

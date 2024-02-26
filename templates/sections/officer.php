@@ -6,11 +6,15 @@
 		$array = '[]';
 	}
 
-	if(!isset($faction)) $faction = "all"
+	if(!isset($faction)) $faction = "all";
+
+	$title = "Officer";
+
+	if($faction == "LSSD") $title = "Deputy";
 
 ?>
 <hr>
-<h4 class="mb-2"><i class="fas fa-fw fa-user-shield mr-2"></i>Officer Section</h4>
+<h4 class="mb-2"><i class="fas fa-fw fa-user-shield mr-2"></i><?php echo $title; ?> Section</h4>
 <div class="form-row groupSlotOfficer">
 	<?php
 		// Form - Textfield - Officer's Name
