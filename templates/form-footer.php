@@ -368,6 +368,8 @@
 					} else {
 						maxSlots($maxSlots);
 					}
+
+					$('#drugCatMessage').css("display", "block")
 				});
 				$('body').on('click', $remove, function() { 
 					$(this).parents($group).remove();

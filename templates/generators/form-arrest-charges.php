@@ -1,6 +1,14 @@
 <div class="container" data-aos="fade-in" data-aos-duration="500" data-aos-delay="250">
 	<h1><i class="fas fa-fw fa-gavel mr-2"></i>Arrest Charges Calculator</h1>
 	<hr>
+	<div class="alert alert-warning " id="drugCatMessage" style="display: none">
+		<b>CAUTION</b><br>Please ensure you select the correct Category for drug charges. Check the warrant (if applicable) for more information.
+		<br> Reference: <a href="https://forum.gta.world/en/topic/30297-drug-enforcement-prevention-act-of-2020-depa/" style="
+    color: #007bff;
+">Drug Enforcement &amp; Prevention Act of 2020 (DEPA)
+
+		</a>
+	</div>
 	<form action="/paperwork-generators/form-processor" method="POST">
 		<input type="hidden" id="generatorType" name="generatorType" value="ArrestCharges">
 		<div class="form-row">
@@ -63,7 +71,7 @@
 	'g' => $g,
 	'pg' => $pg,
 	'c' => $c,
-	'prefix'=> 'inputCrime'
+	'prefix' => 'inputCrime'
 
 ));
 
@@ -139,4 +147,8 @@
 	));
 	?>
 </div>
+
+<script>
+
+</script>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/form-footer.php'; ?>
