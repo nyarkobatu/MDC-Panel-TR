@@ -56,7 +56,7 @@
 
     const SITE_LIVE = true;
     const SITE_NAME = 'MDC Panel';
-    const SITE_VERSION = '2.4.9';
+    const SITE_VERSION = '2.4.10';
     const SITE_LOGO = '/images/MDC-Panel.svg';
     const SITE_FAVICON = '/images/MDC-Panel-Favicon.svg';
     const SITE_IMAGE = '/images/MDC-Panel-OG.png';
@@ -136,7 +136,7 @@
     */
 
     const CHARGES_DRUG = [131, 601, 602, 603, 604, 605, 606];
-    const CHARGES_TRAFFIC = [401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426];
+    const CHARGES_TRAFFIC = [401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 428];
     const CHARGES_DISABLED = [000, 423];
 
     /*
