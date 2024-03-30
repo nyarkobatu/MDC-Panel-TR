@@ -4576,9 +4576,9 @@
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
-	"414": {
-		"id": "414",
-		"charge": "Motor Vehicle Contest",
+	"414M": {
+		"id": "414M",
+		"charge": "Motor Vehicle Contest (Misdemeanor)",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -4625,6 +4625,56 @@
             "cost": 500000
         },
 		"extra": "N/A"
+	},
+	"414F": {
+		"id": "414F",
+		"charge": "Motor Vehicle Contest (Felony)",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 15000,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 10,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 7,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "Evading charged additionally"
 	},
 	"415": {
 		"id": "415",
@@ -5162,6 +5212,97 @@
 			"3": 3
 		},
 		"extra": "N/A"
+	},
+	"427": {
+		"id": "427",
+		"charge": "Street Takeover",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 5,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 20000,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 7,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 7,
+			"2": 0,
+			"3": 3
+		},
+	        "bail": {
+	            "auto": false,
+	            "cost": 0
+	        },
+		"extra": "Evading = 14 day impound + charge seperately"
+	},
+	"428": {
+		"id": "428",
+		"charge": "Excessive Speeding",
+		"type": "I",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": true,
+			"3": true
+		},
+		"time": {
+			"days": 0,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 8000,
+			"2": 8000,
+			"3": 12000
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 3
+		},
+		"suspension": {
+			"1": 0,
+			"2": 2,
+			"3": 4
+		},
+		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
 	"501": {
 		"id": "501",
