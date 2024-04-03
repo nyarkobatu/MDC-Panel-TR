@@ -99,8 +99,8 @@
     |
     */
 
-    const SPECIAL_NOTIFICATION_COOKIE = 'dsk22-30102023';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'Rest in peace DSK22, you will always be honored and missed ❤️';
+    const SPECIAL_NOTIFICATION_COOKIE = 'stopkillinggames-03042024';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'This is the first and last political message I\'ll put on this website. This concerns a hobby that we all enjoy, gaming. Publishers are taking away games that we legally bought and paid for. We can do something about it. <a href="https://www.youtube.com/shorts/iH7k0IZ5PYE">Watch this video</a> or visit <a href="https://stopkillinggames.com>stopkillinggames.com</a>.';
 
     /*
     |--------------------------------------------------------------------------
