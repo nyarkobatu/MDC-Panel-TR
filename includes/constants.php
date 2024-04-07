@@ -88,6 +88,7 @@
     const URL_BAIL_SCHEDULE = 'https://docs.google.com/spreadsheets/d/1qm04NZm-HEy-vdW2liNWcdok7eXFGty_rO-dA1H_k0g/';
     const URL_BBCODERIP = 'https://booskit-bbcode.netlify.app/';
     const URL_ST3FAN = 'https://st3fannl.nl/gtaw/';
+    const URL_DEPA = 'https://forum.gta.world/en/topic/30297-drug-enforcement-prevention-act-of-2020-depa/';
 
     /*
     |--------------------------------------------------------------------------

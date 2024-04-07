@@ -29,6 +29,7 @@ class General {
 			case 'url-bail-schedule':			return URL_BAIL_SCHEDULE;
 			case 'url-bbcoderip':				return URL_BBCODERIP;
 			case 'url-st3fan':					return URL_ST3FAN;
+			case 'url-depa':					return URL_DEPA;
 			case 'special-notification': 		return SPECIAL_NOTIFICATION_COOKIE;
 			case 'special-notification-msg':	return SPECIAL_NOTIFICATION_MESSAGE;
 			default: break;

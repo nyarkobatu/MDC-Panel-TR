@@ -3,7 +3,7 @@
 	<hr>
 	<div class="alert alert-warning " id="drugCatMessage" style="display: none">
 		<b>CAUTION</b><br>Please ensure you select the correct Category for drug charges. Check the warrant (if applicable) for more information.
-		<br> Reference: <a href="https://forum.gta.world/en/topic/30297-drug-enforcement-prevention-act-of-2020-depa/" style="
+		<br> Reference: <a href="<?= $g->getSettings('url-depa') ?>" style="
     color: #007bff;
 ">Drug Enforcement &amp; Prevention Act of 2020 (DEPA)
 

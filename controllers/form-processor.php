@@ -493,10 +493,10 @@ if (isset($_POST['generatorType'])) {
 		$index = 0;
 		if (!empty($inputPersonName)) {
 			foreach ($inputPersonName as $indPerson => $person) {
-				$inputPhone[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
+				/*$inputPhone[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
 				$inputDoB[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
-				$inputResidence[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';
-				$persons .= '[u]Person #' .	$index + 1	. ' - ' . $person . '[/u]
+				$inputResidence[$indPerson] = $inputPhone[$indPerson] ?: 'UNK';*/
+				$persons .= "[u]Person #" .	$index + 1	. ' - ' . $person . '[/u]
 [b]Classification:[/b] ' . $pg->getClassification($inputClassificationArray[$indPerson]) . '
 [b]Age:[/b] ' . $inputDoB[$indPerson] . '
 [b]Phone Number:[/b] ' . $inputPhone[$indPerson] . '
