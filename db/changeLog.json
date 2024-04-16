@@ -1,4 +1,11 @@
 {
+	"2.4.11": {
+		"id": "2.4.11",
+		"date": "16/APR/2024",
+		"changes": {
+			"0": "Github Merge - Fast pulled the last github merge by Jan."
+		}
+	},
 	"2.4.10": {
 		"id": "2.4.10",
 		"date": "30/MAR/2024",
