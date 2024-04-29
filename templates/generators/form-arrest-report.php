@@ -118,8 +118,8 @@
 					'hint' => '<span class="d-block text-center"><strong>N/A</strong>: Only when <u>optionally</u> arresting a misdemeanor suspect in a holding cell at a station (<strong>This does not apply for LSPD; all arrests must be sent to prison.</strong>).</span>
 					<hr>
 					<strong><span style="color: #FF7800">Male</span></strong>: Male suspects above the age of 18.<br>
-					<strong><span style="color: #A600FF">Female</span></strong>: Female suspects above the age of 18.<br>
-					<strong><span style="color: #00A0FF">Minor</span></strong>: Suspects below the age of 18.<br>
+					<strong><span style="color: #A600FF">Female</span></strong>: All female suspects, including those below the age of 18.<br>
+					<strong><span style="color: #00A0FF">Minor</span></strong>: <u>Male</u> suspects below the age of 18.<br>
 					<strong><span style="color: #FF0000">Solitary Housing Unit</span></strong>: Suspects arrested for additional crimes in prison.<br> 
 					<strong><span style="color: #FFEC00">Protective Custody</span></strong>: Suspects that have previously been or are currently employed government officials or suspects that are deemed to have their life at risk. Also suspects with an INDEF-PC caution tag.',
 					'hintClass' => 'text-left'
