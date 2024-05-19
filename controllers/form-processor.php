@@ -220,7 +220,7 @@ if (isset($_POST['generatorType'])) {
 		$inputEvidence = $_POST['inputEvidence'] ?: '';
 		$inputDashcam = $_POST['inputDashcam'] ?: '';
 		$inputPrisonAssignment = $_POST['inputPrisonAssignment'] ?: 0;
-		$inputPlea = $_POST['inputPlea'] ?: 0;
+		//$inputPlea = $_POST['inputPlea'] ?: 0;
 
 		$suspectURL = str_replace(' ', '_', $postInputDefName);
 
@@ -258,9 +258,9 @@ if (isset($_POST['generatorType'])) {
 		$processingDetails = '<br><br>' . $processingDetails . '<br>';
 
 		// Plea Resolver
-		$plea = $ar->getPlea($inputPlea, $postInputDefName);
+		/*$plea = $ar->getPlea($inputPlea, $postInputDefName);
 		$plea2 = $ar->getPleaRaw($inputPlea);
-		$plea3 = $ar->getPleaRawShort($inputPlea);
+		$plea3 = $ar->getPleaRawShort($inputPlea);*/
 
 		// Crime Resolver
 		$charges = '';
@@ -271,7 +271,7 @@ if (isset($_POST['generatorType'])) {
 		// Report Builder
 		$redirectPath = redirectPath(1);
 		$generatedReportType = 'Arrest Report';
-		$generatedReport = $officers . 'under the callsign ' . $callsign . ' on the ' . $datetime . '. Conducted an arrest on ' . $suspect . ', the apprehension took place on ' . $location . $narrative . $evidence . $dashboard . $processingDetails . $plea;
+		$generatedReport = $officers . 'under the callsign ' . $callsign . ' on the ' . $datetime . '. Conducted an arrest on ' . $suspect . ', the apprehension took place on ' . $location . $narrative . $evidence . $dashboard . $processingDetails;
 		$showGeneratedArrestChargeTables = $_SESSION['showGeneratedArrestChargeTables'];
 		$generatedArrestChargeList = $_SESSION['generatedArrestChargeList'];
 		$generatedArrestChargeTotals = $_SESSION['generatedArrestChargeTotals'];
@@ -901,9 +901,10 @@ COUNTY OF LOS SANTOS[/b]
 				$chargeExtraFull = '<span class="badge badge-' . $chargeExtraColour . '"><i class="fas fa-fw fa-' . $chargeExtraIcon . ' mr-1"></i>' . $chargeExtra[$iCharge] . '</span>';
 
 				// Plea for maxtime
-				$pleaPre = $_POST['inputPleaPre'] ?: '';
+				// $pleaPre = $_POST['inputPleaPre'] ?: '';
 
 				// Time Builder
+				/*
 				if (in_array($chargeID, $pg->chargesDrug)) {
 					$days[] = ($charge['time'][$chargeSubstanceCategory]['days'] / $chargeReduction);
 					$hours[] = ($charge['time'][$chargeSubstanceCategory]['hours'] / $chargeReduction);
@@ -921,9 +922,48 @@ COUNTY OF LOS SANTOS[/b]
 					$hours[] = ($charge['time']['hours'] / $chargeReduction);
 					$mins[] = ($charge['time']['min'] / $chargeReduction);
 				}
+				*/
 
-				// Time Calculation
+				// Minimum Time Builder
+				if (in_array($chargeID, $pg->chargesDrug)) {
+					$days[] = ($charge['time'][$chargeSubstanceCategory]['days'] / $chargeReduction);
+					$hours[] = ($charge['time'][$chargeSubstanceCategory]['hours'] / $chargeReduction);
+					$mins[] = ($charge['time'][$chargeSubstanceCategory]['min'] / $chargeReduction);
+				} elseif (in_array($chargeID, $multiDimensionalCrimeTimes)) {
+					$days[] = ($charge['time'][$chargeOffence]['days'] / $chargeReduction);
+					$hours[] = ($charge['time'][$chargeOffence]['hours'] / $chargeReduction);
+					$mins[] = ($charge['time'][$chargeOffence]['min'] / $chargeReduction);
+				} else {
+					$days[] = ($charge['time']['days'] / $chargeReduction);
+					$hours[] = ($charge['time']['hours'] / $chargeReduction);
+					$mins[] = ($charge['time']['min'] / $chargeReduction);
+				}
+
+				// Maximum Time Builder
+				if (in_array($chargeID, $pg->chargesDrug)) {
+					$max_days[] = ($charge['time'][$chargeSubstanceCategory]['days'] / $chargeReduction);
+					$max_hours[] = ($charge['time'][$chargeSubstanceCategory]['hours'] / $chargeReduction);
+					$max_mins[] = ($charge['time'][$chargeSubstanceCategory]['min'] / $chargeReduction);
+				} elseif (in_array($chargeID, $multiDimensionalCrimeTimes)) {
+					$max_days[] = ($charge['time'][$chargeOffence]['days'] / $chargeReduction);
+					$max_hours[] = ($charge['time'][$chargeOffence]['hours'] / $chargeReduction);
+					$max_mins[] = ($charge['time'][$chargeOffence]['min'] / $chargeReduction);
+				} elseif (array_key_exists('maxtime', $charge)) {
+					$max_days[] = ($charge['maxtime']['days'] / $chargeReduction);
+					$max_hours[] = ($charge['maxtime']['hours'] / $chargeReduction);
+					$max_mins[] = ($charge['maxtime']['min'] / $chargeReduction);
+				} else {
+					$max_days[] = ($charge['time']['days'] / $chargeReduction);
+					$max_hours[] = ($charge['time']['hours'] / $chargeReduction);
+					$max_mins[] = ($charge['time']['min'] / $chargeReduction);
+				}
+
+
+				// Minimum Time Calculation
 				$chargeTimeFull = $pg->calculateCrimeTime($days[$iCharge], $hours[$iCharge], $mins[$iCharge]);
+
+				// Maximum Time Calculation
+				$chargeTimeFullMax = $pg->calculateCrimeTime($max_days[$iCharge], $max_hours[$iCharge], $max_mins[$iCharge]);
 
 				// Finalisation Builders
 				$chargeOffenceFull = null;
@@ -934,10 +974,10 @@ COUNTY OF LOS SANTOS[/b]
 
 				// Autobail Builder
 				$autoBailRow = 'N/A';
-				if (in_array($chargeID, $pg->chargesDrug) && $pleaPre == 2) {
+				if (in_array($chargeID, $pg->chargesDrug)) {
 					$autoBailCost = $charge['bail']['cost'][$chargeSubstanceCategory];
 					$autoBailRaw = $charge['bail']['auto'][$chargeSubstanceCategory];
-				} elseif ($pleaPre == 2) {
+				} else {
 					$autoBailRaw = $charge['bail']['auto'];
 					$autoBailCost = $charge['bail']['cost'];
 					array_push($bailArray, $autoBailRaw);
@@ -978,13 +1018,13 @@ COUNTY OF LOS SANTOS[/b]
 							$autoBailRow = 'N/A';
 						}
 					}
-				} else {
+				} /* else {
 					array_push($bailArray, 5);
 					$autoBail = 'N/A';
 					$autoBailIcon = 'minus-circle';
 					$autoBailColour = 'muted';
 					$autoBailCost = "$0";
-				}
+				} */
 				$autoBailFull = '<span class="badge badge-' . $autoBailColour . '"><i class="fas fa-fw fa-' . $autoBailIcon . ' mr-1"></i>' . $autoBail . '</span>';
 				$bailStatusFull = '<span class="badge badge-' . $bailArray[$iCharge] . '"><i class="fas fa-fw fa-' . $autoBailIcon . ' mr-1"></i>' . $autoBail . '</span>';
 
@@ -996,6 +1036,7 @@ COUNTY OF LOS SANTOS[/b]
 						<td class="text-center">' . $chargeOffence . '</td>
 						<td>' . $chargeTypeFull . '</td>
 						<td>' . $chargeTimeFull . '</td>
+						<td>' . $chargeTimeFullMax . '</td>
 						<td class="text-center">' . $chargePoints[$iCharge] . '</td>
 						<td>' . $chargeFineFull . '</td>
 						<td class="text-center">' . $chargeImpoundFull . '</td>
@@ -1011,6 +1052,12 @@ COUNTY OF LOS SANTOS[/b]
 			$chargeTimeTotalHours = array_sum($hours);
 			$chargeTimeTotalMinutes = array_sum($mins);
 			$chargeTimeTotal = $pg->calculateCrimeTime($chargeTimeTotalDays, $chargeTimeTotalHours, $chargeTimeTotalMinutes);
+
+			// Total Time Max
+			$chargeTimeTotalDaysMax = array_sum($max_days);
+			$chargeTimeTotalHoursMax = array_sum($max_hours);
+			$chargeTimeTotalMinutesMax = array_sum($max_mins);
+			$chargeTimeTotalMax = $pg->calculateCrimeTime($chargeTimeTotalDaysMax, $chargeTimeTotalHoursMax, $chargeTimeTotalMinutesMax);
 
 			// Total Points
 			$chargePointsTotal = array_sum($chargePoints);
@@ -1052,15 +1099,15 @@ COUNTY OF LOS SANTOS[/b]
 					$bailState = "DISCRETIONARY";
 					$bailStateColour = "warning";
 					$bailStateIcon = 'check-circle';
-				} elseif ($pleaPre == 2) {
+				} else {
 					$bailState = "ELIGIBLE";
 					$bailStateColour = "success";
 					$bailStateIcon = 'check-circle';
-				} else {
+				} /* else {
 					$bailState = "N/A";
 					$bailStateColour = "muted";
 					$bailStateIcon = 'minus-circle';
-				};
+				} */;
 			} else {
 				$bailState = "NOT ELIGIBLE";
 				$bailStateColour = "danger";
@@ -1075,6 +1122,7 @@ COUNTY OF LOS SANTOS[/b]
 			// Totals Row Builder
 			$rowBuilderTotals = '<tr>
 					<td>' . $chargeTimeTotal . '</td>
+					<td>' . $chargeTimeTotalMax . '</td>
 					<td>' . $chargePointsTotal . '</td>
 					<td>' . $chargeFineTotal . '</td>
 					<td>' . $chargeImpoundTotal . '</td>
@@ -1103,14 +1151,14 @@ COUNTY OF LOS SANTOS[/b]
 				"c" => $c,
 				"g" => $g,
 				"showChargeTable" => true,
-				"plea" => $pleaPre
+				//"plea" => $pleaPre
 	
 			], false);
 			return;
 		} else {
 			$showGeneratedArrestChargeTables = false;
 		}
-		$_SESSION['plea'] = $pleaPre;
+		//$_SESSION['plea'] = $pleaPre;
 	
 	}
 

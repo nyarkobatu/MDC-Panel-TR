@@ -125,6 +125,7 @@
 					'hintClass' => 'text-left'
 				));
 				// Form - List - Plea
+				/*
 				$c->form('list', 'forms', array(
 					'size' => '4',
 					'label' => '<label>Plea</label>',
@@ -140,6 +141,7 @@
 					'hint' => 'Please remember to ask for the suspect&#39;s <strong>GTA:W</strong> forum name if pleading <strong>Not Guilty</strong>, <strong>No Contest</strong>, or <strong>Required Case</strong>.',
 					'hintClass' => 'text-center'
 				));
+				*/
 			?>
 		</div>
 		<?php

@@ -1,4 +1,12 @@
 {
+	"2.4.12": {
+		"id": "2.4.12",
+		"date": "18/MAY/2024",
+		"changes": {
+			"0": "Arrest Calculator - Added support for the new <a href=\"https://forum.gta.world/en/topic/126139-arrest-plea-system/\">plea system</a> including the display of min/max jail times.",
+			"1": "Penal Code - Updated all charges to the newest penal code update."
+		}
+	},
 	"2.4.11": {
 		"id": "2.4.11",
 		"date": "16/APR/2024",

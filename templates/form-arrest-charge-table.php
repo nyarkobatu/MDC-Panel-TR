@@ -5,7 +5,8 @@
 		<th scope="col" class="text-center">Sentencing</th>
 		<th scope="col" class="text-center">Offence</th>
 		<th scope="col">Type</th>
-		<th scope="col">Time</th>
+		<th scope="col">Min Time</th>
+		<th scope="col">Max Time</th>
 		<th scope="col" class="text-center">Points</th>
 		<th scope="col">Fine</th>
 		<th scope="col" class="text-center">Impound</th>
@@ -21,7 +22,8 @@
 <hr>
 <table class="table table-striped table-light table-hover table-sm table-borderless">
 	<thead>
-		<th>Total Time</th>
+		<th>Total Min Time</th>
+		<th>Total Max Time</th>
 		<th>Total Points</th>
 		<th>Total Fines</th>
 		<th>Total Impound Time</th>
@@ -34,7 +36,7 @@
 	</tbody>
 </table>
 
-<?php if($plea == 2){?>
+<?php if(true){?>
 <div class="row">
 <small class="form-text text-muted mb-3 pl-3"><strong>*</strong> Bail and bond conditions are determined based on the bail schedule.
 The bail/bond cost is <strong>not</strong> the total cost of all charges as that is not how bail/bond is calculated, instead, 
@@ -62,7 +64,7 @@ The bail/bond cost is <strong>not</strong> the total cost of all charges as that
 			</div>
 			<hr>
 
-			<?php if($plea == 2){?>
+			<?php if(false){?>
 			<div class="card-text text-center">
 				
 				<div class="row">
@@ -79,7 +81,7 @@ The bail/bond cost is <strong>not</strong> the total cost of all charges as that
 					</div>
 				</div>
 			</div>
-			<?php } else if($plea == 3||$plea == 4){?>
+			<?php } if(false){?>
 			<div class="card-text text-center">
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
@@ -94,7 +96,7 @@ The bail/bond cost is <strong>not</strong> the total cost of all charges as that
 					</div>
 				</div>
 			</div>
-			<?php } if($plea == 3){?>
+			<?php } if(false){?>
 			<div class="card-text text-center">
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
@@ -108,7 +110,7 @@ The bail/bond cost is <strong>not</strong> the total cost of all charges as that
 					</div>
 				</div>
 			</div>
-			<?php } if($plea == 1){?>
+			<?php } if(false){?>
 			<div class="card-text text-center">
 				<div class="row">
 					<div class="col-8 mx-auto text-centre">
@@ -125,7 +127,7 @@ The bail/bond cost is <strong>not</strong> the total cost of all charges as that
 		</div>
 	</div>
 </details>
-<?php if($plea == 2){?>
+<?php if(false){?>
 <details id="guidelineBailDropdown" class="card text-dark bg-warning p-2 text-center mt-2" <?php
 																				$openBailStatus = $g->findCookie('openBailStatus');
 																				if ($openBailStatus == 1) {

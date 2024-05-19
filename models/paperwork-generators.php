@@ -107,10 +107,16 @@ class PaperworkGenerators
 				$drugChargeTitle = ' (Category ' . $chargeSubstanceCategory . ')';
 				$charge_fine = $penal_charge['fine'][$chargeSubstanceCategory];
 				$time = $penal_charge["time"][$chargeSubstanceCategory];
+				$maxtime = $penal_charge["time"][$chargeSubstanceCategory];
 			} else {
 				$autoBailCost = $penal_charge['bail']['cost'];
 				$charge_fine = $penal_charge['fine'][$offence[$iCharge] ?? 1];
 				$time = $penal_charge["time"];
+				if(array_key_exists('maxtime', $penal_charge)) {
+					$maxtime = $penal_charge["maxtime"];
+				} else {
+					$maxtime = $time;
+				}
 			}
 
 
@@ -129,7 +135,8 @@ class PaperworkGenerators
 				"drugChargeTitle" => $drugChargeTitle,
 				"fullName" => $chargeType . $chargeClass . ' ' . $penal_charge["id"] . '. ' . $penal_charge["charge"] . $drugChargeTitle . " " . $additionName,
 				"fine" => $charge_fine,
-				"time" => $time
+				"time" => $time,
+				"maxtime" => $maxtime
 
 			]);
 		}
@@ -155,6 +162,8 @@ class PaperworkGenerators
 		$inputTime = ($iDays + ($iHours / 24 + ($iMinutes / 60 / 24)));
 
 		$seconds = intval(ceil(86400 * $inputTime));
+
+		$outputMinutes = floor($seconds / 60);
 
 		$days = floor($seconds / 86400);
 		$seconds %= 86400;
@@ -183,7 +192,13 @@ class PaperworkGenerators
 			$minutes = '';
 		}
 
-		$input = array($days, $hours, $minutes);
+		if ($outputMinutes != 0) {
+			$outputMinutes = ' (' . $outputMinutes . ' mins)';
+		} else {
+			$outputMinutes = '';
+		}
+
+		$input = array($days, $hours, $minutes, $outputMinutes);
 		$output = '';
 
 		foreach ($input as $timeElement) {

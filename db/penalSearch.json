@@ -3944,6 +3944,106 @@
         },
 		"extra": "N/A"
 	},
+	"313M": {
+		"id": "313M",
+		"charge": "Vehicle Registration Theft",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 3,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"313F": {
+		"id": "313F",
+		"charge": "Vehicle Registration Theft",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 3
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
 	"401": {
 		"id": "401",
 		"charge": "Driving Without a Valid License",
@@ -5258,8 +5358,8 @@
 			"3": 3
 		},
 	        "bail": {
-	            "auto": false,
-	            "cost": 0
+	            "auto": true,
+	            "cost": 350000
 	        },
 		"extra": "Evading = 14 day impound + charge seperately"
 	},
@@ -6725,8 +6825,8 @@
 			"min": 0
 		},
 		"maxtime": {
-			"days": 0,
-			"hours": 4,
+			"days": 2,
+			"hours": 0,
 			"min": 0
 		},
 		"points": {
@@ -7350,8 +7450,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": 2,
+            "cost": 500000
         },
 		"extra": "N/A"
 	}

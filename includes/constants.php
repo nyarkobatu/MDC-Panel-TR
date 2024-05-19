@@ -56,7 +56,7 @@
 
     const SITE_LIVE = true;
     const SITE_NAME = 'MDC Panel';
-    const SITE_VERSION = '2.4.11';
+    const SITE_VERSION = '2.4.12';
     const SITE_LOGO = '/images/MDC-Panel.svg';
     const SITE_FAVICON = '/images/MDC-Panel-Favicon.svg';
     const SITE_IMAGE = '/images/MDC-Panel-OG.png';
@@ -100,8 +100,8 @@
     |
     */
 
-    const SPECIAL_NOTIFICATION_COOKIE = 'stopkillinggames-03042024';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'This is the first and last political message I\'ll put on this website. This concerns a hobby that we all enjoy, gaming. Publishers are taking away games that we legally bought and paid for. We can do something about it. <b><a href="https://www.youtube.com/shorts/iH7k0IZ5PYE">Watch this video</a></b> or visit <b><a href="https://stopkillinggames.com">stopkillinggames.com</a></b>.';
+    const SPECIAL_NOTIFICATION_COOKIE = 'updatedpleasystem-18052024';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'The way we arrest people has been fundementally changed, you no longer have to ask for a plea. <a href="https://forum.gta.world/en/topic/126139-arrest-plea-system/">Read this</a> for more information.';
 
     /*
     |--------------------------------------------------------------------------
