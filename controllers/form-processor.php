@@ -781,6 +781,7 @@ COUNTY OF LOS SANTOS[/b]
 
 			$multiDimensionalCrimeTimes = [412];
 			$bailArray = [];
+			$bailCost = [];
 			// Charge List Builder
 			foreach ($charges as $iCharge => $charge) {
 
@@ -791,7 +792,6 @@ COUNTY OF LOS SANTOS[/b]
 				$chargeOffence = $_POST['inputCrimeOffence'][$iCharge] ?? 1;
 				$chargeAddition = $_POST['inputCrimeAddition'][$iCharge];
 				$chargeSubstanceCategory = $_POST['inputCrimeSubstanceCategory'][$iCharge];
-				$bailCost = [];
 
 				if (in_array($chargeID, $pg->chargesDrug)) {
 					$chargeFine[] = $charge['fine'][$chargeSubstanceCategory];
@@ -1052,12 +1052,14 @@ COUNTY OF LOS SANTOS[/b]
 			$chargeTimeTotalHours = array_sum($hours);
 			$chargeTimeTotalMinutes = array_sum($mins);
 			$chargeTimeTotal = $pg->calculateCrimeTime($chargeTimeTotalDays, $chargeTimeTotalHours, $chargeTimeTotalMinutes);
+			$chargeTimeTotalRaw = ($chargeTimeTotalDays * 24 * 60) + ($chargeTimeTotalHours * 60) + $chargeTimeTotalMinutes;
 
 			// Total Time Max
 			$chargeTimeTotalDaysMax = array_sum($max_days);
 			$chargeTimeTotalHoursMax = array_sum($max_hours);
 			$chargeTimeTotalMinutesMax = array_sum($max_mins);
 			$chargeTimeTotalMax = $pg->calculateCrimeTime($chargeTimeTotalDaysMax, $chargeTimeTotalHoursMax, $chargeTimeTotalMinutesMax);
+			$chargeTimeTotalMaxRaw = ($chargeTimeTotalDaysMax * 24 * 60) + ($chargeTimeTotalHoursMax * 60) + $chargeTimeTotalMinutesMax;
 
 			// Total Points
 			$chargePointsTotal = array_sum($chargePoints);
@@ -1129,6 +1131,17 @@ COUNTY OF LOS SANTOS[/b]
 					<td>' . $chargeSuspensionTotal . '</td>
 					<td>' . $bailCostTotal . '</td>
 					<td>' . $bailStatusFull. '</td>
+				</tr>'
+				.
+				'<tr>
+					<td>' . $chargeTimeTotalRaw . '</td>
+					<td>' . $chargeTimeTotalMaxRaw . '</td>
+					<td>' . array_sum($chargePoints) . '</td>
+					<td>' . array_sum($chargeFine) . '</td>
+					<td>' . array_sum($chargeImpound) . '</td>
+					<td>' . array_sum($chargeSuspension) . '</td>
+					<td>' . $bailCost . '</td>
+					<td><- COPY HERE</td>
 				</tr>';
 
 			// Session Builder
