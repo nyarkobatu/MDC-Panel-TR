@@ -1,4 +1,11 @@
 {
+	"2.4.14": {
+		"id": "2.4.14",
+		"date": "22/MAY/2024",
+		"changes": {
+			"0": "Parking Ticket Generator - Added the following reasons to parking tickets: <ul><li>Parking a non-electric vehicle into a parking space with an electric charger.</li><li>In a manner that a vehicle takes up two parking spaces.</li><li>No more than 2 motorcycles may park abreast in 1 parking space given that the parking is wide enough for 2 motorcycles.</li></ul>"
+		}
+	},
 	"2.4.13": {
 		"id": "2.4.13",
 		"date": "19/MAY/2024",

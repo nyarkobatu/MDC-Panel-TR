@@ -838,10 +838,10 @@ class ParkingTicketGenerator extends PaperworkGenerators
 		$groupObstruction = '';
 		$groupSidewalk = '';
 
-		$reasonsVS = array(0);
-		$reasonsPR = array(1, 2, 3, 4, 5);
-		$reasonsOS = array(6, 7, 8, 9, 10, 11, 12, 13);
-		$reasonsSW = array(14, 15, 16, 17);
+		$reasonsVS = ILLEGAL_PARKING_REASONS_VS;
+		$reasonsPR = ILLEGAL_PARKING_REASONS_PR;
+		$reasonsOS = ILLEGAL_PARKING_REASONS_OS;
+		$reasonsSW = ILLEGAL_PARKING_REASONS_SW;
 
 		foreach ($illegalParkingReasons as $illegalParkingReason) {
 

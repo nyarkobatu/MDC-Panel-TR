@@ -56,7 +56,7 @@
 
     const SITE_LIVE = true;
     const SITE_NAME = 'MDC Panel';
-    const SITE_VERSION = '2.4.13';
+    const SITE_VERSION = '2.4.14';
     const SITE_LOGO = '/images/MDC-Panel.svg';
     const SITE_FAVICON = '/images/MDC-Panel-Favicon.svg';
     const SITE_IMAGE = '/images/MDC-Panel-OG.png';
@@ -150,3 +150,19 @@
     */
 
     const BOND_PERCENTAGE = 10;
+
+    /*
+    |--------------------------------------------------------------------------
+    | ILLEGAL PARKING SETTINGS
+    | ------------------------
+    | + Here you are able to setup the settings for the illegal parking
+    | controller.
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    const ILLEGAL_PARKING_REASONS_VS = [0]; // Vehicle Status
+    const ILLEGAL_PARKING_REASONS_PR = [1, 2, 3, 4, 5, 18, 19, 20]; // Parking Related
+    const ILLEGAL_PARKING_REASONS_OS = [6, 7, 8, 9, 10, 11, 12, 13]; // Obstruction
+    const ILLEGAL_PARKING_REASONS_SW = [14, 15, 16, 17]; // Sidewalk
+
