@@ -100,8 +100,8 @@
     |
     */
 
-    const SPECIAL_NOTIFICATION_COOKIE = 'updatedpleasystem-18052024';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'The way we arrest people has been fundementally changed, you no longer have to ask for a plea. <a href="https://forum.gta.world/en/topic/126139-arrest-plea-system/">Read this</a> for more information.';
+    const SPECIAL_NOTIFICATION_COOKIE = 'downtime-31052024';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'We have some planned downtime on the 3rd of June 2024 (roughly around 05:00 - 12:00 servertime) as we migrate to a new host.';
 
     /*
     |--------------------------------------------------------------------------
