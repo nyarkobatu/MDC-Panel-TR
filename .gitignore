@@ -11,3 +11,5 @@ templates/example-arrest-report
 todo.txt
 db/visitors.json
 .vscode/*
+deploy.sh
+deploy.key
