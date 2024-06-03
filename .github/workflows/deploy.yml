@@ -22,3 +22,4 @@ jobs:
           source: "*,!.git,!.github,!.gitignore,!.gitattributes"
           target: ${{ secrets.TARGET }}
           rm: true
+          debug: true
