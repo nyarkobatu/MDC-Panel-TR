@@ -100,8 +100,8 @@
     |
     */
 
-    const SPECIAL_NOTIFICATION_COOKIE = 'downtime-31052024';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'We have some planned downtime on the 3rd of June 2024 (roughly around 05:00 - 12:00 servertime) as we migrate to a new host.';
+    const SPECIAL_NOTIFICATION_COOKIE = 'newhost-03062024';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'We\'ve migrated to a new host. This may take time to propagate for some people, you can also use the proxy domain <a href="https://mdc-panel.duckdns.org/">https://mdc-panel.duckdns.org/</a>.';
 
     /*
     |--------------------------------------------------------------------------
