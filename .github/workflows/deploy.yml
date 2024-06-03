@@ -1,23 +1,34 @@
-name: Deploy to HestiaCP Server
-
+name: Deploy
 on:
   push:
-    branches:
-      - master
+    branches: master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
 
-    - name: Sync files to server
-      uses: easingthemes/ssh-deploy@v2.0.7
-      with:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-        SOURCE: "public_html/"
-        REMOTE_HOST: ${{ secrets.SSH_HOST }}
-        REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-        TARGET: ${{ secrets.TARGET }}
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Transfer
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "*,!.git,!.github,!.gitignore,!.gitattributes"
+          target: ${{ secrets.TARGET }}
+          rm: true
+      - name: CHOWN
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo chown github:ftp -R /home/webhost/cxdezign.dev/mdc
