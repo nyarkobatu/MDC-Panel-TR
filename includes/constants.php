@@ -101,7 +101,7 @@
     */
 
     const SPECIAL_NOTIFICATION_COOKIE = 'newhost-03062024';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'We\'ve migrated to a new host. This may take time to propagate for some people, you can also use the proxy domain <a href="https://mdc-panel.duckdns.org/">https://mdc-panel.duckdns.org/</a>.';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'We\'ve migrated to a new host. This may take time to propagate for some people, if you have issues or a friend has issues, you can also use the proxy domain <a href="https://mdc-panel.duckdns.org/">https://mdc-panel.duckdns.org/</a>.';
 
     /*
     |--------------------------------------------------------------------------
