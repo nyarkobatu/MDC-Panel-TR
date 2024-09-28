@@ -689,7 +689,7 @@
             "auto": false,
             "cost": 0
         },
-		"extra": "This offense will go through a court case by mandatory requirement only if applied for bail violations."
+		"extra": "N/A"
 	},
 	"111": {
 		"id": "111",
@@ -1880,6 +1880,16 @@
 				"days": 1,
 				"hours": 0,
 				"min": 0
+			},
+			"Alcohol": {
+				"days": 3,
+				"hours": 0,
+				"min": 0
+			},
+			"Instruments": {
+				"days": 5,
+				"hours": 0,
+				"min": 0
 			}
 		},
         "bail": {
@@ -1888,14 +1898,18 @@
                 "B": true,
                 "C": true,
                 "D": true,
-                "T": true
+                "T": true,
+                "Alcohol": true,
+                "Instruments": true
             },
             "cost": {
                 "A": 250000,
                 "B": 250000,
                 "C": 250000,
                 "D": 250000,
-                "T": 250000
+                "T": 250000,
+                "Alcohol": 250000,
+                "instruments": 250000
             }
         },
 		"points": {
@@ -1908,7 +1922,9 @@
 			"B": 37500,
 			"C": 30000,
 			"D": 22500,
-			"T": 8000
+			"T": 8000,
+			"Alcohol": 25000,
+			"Instruments": 30000
 		},
 		"impound": {
 			"1": 0,
@@ -1926,7 +1942,9 @@
 			"2": "B",
 			"3": "C",
 			"4": "D",
-			"5": "T"
+			"5": "T",
+			"6": "Alcohol",
+			"7": "Instruments"
 		}
 	},
 	"132": {
@@ -2260,6 +2278,256 @@
 		},
 		"fine": {
 			"1": 2500,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"139": {
+		"id": "139",
+		"charge": "Misuse of the Mobile Data Computer",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": true,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 6,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 3,
+			"C": 2
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"140": {
+		"id": "140",
+		"charge": "Unauthorized Sharing of Information from the Mobile Data Computer",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": true,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 4,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 8,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 3,
+			"C": 2
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"141": {
+		"id": "141",
+		"charge": "Unlawful Communication with an Inmate",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 18,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"142M": {
+		"id": "142M",
+		"charge": "Failure to Appear at Cour (Misdeamanor)",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 2,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 2,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"142F": {
+		"id": "142F",
+		"charge": "Failure to Appear at Cour (Felony)",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 6,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 6,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
 			"2": 0,
 			"3": 0
 		},
@@ -3299,6 +3567,56 @@
         },
 		"extra": "N/A"
 	},
+    "222": {
+		"id": "222",
+		"charge": "Assault with Caustic Chemicals",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 4,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 8,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
 	"301": {
 		"id": "301",
 		"charge": "Arson",
@@ -4022,6 +4340,106 @@
 			"A": 0,
 			"B": 0,
 			"C": 3
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"314M": {
+		"id": "314M",
+		"charge": "Vandalism of Prison Property (Misdemeanor)",
+		"type": "M",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 0,
+			"hours": 6,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "N/A"
+	},
+	"314F": {
+		"id": "314F",
+		"charge": "Vandalism of Prison Property (Felony)",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 1,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 3,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 2
 		},
 		"fine": {
 			"1": 0,
@@ -6001,6 +6419,56 @@
         "bail": {
             "auto": true,
             "cost": 50000
+        },
+		"extra": "N/A"
+	},
+	"512": {
+		"id": "512",
+		"charge": "Sexual Activity With An Inmate",
+		"type": "F",
+		"class": {
+			"A": false,
+			"B": false,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 2,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 5,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 3
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},

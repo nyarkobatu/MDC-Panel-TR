@@ -1,4 +1,11 @@
 {
+	"2.4.15": {
+		"id": "2.4.15",
+		"date": "28/SEP/2024",
+		"changes": {
+			"0": "Penal Code - Updated all charges to the newest penal code update."
+		}
+	},
 	"2.4.14": {
 		"id": "2.4.14",
 		"date": "22/MAY/2024",
