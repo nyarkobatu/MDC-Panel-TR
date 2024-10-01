@@ -807,18 +807,27 @@ COUNTY OF LOS SANTOS[/b]
 				switch ($chargeAddition) {
 					case 3:
 						$chargeReduction = 2;
+						$chargeMultiplyPoints = 1;
 						break;
 					case 4:
 						$chargeReduction = 4;
+						$chargeMultiplyPoints = 1;
 						break;
 					case 5:
 						$chargeReduction = 2;
+						$chargeMultiplyPoints = 1;
 						break;
 					case 6:
 						$chargeReduction = 4;
+						$chargeMultiplyPoints = 1;
+						break;
+					case 7:
+						$chargeReduction = 1;
+						$chargeMultiplyPoints = 4;
 						break;
 					default:
 						$chargeReduction = 1;
+						$chargeMultiplyPoints = 1;
 				}
 
 				// Charge Type Builder
@@ -859,7 +868,7 @@ COUNTY OF LOS SANTOS[/b]
 				}
 
 				// Points Builder
-				$chargePoints[] = ceil($charge['points'][$chargeClass] / $chargeReduction);
+				$chargePoints[] = ceil($charge['points'][$chargeClass] * $chargeMultiplyPoints / $chargeReduction);
 
 				// Impound Builder
 				$chargeImpound[] = $charge['impound'][$chargeOffence];
