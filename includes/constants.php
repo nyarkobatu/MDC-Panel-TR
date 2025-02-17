@@ -86,7 +86,7 @@
     const URL_SASP = 'https://saparks.gta.world';
     const URL_PENAL_CODE = 'https://forum.gta.world/en/topic/78852-san-andreas-penal-code/';
     const URL_BAIL_SCHEDULE = 'https://docs.google.com/spreadsheets/d/1qm04NZm-HEy-vdW2liNWcdok7eXFGty_rO-dA1H_k0g/';
-    const URL_BBCODERIP = 'https://booskit-bbcode.netlify.app/';
+    const URL_BBCODERIP = 'https://bbcode.booskit.dev/';
     const URL_ST3FAN = 'https://st3fannl.nl/gtaw/';
     const URL_DEPA = 'https://forum.gta.world/en/topic/30297-drug-enforcement-prevention-act-of-2020-depa/';
 
@@ -100,8 +100,8 @@
     |
     */
 
-    const SPECIAL_NOTIFICATION_COOKIE = 'newhost-03062024';
-    const SPECIAL_NOTIFICATION_MESSAGE = 'We\'ve migrated to a new host. This may take time to propagate for some people, if you have issues or a friend has issues, you can also use the proxy domain <a href="https://mdc-panel.duckdns.org/">https://mdc-panel.duckdns.org/</a>.';
+    const SPECIAL_NOTIFICATION_COOKIE = 'bbcoderip-17022025';
+    const SPECIAL_NOTIFICATION_MESSAGE = 'The <a href="https://bbcode.booskit.dev/">🖕 BBCode.rip</a> website has been fixed so that you\'re now able to share links, we will also update it with a bunch of other upcoming elements.';
 
     /*
     |--------------------------------------------------------------------------
