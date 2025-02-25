@@ -75,7 +75,7 @@
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" target="_blank" rel="noopener noreferrer" href="<?= $g->getSettings('url-bbcoderip') ?>">
-				<i class="fas fa-fw fa-hand-middle-finger mr-2"></i><span class="icon-text">BBCode.RIP<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
+				<i class="/images/Logo-ReBB.png"></i><span class="icon-text">ReBB<i class="fas fa-fw fa-xs fa-ss fa-external-link-alt ml-2"></i></span>
 			</a>
 		</li>
 		<hr class="my-3">
