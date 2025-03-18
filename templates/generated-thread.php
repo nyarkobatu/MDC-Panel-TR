@@ -16,13 +16,13 @@
 	<?php if ($title) { ?>
 	<div class="container mt-2 text-center">
 		<a class="btn btn-primary px-5" data-clipboard-target="#generatedThreadTitle" data-toggle="tooltip" title="Copied!">
-			<i class="fas fa-copy fa-fw mr-2"></i>Copy <?= $type ?> Title
+			<i class="fas fa-copy fa-fw mr-2"></i><?= $type ?> Başlığını Kopyala
 		</a>
 	</div>
 	<?php } ?>
 	<div class="container mt-2 text-center">
 		<a class="btn btn-primary px-5" data-clipboard-target="#generatedThread" data-toggle="tooltip" title="Copied!">
-			<i class="fas fa-copy fa-fw mr-2"></i>Copy <?= $type ?>
+			<i class="fas fa-copy fa-fw mr-2"></i><?= $type ?> Çıktısını Kopyala
 		</a>
 	</div>
 	<div class="container mt-2 text-center">

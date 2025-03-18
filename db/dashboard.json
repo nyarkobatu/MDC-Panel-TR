@@ -2,7 +2,7 @@
 	"0": {
 		"type": "external",
 		"title": "Mobile Data Computer",
-		"description": "Access the Mobile Data Computer.",
+		"description": "Mobile Data Computer'a erişin.",
 		"link": "url-mdc",
 		"ID": "card-main-mdc",
 		"class": "",

@@ -61,7 +61,7 @@
     const SITE_FAVICON = '/images/MDC-Panel-Favicon.svg';
     const SITE_IMAGE = '/images/MDC-Panel-OG.png';
     const SITE_DESCRIPTION = 'MDC Panel - Multi-functional tools, generators, and resources for official government use.';
-    const SITE_DISCORD_CONTACT = 'Biscuit#0001';
+    const SITE_DISCORD_CONTACT = 'nyarko';
 
     /*
     |--------------------------------------------------------------------------
@@ -77,18 +77,18 @@
     const URL_DISCORD = 'https://discord.gg/rxfYd23TNz';
     const URL_MDC = 'https://mdc.gta.world';
     const URL_CAD = 'https://cad.gta.world';
-    const URL_LSPD = 'https://lspd.gta.world';
-    const URL_LSSD = 'https://lssd.gta.world';
-    const URL_LSFD = 'https://lsfd.gta.world';
-    const URL_LSDA = 'https://lsda.gta.world';
-    const URL_SADCR = 'https://sadcr.gta.world';
+    const URL_LSPD = 'https://lspd-tr.gta.world';
+    const URL_LSSD = 'https://lssd-tr.gta.world';
+    const URL_LSFD = 'https://lsfd-tr.gta.world';
+    const URL_LSDA = 'https://lsda-tr.gta.world';
+    const URL_SADCR = 'https://sadcr-tr.gta.world';
     const URL_SFM = 'https://sfm.gta.world';
     const URL_SASP = 'https://saparks.gta.world';
-    const URL_PENAL_CODE = 'https://forum.gta.world/en/topic/78852-san-andreas-penal-code/';
+    const URL_PENAL_CODE = 'https://forum-tr.gta.world/index.php?/topic/77-san-andreas-ceza-kanunu/';
     const URL_BAIL_SCHEDULE = 'https://docs.google.com/spreadsheets/d/1qm04NZm-HEy-vdW2liNWcdok7eXFGty_rO-dA1H_k0g/';
     const URL_BBCODERIP = 'https://rebb.booskit.dev/';
     const URL_ST3FAN = 'https://st3fannl.nl/gtaw/';
-    const URL_DEPA = 'https://forum.gta.world/en/topic/30297-drug-enforcement-prevention-act-of-2020-depa/';
+    const URL_DEPA = 'https://forum-tr.gta.world/index.php?/topic/7076-2023-uyu%C5%9Fturucuyla-m%C3%BCcadele-ve-%C3%B6nleme-yasas%C4%B1-depa/';
 
     /*
     |--------------------------------------------------------------------------

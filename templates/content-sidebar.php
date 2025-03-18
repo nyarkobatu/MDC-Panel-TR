@@ -13,7 +13,7 @@
 	<ul class="list-unstyled components px-3">
 		<li class="nav-item">
 			<a class="nav-link" href="/">
-				<i class="fas fa-fw fa-th-large mr-2"></i><span class="icon-text">Dashboard</span>
+				<i class="fas fa-fw fa-th-large mr-2"></i><span class="icon-text">Pano</span>
 			</a>
 		</li>
 		<li class="nav-item">
@@ -28,12 +28,12 @@
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="/street-guide">
-				<i class="fas fa-fw fa-map-marker-alt mr-2"></i><span class="icon-text">Street Guide</span>
+				<i class="fas fa-fw fa-map-marker-alt mr-2"></i><span class="icon-text">Harita Rehberi</span>
 			</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link dropdown-toggle" href="#generatorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-				<i class="fas fa-fw fa-archive mr-2"></i><span class="icon-text">Paperwork Generators</span>
+				<i class="fas fa-fw fa-archive mr-2"></i><span class="icon-text">Evrak Oluşturucu</span>
 			</a>
 			<ul class="collapse list-unstyled" id="generatorSubmenu">
 				<li>
@@ -43,22 +43,22 @@
 				</li>
 				<li>
 					<a class="nav-link" href="/paperwork-generators/arrest-report">
-						<i class="fas fa-fw fa-landmark mr-2"></i><span class="icon-text">Arrest Report</span>
+						<i class="fas fa-fw fa-landmark mr-2"></i><span class="icon-text">Tutuklama Raporu</span>
 					</a>
 				</li>
 				<li>
 					<a class="nav-link" href="/paperwork-generators/traffic-report">
-						<i class="fas fa-fw fa-car mr-2"></i><span class="icon-text">Traffic Report</span>
+						<i class="fas fa-fw fa-car mr-2"></i><span class="icon-text">Trafik Raporu</span>
 					</a>
 				</li>
 				<li>
 					<a class="nav-link" href="/paperwork-generators/impound-report">
-						<i class="fas fa-fw fa-truck-pickup mr-2"></i><span class="icon-text">Impound Report</span>
+						<i class="fas fa-fw fa-truck-pickup mr-2"></i><span class="icon-text">Araç Çekme Raporu</span>
 					</a>
 				</li>
 				<li>
 					<a class="nav-link" href="/paperwork-generators/parking-ticket">
-						<i class="fas fa-fw fa-parking mr-2"></i><span class="icon-text">Parking Ticket</span>
+						<i class="fas fa-fw fa-parking mr-2"></i><span class="icon-text">Park Cezası</span>
 					</a>
 				</li>
 				<li>

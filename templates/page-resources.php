@@ -91,7 +91,7 @@
 ?>
 
 <div class="container" data-aos="fade-out" data-aos-duration="500" data-aos-delay="250">
-	<h1><i class="fas fa-fw fa-book mr-2"></i>Useful Resources</h1>
+	<h1><i class="fas fa-fw fa-book mr-2"></i>Yararlı Kaynaklar</h1>
 	<hr>
 	<div class="grid" id="resources">
 		<div class="grid-col grid-col--1"></div>

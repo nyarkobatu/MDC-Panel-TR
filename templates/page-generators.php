@@ -65,7 +65,7 @@
 ?>
 
 <div class="container" data-aos="fade-out" data-aos-duration="500" data-aos-delay="250">
-	<h1><i class="fas fa-fw fa-archive mr-2"></i>Paperwork Generators</h1>
+	<h1><i class="fas fa-fw fa-archive mr-2"></i>Evrak Oluşturucusu</h1>
 	<hr>
 	<h5>Mobile Data Computer</h5>
 	<div class="grid" id="generators">
@@ -99,7 +99,7 @@
 		<div class="grid-col grid-col--4"></div>
 		<?= $generatorsLSDA ?>
 	</div>
-	<h5>Court Procedures</h5>
+	<h5>Mahkeme Prosedürleri</h5>
 	<div class="grid" id="generators">
 		<div class="grid-col grid-col--1"></div>
 		<div class="grid-col grid-col--2"></div>

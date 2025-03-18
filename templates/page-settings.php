@@ -1,21 +1,21 @@
 <div class="container" data-aos="fade-in" data-aos-duration="500" data-aos-delay="250">
-	<h1><i class="fas fa-fw fa-cog mr-2"></i>Settings</h1>
+	<h1><i class="fas fa-fw fa-cog mr-2"></i>Ayarlar</h1>
 	<hr>
-	<h4 class="text-center mb-3"><i class="fas fa-globe fa-fw mr-2"></i>Site Preferences</h4>
+	<h4 class="text-center mb-3"><i class="fas fa-globe fa-fw mr-2"></i>Sayfa Tercihleri</h4>
 	<form>
 		<div class="row">
 			<div class="form-group col-xl-12">
-				<label class="text-center d-block">Clear Site Cookies</label>
+				<label class="text-center d-block">Çerezleri Temizle</label>
 				<div class="container my-2 text-center">
 					<button type="submit" id="clearCookies" name="clearCookies" class="btn btn-danger px-5">
-						<i class="fas fa-cookie-bite fa-fw mr-1"></i>Clear Site Cookies
+						<i class="fas fa-cookie-bite fa-fw mr-1"></i>Çerezleri Temizle
 					</button>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Day/Night Mode</label>
+				<label class="d-block text-center">Gündüz/Gece Modunu Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleMode"
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Live Clock</label>
+				<label class="d-block text-center">Anlık Saati Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleClock"
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Breadcrumb</label>
+				<label class="d-block text-center">İçerik Haritasını Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleBreadcrumb"
@@ -69,7 +69,7 @@
 				</div>
 			</div>
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Background Logo</label>
+				<label class="d-block text-center">Arkaplan Logosunu Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleBackgroundLogo"
@@ -87,7 +87,7 @@
 				</div>
 			</div>
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Hints</label>
+				<label class="d-block text-center">İpucularını Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleHints"
@@ -105,7 +105,7 @@
 				</div>
 			</div>
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Footer</label>
+				<label class="d-block text-center">Altbilgiyi Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleFooter"
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<div class="col-xl-4 d-flex flex-column mb-3">
-				<label class="d-block text-center">Toggle Live Visitor Counter</label>
+				<label class="d-block text-center">Aktif Ziyaretçiler Sayacını Aktifleştir</label>
 				<div class="mx-auto">
 					<input
 						id="settingsToggleLiveVisitorCounter"
@@ -143,22 +143,22 @@
 		</div>
 	</form>
 	<hr class="my-3">
-	<h4 class="d-block text-center mb-3"><i class="fas fa-user-cog fa-fw mr-2"></i>Character Settings</h4>
+	<h4 class="d-block text-center mb-3"><i class="fas fa-user-cog fa-fw mr-2"></i>Karakter Ayarları</h4>
 	<form>
 		<div class="row">
 			<div class="form-group col-xl-6">
-				<label class="d-block text-center">Full Name</label>
+				<label class="d-block text-center">Tam Adı</label>
 				<input
 				class="form-control"
 				type="text"
 				id="inputName"
 				name="inputName"
-				placeholder="Firstname Lastname"
+				placeholder="Adı Soyadı"
 				value="<?= $g->findCookie('officerName') ?>"
 				required>
 			</div>
 			<div class="form-group col-xl-4">
-				<label class="d-block text-center">Rank</label>
+				<label class="d-block text-center">Rütbe</label>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text"><i class="fas fa-fw fa-user-shield"></i></span>
@@ -167,14 +167,14 @@
 					class="form-control selectpicker"
 					id="inputRank"
 					name="inputRank"
-					title="Select Rank"
+					title="Rütbe Seçin"
 					required>
 					<?= $pg->rankChooser(1) ?>
 					</select>
 				</div>
 			</div>
 			<div class="form-group col-xl-2">
-				<label class="d-block text-center">Badge</label>
+				<label class="d-block text-center">Rozet NO</label>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text"><i class="fas fa-fw fa-hashtag"></i></span>
@@ -192,10 +192,10 @@
 		</div>
 		<hr>
 
-	<h4 class="d-block text-center mb-3"><i class="fas fa-gavel fa-fw mr-2"></i>Legal Character Settings</h4>
+	<h4 class="d-block text-center mb-3"><i class="fas fa-gavel fa-fw mr-2"></i>Legal Karakter Ayarları</h4>
 		<div class="row">
 			<div class="form-group col-xl-6">
-				<label class="d-block text-center">Full Name</label>
+				<label class="d-block text-center">Tam Adı</label>
 				<input
 				class="form-control"
 				type="text"
@@ -206,7 +206,7 @@
 				required>
 			</div>
 			<div class="form-group col-xl-4">
-				<label class="d-block text-center">Rank</label>
+				<label class="d-block text-center">Rütbe</label>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text"><i class="fas fa-fw fa-user-shield"></i></span>
@@ -222,7 +222,7 @@
 				</div>
 			</div>
 			<div class="form-group col-xl-2">
-				<label class="d-block text-center">Badge</label>
+				<label class="d-block text-center">Rozet</label>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text"><i class="fas fa-fw fa-hashtag"></i></span>
@@ -239,7 +239,7 @@
 			</div>
 			<div class="container my-5 text-center">
 				<button id="submit" type="submit" name="submit" class="btn btn-primary px-5">
-					<i class="fas fa-save fa-fw mr-1"></i>Save Character Settings
+					<i class="fas fa-save fa-fw mr-1"></i>Karakter Ayarlarını Kaydedin
 				</button>
 			</div>
 		</div>

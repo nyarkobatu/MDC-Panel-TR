@@ -3,11 +3,11 @@ if ($g->findCookie('notificationVersion') != $g->getSettings('site-version')) {
 ?>
 <div id="notification">
 	<div class="container">
-		<i class="mr-1 fas fa-fw fa-plug"></i>Update
+		<i class="mr-1 fas fa-fw fa-plug"></i>Güncelleme
 		<a class="mx-1" href="/changelogs#<?= $g->getSettings('site-version') ?>">
 			<span class="badge badge-dark"><?= $g->getSettings('site-version') ?></span>
 		</a>
-		is now out!
+		şimdi yayınladı!
 		<a class="ml-3" id="notification-dissmiss"><span class="badge badge-trans p-2"><i class="fas fa-fw fa-times"></i></span></a>
 	</div>
 </div>
