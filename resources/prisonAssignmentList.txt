@@ -1,6 +1,6 @@
 Not Applicable
-Male
-Female
+Erkek
+Kadın
 Minor
 Solitary Housing Unit
 Protective Custody

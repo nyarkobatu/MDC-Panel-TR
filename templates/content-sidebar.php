@@ -53,7 +53,7 @@
 				</li>
 				<li>
 					<a class="nav-link" href="/paperwork-generators/impound-report">
-						<i class="fas fa-fw fa-truck-pickup mr-2"></i><span class="icon-text">Araç Çekme Raporu</span>
+						<i class="fas fa-fw fa-truck-pickup mr-2"></i><span class="icon-text">Impound Raporu</span>
 					</a>
 				</li>
 				<li>
@@ -70,7 +70,7 @@
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="/useful-resources">
-				<i class="fas fa-fw fa-book mr-2"></i><span class="icon-text">Useful Resources</span>
+				<i class="fas fa-fw fa-book mr-2"></i><span class="icon-text">Yararlı Kaynaklar</span>
 			</a>
 		</li>
 		<li class="nav-item">
@@ -122,7 +122,7 @@
 		<hr class="my-3">
 		<li class="nav-item">
 			<a class="nav-link" href="/settings">
-				<i class="fas fa-fw fa-cog mr-2"></i><span class="icon-text">Settings</span>
+				<i class="fas fa-fw fa-cog mr-2"></i><span class="icon-text">Ayarlar</span>
 			</a>
 		</li>
 		<li class="nav-item">
@@ -137,7 +137,7 @@
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="/changelogs#<?= $g->getSettings('site-version') ?>">
-				<i class="fas fa-fw fa-plug mr-2"></i><span class="icon-text">Changelogs<span class="badge badge-danger ml-3"><?= $g->getSettings('site-version') ?></span></span>
+				<i class="fas fa-fw fa-plug mr-2"></i><span class="icon-text">Güncelleme Notları<span class="badge badge-danger ml-3"><?= $g->getSettings('site-version') ?></span></span>
 			</a>
 		</li>
 	</ul>

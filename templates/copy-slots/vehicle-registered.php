@@ -4,13 +4,13 @@
 	$c->form('textfield', 'forms', array(
 		'size' => '4 slotVehRO',
 		'type' => 'text',
-		'label' => '<label>Registered Owner</label>',
+		'label' => '<label>Kayıtlı Araç Sahibi</label>',
 		'icon' => 'ticket-alt',
 		'class' => '',
 		'id' => 'inputVehRO',
 		'name' => 'inputVehRO',
 		'value' => '',
-		'placeholder' => 'Firstname Lastname',
+		'placeholder' => 'İsim Soyisim',
 		'tooltip' => $tooltipRO,
 		'attributes' => $attributesRO,
 		'style' => ''
@@ -19,7 +19,7 @@
 	$c->form('textfield', 'forms', array(
 		'size' => '3 slotVehPlate',
 		'type' => 'text',
-		'label' => '<label>Identification Plate</label>',
+		'label' => '<label>Kayıtlı Plaka</label>',
 		'icon' => 'ticket-alt',
 		'class' => '',
 		'id' => 'inputVehPlate',

@@ -7,8 +7,8 @@
 			id="inputDateFrom"
 			name="inputDateFrom"
 			value="<?= $dateValue ?>"
-			placeholder="DD/MMM/YYYY"
-			data-placement="bottom" title="DD/MMM/YYYY Format"
+			placeholder="GG/MMM/YYYY"
+			data-placement="bottom" title="GG/MMM/YYYY Formatı"
 			data-html="true"
 			required
 			style="<?= $style ?>"
@@ -22,8 +22,8 @@
 			id="inputDateTo"
 			name="inputDateTo"
 			value=""
-			placeholder="DD/MMM/YYYY"
-			data-placement="bottom" title="DD/MMM/YYYY Format"
+			placeholder="GG/AAA/YYYY"
+			data-placement="bottom" title="GG/MMM/YYYY Formatı"
 			data-html="true"
 			style="<?= $style ?>"
 		>
@@ -39,7 +39,7 @@
 			name="inputTimeFrom"
 			value="<?= $timeValue ?>"
 			placeholder="00:00"
-			data-placement="bottom" title="00:00 Format"
+			data-placement="bottom" title="00:00 Formatı"
 			data-html="true"
 			required
 			style="<?= $style ?>"
@@ -53,7 +53,7 @@
 			id="inputTimeTo"
 			name="inputTimeTo"
 			placeholder="24:00"
-			data-placement="bottom" title="00:00 Format"
+			data-placement="bottom" title="00:00 Formatı"
 			data-html="true"
 			required
 			style="<?= $style ?>"

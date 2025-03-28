@@ -10,8 +10,8 @@
 			'id' => 'inputName',
 			'name' => 'inputName[]',
 			'value' => '',
-			'placeholder' => 'Firstname Lastname',
-			'tooltip' => 'Officer - Full Name',
+			'placeholder' => 'İsim Soyisim',
+			'tooltip' => 'Officer - Tam İsim',
 			'attributes' => 'required',
 			'style' => ''
 		));
@@ -24,7 +24,7 @@
 			'id' => 'inputRank',
 			'name' => 'inputRank[]',
 			'attributes' => 'required',
-			'title' => 'Select Rank',
+			'title' => 'Rütbe Seçin',
 			'list' => $pg->rankChooser(0),
 			'hint' => '',
 			'hintClass' => ''

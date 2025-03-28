@@ -198,7 +198,7 @@ if (isset($_POST['generatorType'])) {
 			if ($inputCrimeFine[$iCrime] == 0) {
 				$fines .= '<li><strong class="style-underline chargeCopy" data-clipboard-target="#charge-' . $crime . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $crime . '">' . $pg->getCrimeColour($chargeType) . $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . '</strong></span></strong></li>';
 			} else {
-				$fines .= '<li><strong class="style-underline chargeCopy" data-clipboard-target="#charge-' . $crime . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $crime . '">' . $pg->getCrimeColour($chargeType) . $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . '</strong></span></strong> - <strong style="color: green!important;">$' . number_format($inputCrimeFine[$iCrime]) . '</strong> Citation</li>';
+				$fines .= '<li><strong class="style-underline chargeCopy" data-clipboard-target="#charge-' . $crime . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $crime . '">' . $pg->getCrimeColour($chargeType) . $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . '</strong></span></strong> - <strong style="color: green!important;">$' . number_format($inputCrimeFine[$iCrime]) . '</strong> Para Cezası</li>';
 			}
 		}
 
@@ -1205,7 +1205,7 @@ COUNTY OF LOS SANTOS[/b]
 		// Vehicle Insurance Resolver
 		$insurance = '';
 		if ($inputVehInsurance) {
-			$insurance = 'The vehicle was uninsured at the time of writing the parking ticket, having expired on the ' . textBold(2, $inputVehInsuranceDate) . ', ' . textBold(1, $inputVehInsuranceTime) . '.<br>';
+			$insurance = 'Park cezasının düzenlendiği tarihte aracın sigortası yoktu, ' . textBold(2, $inputVehInsuranceDate) . ', ' . textBold(1, $inputVehInsuranceTime) . ' sigorta süresi dolmuştu.<br>';
 		}
 
 		// Evidence Resolver
@@ -1234,7 +1234,7 @@ COUNTY OF LOS SANTOS[/b]
 			if ($inputCrimeFine[$iCrime] == 0) {
 				$fines .= '<li><strong class="style-underline chargeCopy" data-clipboard-target="#charge-' . $crime . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $crime . '">' . $pg->getCrimeColour($chargeType) . $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . '</strong></span></strong>.</li>';
 			} else {
-				$fines .= '<li><strong class="style-underline chargeCopy" data-clipboard-target="#charge-' . $crime . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $crime . '">' . $pg->getCrimeColour($chargeType) . $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . '</strong></span></strong> - <strong style="color: green!important;">$' . number_format($inputCrimeFine[$iCrime]) . '</strong> Citation.</li>';
+				$fines .= '<li><strong class="style-underline chargeCopy" data-clipboard-target="#charge-' . $crime . '" data-toggle="tooltip" title="Copied!"><span id="charge-' . $crime . '">' . $pg->getCrimeColour($chargeType) . $chargeType . $chargeClass . ' ' . $crime . '. ' . $chargeTitle . '</strong></span></strong> - <strong style="color: green!important;">$' . number_format($inputCrimeFine[$iCrime]) . '</strong> Para Cezası.</li>';
 			}
 		}
 
@@ -1247,13 +1247,13 @@ COUNTY OF LOS SANTOS[/b]
 		// Report Builder
 		$redirectPath = redirectPath(1);
 		$generatedReportType = 'Parking Ticket';
-		$generatedReport = $generatedReport = $officers . ' on the ' . textBold(2, $postInputDate) . ', ' . textBold(1, $postInputTime) . '.<br>Cited a ' . textBold(1, $postInputVeh) . ', ' . $pg->getVehiclePlates($postInputVehPlate, 0) . ', ' . $pg->getVehicleRO($postInputVehRO) . ', on ' . textBold(1, $postInputStreet) . ', ' . textBold(1, $postInputDistrict) . '.<br>' . $insurance . '
+		$generatedReport = $generatedReport = $officers . textBold(2, $postInputDate) . ' tarihinde ' . textBold(1, $postInputTime) . ' saatinde.<br>Kontroller doğrultusunda ' . $pg->getVehiclePlates($postInputVehPlate, 0) . ', ' . $pg->getVehicleRO($postInputVehRO) . ', ' . textBold(1, $postInputStreet) . ', ' . textBold(1, $postInputDistrict) . ' bölgesinde bulunan ' . textBold(1, $postInputVeh) . ' aracına ceza kesildi.<br>' . $insurance . '
 				<br>
-				<strong>Citation(s):</strong>
+				<strong>Ceza(lar):</strong>
 				<ul>' . $fines . '</ul>
-				<strong>Citation Reason(s):</strong>
+				<strong>Ceza Sebep(ler)i:</strong>
 				<ul>' . $statementReason . '</ul>
-				<strong>Evidence:</strong><br>' . $evidence;
+				<strong>Kanıt:</strong><br>' . $evidence;
 	}
 
 	if ($generatorType == 'ImpoundReport') {
@@ -1274,10 +1274,10 @@ COUNTY OF LOS SANTOS[/b]
 		// Report Builder
 		$redirectPath = redirectPath(1);
 		$generatedThreadTitle = $postInputVeh . ' - ' . $postInputVehPlate;
-		$generatedReportType = 'Impound Report';
-		$generatedReport = $officers . ' on the ' . textBold(2, $postInputDate) . ', ' . textBold(1, $postInputTime) . '.<br>Impounded a ' . textBold(1, $postInputVeh) . ', ' . $pg->getVehiclePlates($postInputVehPlate, 0) . ', for ' . textBold(1, $inputDuration) . ' days, ' . $pg->getVehicleRO($postInputVehRO) . ', on ' . textBold(1, $postInputStreet) . ', ' . textBold(1, $postInputDistrict) . '.<br>
+		$generatedReportType = 'Impound Raporu';
+		$generatedReport = $officers . textBold(2, $postInputDate) . ' tarihinde ' . textBold(1, $postInputTime) . ' saatinde.<br>Kontroller doğrultusunda ' . textBold(1, $postInputVeh) . ' modelinde, ' . $pg->getVehiclePlates($postInputVehPlate, 0) . ', ' . $pg->getVehicleRO($postInputVehRO) . ' araç ' . textBold(1, $inputDuration) . ' günlüğüne, ' . textBold(1, $postInputStreet) . ', ' . textBold(1, $postInputDistrict) . ' adresinden impound edilmiştir.<br>
 
-				<strong>Impound Reason:</strong>
+				<strong>Impound Sebebi:</strong>
 				<ul><li>' . $inputReason . '</li></ul>';
 	}
 

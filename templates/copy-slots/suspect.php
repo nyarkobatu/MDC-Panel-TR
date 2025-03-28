@@ -4,27 +4,27 @@
 		$c->form('textfield', 'forms', array(
 			'size' => '4',
 			'type' => 'text',
-			'label' => '<label>Full Name</label>',
+			'label' => '<label>Tam İsim</label>',
 			'icon' => 'id-card',
 			'class' => '',
 			'id' => 'inputSuspectName',
 			'name' => 'inputSuspectName[]',
 			'value' => '',
-			'placeholder' => 'Firstname Lastname',
-			'tooltip' => 'Person - Full Name',
+			'placeholder' => 'İsim Soyisim',
+			'tooltip' => 'Kişi - Tam İsim',
 			'attributes' => 'required',
 			'style' => ''
 		));
 		// Form - List - Status
 		$c->form('list', 'forms', array(
 			'size' => '3',
-			'label' => '<label>Status</label>',
+			'label' => '<label>Durum</label>',
 			'icon' => 'user-shield',
 			'class' => 'selectpicker',
 			'id' => 'inputSuspectStatus',
 			'name' => 'inputSuspectStatus[]',
 			'attributes' => 'required',
-			'title' => 'Select Status',
+			'title' => 'Durum Seçin',
 			'list' => $pg->sStatusChooser(),
 			'hint' => '',
 			'hintClass' => ''

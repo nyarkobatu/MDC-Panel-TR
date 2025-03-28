@@ -9,64 +9,64 @@
 		"icon": "gavel"
 	},
 	"1": {
-		"title": "Arrest Report",
+		"title": "Tutuklama Raporu",
 		"type": "MDC",
 		"link": "/paperwork-generators/arrest-report",
-		"tooltip": "Generate an arrest report.",
+		"tooltip": "Tutuklama raporu oluştur.",
 		"card": "card-generators-arrest",
 		"iconType": "icon",
 		"icon": "landmark"
 	},
 	"2": {
-		"title": "Traffic Report",
+		"title": "Trafik Raporu",
 		"type": "MDC",
 		"link": "/paperwork-generators/traffic-report",
-		"tooltip": "Generate a traffic report.",
+		"tooltip": "Trafik raporu oluştur.",
 		"card": "card-generators-traffic",
 		"iconType": "icon",
 		"icon": "car"
 	},
 	"3": {
-		"title": "Impound Report",
+		"title": "Impound Raporu",
 		"type": "MDC",
 		"link": "/paperwork-generators/impound-report",
-		"tooltip": "Generate an impound report.",
+		"tooltip": "Impound raporu oluştur.",
 		"card": "card-generators-impound",
 		"iconType": "icon",
 		"icon": "truck-pickup"
 	},
 	"4": {
-		"title": "Parking Ticket",
+		"title": "Park Cezası",
 		"type": "MDC",
 		"link": "/paperwork-generators/parking-ticket",
-		"tooltip": "Generate a parking ticket.",
+		"tooltip": "Park cezası oluştur.",
 		"card": "card-generators-parking",
 		"iconType": "icon",
 		"icon": "parking"
 	},
 	"5": {
-		"title": "Death Report",
+		"title": "Ölüm Raporu",
 		"type": "LSPD",
 		"link": "/paperwork-generators/lspd/death-report",
-		"tooltip": "Generate a death report.",
+		"tooltip": "Ölüm raporu oluştur.",
 		"card": "card-generators-death",
 		"iconType": "icon",
 		"icon": "skull"
 	},
 	"6": {
-		"title": "Incident Report",
+		"title": "Olay Raporu",
 		"type": "LSSD",
 		"link": "/paperwork-generators/lssd/incident-report",
-		"tooltip": "Generate an incident report.",
+		"tooltip": "Olay Raporu oluştur.",
 		"card": "card-generators-sd-incident",
 		"iconType": "icon",
 		"icon": "clipboard-list"
 	},
 	"7": {
-		"title": "Use of Force Report",
+		"title": "Güç Kullanımı Raporu",
 		"type": "LSSD",
 		"link": "/paperwork-generators/lssd/uof-report",
-		"tooltip": "Generate a use of force report.",
+		"tooltip": "Güç kullaınımı raporu oluştur.",
 		"card": "card-generators-sd-uof",
 		"iconType": "icon",
 		"icon": "fist-raised"

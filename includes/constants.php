@@ -75,8 +75,8 @@
 
     const URL_GITHUB = 'https://github.com/biscuitgtaw/MDC-Panel';
     const URL_DISCORD = 'https://discord.gg/rxfYd23TNz';
-    const URL_MDC = 'https://mdc.gta.world';
-    const URL_CAD = 'https://cad.gta.world';
+    const URL_MDC = 'https://mdc-tr.gta.world';
+    const URL_CAD = 'https://cad-tr.gta.world';
     const URL_LSPD = 'https://lspd-tr.gta.world';
     const URL_LSSD = 'https://lssd-tr.gta.world';
     const URL_LSFD = 'https://lsfd-tr.gta.world';
@@ -85,7 +85,7 @@
     const URL_SFM = 'https://sfm.gta.world';
     const URL_SASP = 'https://saparks.gta.world';
     const URL_PENAL_CODE = 'https://forum-tr.gta.world/index.php?/topic/77-san-andreas-ceza-kanunu/';
-    const URL_BAIL_SCHEDULE = 'https://docs.google.com/spreadsheets/d/1qm04NZm-HEy-vdW2liNWcdok7eXFGty_rO-dA1H_k0g/';
+    const URL_BAIL_SCHEDULE = 'https://docs.google.com/spreadsheets/d/1Gx7QAujLMvwc7TvFjovNdZ5UwUmhu7TXuJS40ZqKafw/edit?gid=0#gid=0';
     const URL_BBCODERIP = 'https://rebb.booskit.dev/';
     const URL_ST3FAN = 'https://st3fannl.nl/gtaw/';
     const URL_DEPA = 'https://forum-tr.gta.world/index.php?/topic/7076-2023-uyu%C5%9Fturucuyla-m%C3%BCcadele-ve-%C3%B6nleme-yasas%C4%B1-depa/';
@@ -117,7 +117,7 @@
 		"LSSD" => ["name" => "Los Santos Sheriff's Department", "ranks" => [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]],
 		"SFM" => ["name" => "State Fire Marshal", "ranks" => [30, 31, 32, 33, 34, 35, 36, 37]],
 		"SAPR" => ["name" => "San Andreas State Parks", "ranks" => [38, 39, 40, 41, 42, 43, 44, 45, 46, 47]],
-		"LSPE" => ["name" => "Los Santos Parking Enforcement", "ranks" => [48, 49, 50]],
+		"LSPE" => ["name" => "Los Santos Parking Enforcement", "ranks" => [48, 49, 50, 79, 80, 81, 82]],
 		"SAAA" => ["name" => "San Andreas Aviation Administration", "ranks" => [51, 52, 53]],
 		"LSDA" => ["name" => "Los Santos District Attorney's Office", "ranks" => [55, 56, 57, 58]],
 		"JSA" => ["name" => "Judiciary of San Andreas", "ranks" => [59, 60, 61, 62, 63, 64]],
@@ -162,7 +162,7 @@
     */
 
     const ILLEGAL_PARKING_REASONS_VS = [0]; // Vehicle Status
-    const ILLEGAL_PARKING_REASONS_PR = [1, 2, 3, 4, 5, 18, 19, 20]; // Parking Related
+    const ILLEGAL_PARKING_REASONS_PR = [1, 2, 3, 4, 5, 18, 19, 20, 21, 22]; // Parking Related
     const ILLEGAL_PARKING_REASONS_OS = [6, 7, 8, 9, 10, 11, 12, 13]; // Obstruction
     const ILLEGAL_PARKING_REASONS_SW = [14, 15, 16, 17]; // Sidewalk
 

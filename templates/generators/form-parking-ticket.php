@@ -1,5 +1,5 @@
 <div class="container" data-aos="fade-in" data-aos-duration="500" data-aos-delay="250">
-	<h1><i class="fas fa-fw fa-parking mr-2"></i>Parking Ticket</h1>
+	<h1><i class="fas fa-fw fa-parking mr-2"></i>Park Cezası</h1>
 	<form action="/controllers/form-processor.php" method="POST">
 		<input type="hidden" id="generatorType" name="generatorType" value="ParkingTicket">
 		<?php
@@ -34,7 +34,7 @@
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/sections/location.php';
 		?>
 		<hr>
-		<h4><i class="fas fa-fw fa-fingerprint mr-2"></i>Evidence Section</h4>
+		<h4><i class="fas fa-fw fa-fingerprint mr-2"></i>Kanıt Bölümü</h4>
 		<div class="form-row groupEvidencePhotograph">
 			<?php
 				// Form - Textfield - Photograph
@@ -48,7 +48,7 @@
 					'name' => 'inputEvidenceImage[]',
 					'value' => '',
 					'placeholder' => 'https://i.imgur.com/example.png',
-					'tooltip' => 'Enter the direct URL to the photograph.',
+					'tooltip' => 'Fotoğrafın URLsini buraya girin.',
 					'attributes' => '',
 					'style' => ''
 				));
@@ -64,7 +64,7 @@
 			?>
 		</div>
 		<hr>
-		<h4><i class="fas fa-fw fa-receipt mr-2"></i>Charges</h4>
+		<h4><i class="fas fa-fw fa-receipt mr-2"></i>Suçlamalar</h4>
 		<div class="form-row groupSlotCitation crimeSelectorGroup">
 		<?php
 			// Form - List - Citation
@@ -76,7 +76,7 @@
 				'id' => 'inputCrime-1',
 				'name' => 'inputCrime[]',
 				'attributes' => 'required data-live-search="true"',
-				'title' => 'Select Charge',
+				'title' => 'Suçlama Seçin',
 				'list' => $pg->chargeChooser('traffic'),
 				'hint' => '',
 				'hintClass' => ''
@@ -90,7 +90,7 @@
 				'id' => 'inputCrimeClass-1',
 				'name' => 'inputCrimeClass[]',
 				'attributes' => 'required',
-				'title' => 'Select Class',
+				'title' => 'Class Seçin',
 				'list' => '',
 				'hint' => '',
 				'hintClass' => ''
@@ -106,7 +106,7 @@
 				'name' => 'inputCrimeFine[]',
 				'value' => '',
 				'placeholder' => '####',
-				'tooltip' => 'Leave empty if no fine.',
+				'tooltip' => 'Para cezası yoksa boş bırakırn.',
 				'attributes' => '',
 				'style' => 'text-transform: uppercase;'
 			));
@@ -122,21 +122,21 @@
 		?>
 		</div>
 		<hr>
-		<h4><i class="fas fa-fw fa-parking mr-2"></i>Parking Ticket Details</h4>
+		<h4><i class="fas fa-fw fa-parking mr-2"></i>Park Cezası Detayları</h4>
 		<div class="form-row">
 		<?php
 			// Form - List - Citation Reason
 			$c->form('list', 'forms', array(
 				'size' => '12',
-				'label' => '<label>Parking Ticket Reason(s)</label>',
+				'label' => '<label>Park Cezası Sebep(ler)i</label>',
 				'icon' => 'gavel',
 				'class' => 'selectpicker',
 				'id' => 'inputReason',
 				'name' => 'inputReason[]',
 				'attributes' => 'required multiple data-live-search="true"',
-				'title' => 'Select Parking Ticket Reason',
+				'title' => 'Park Cezası Sebebini Seçin',
 				'list' => $pt->illegalParkingChooser(),
-				'hint' => '<small>Select multiple if applicable.</small>',
+				'hint' => '<small>Eğer uygunsa birden fazla seçin.</small>',
 				'hintClass' => ''
 			));
 		?>
@@ -154,7 +154,7 @@
 		'g' => $g,
 		'c' => $c,
 		'attributesRO' => 'required',
-		'tooltipRO' => 'Registered Owner - Firstname Lastname',
+		'tooltipRO' => 'Araç Sahibi - İsim Soyisim',
 	));
 	// COPY SLOT - VEHICLE INSURANCE EXPIRED DATE
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/copy-slots/vehicle-insurance-date.php';
@@ -173,7 +173,7 @@
 		'name' => 'inputEvidenceImage[]',
 		'value' => '',
 		'placeholder' => 'https://i.imgur.com/example.png',
-		'tooltip' => 'Enter the direct URL to the photograph.',
+		'tooltip' => 'Fotoğrafın URLsini buraya girin.',
 		'attributes' => 'required',
 		'style' => ''
 	));
@@ -200,7 +200,7 @@
 		'id' => 'inputCrime-',
 		'name' => 'inputCrime[]',
 		'attributes' => 'required data-live-search="true"',
-		'title' => 'Select Charge',
+		'title' => 'Suçlama Seçin',
 		'list' => $pg->chargeChooser('traffic'),
 		'hint' => '',
 		'hintClass' => ''
@@ -214,7 +214,7 @@
 		'id' => 'inputCrimeClass-',
 		'name' => 'inputCrimeClass[]',
 		'attributes' => 'required',
-		'title' => 'Select Class',
+		'title' => 'Class Seçin',
 		'list' => '',
 		'hint' => '',
 		'hintClass' => ''
@@ -230,7 +230,7 @@
 		'name' => 'inputCrimeFine[]',
 		'value' => '',
 		'placeholder' => '####',
-		'tooltip' => 'Leave empty if no fine.',
+		'tooltip' => 'Para cezası yoksa boş bırakın.',
 		'attributes' => '',
 		'style' => 'text-transform: uppercase;'
 	));

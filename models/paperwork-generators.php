@@ -655,9 +655,9 @@ class PaperworkGenerators
 	{
 
 		if (empty($input)) {
-			return '<strong>unknown registered owner</strong>';
+			return '<strong>kayıtlı sahibi bilinmeyen</strong>';
 		} else {
-			return 'registered to <strong>' . $input . '</strong>';
+			return  '<strong>' . $input . '</strong>' . ' adına kayıtlı';
 		}
 	}
 
@@ -680,9 +680,9 @@ class PaperworkGenerators
 		}
 
 		if (empty($input)) {
-			return $b . 'unregistered' . $bb;
+			return $b . 'kayıtsız' . $bb;
 		} else {
-			return 'identification plate reading ' . $b . $input . $bb;
+			return 'kayıtlı plakası ' . $b . $input . $bb . ' olan';
 		}
 	}
 }

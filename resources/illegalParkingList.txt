@@ -1,21 +1,22 @@
-Failed to pay vehicular insurance within the time required by law on any public road.
-Next to a fire hydrant, and/or on a firelane marked by red lines.
-Facing opposing traffic.
-Inside any tunnel.
-On any freeway.
-On a bridge outside of the City of Los Santos.
-In a fashion which blocks the flow of traffic.
-In a manner that obstructs a lane of traffic and prevents traffic from properly flowing.
-In a manner that obstructs an alleyway used by traffic and prevents traffic from entering and/or exiting the alleyway.
-In a manner that obstructs a parking lot and prevents vehicles from leaving or entering the lot.
-In front of or obstructing a private driveway or an entrance or exit to a private road or path.
-In the immediate ambulatory parking or bay area of a hospital or clinic.
-On or within range of railroad tracks, where such a range poses the risk of the vehicle being struck by any railroad cars.
-At or near a helipad or an aircraft landing zone, if in control of a non-aerial vehicle.
-Within a marked crosswalk.
-On any part of a sidewalk.
-On any sidewalk that completely obstructs pedestrian foot traffic, or on any median.
-In the immediate vicinity of the Bank's entrance, including the sidewalk adjacent to the metal barriers.
-Parking a non-electric vehicle into a parking space with an electric charger.
-In a manner that a vehicle takes up two parking spaces.
-No more than 2 motorcycles may park abreast in 1 parking space given that the parking is wide enough for 2 motorcycles.
+Herhangi bir kamu yolunda kanunen zorunlu olan süre içerisinde araç sigortasını ödememek.
+Yangın musluğunun yanında ve/veya kırmızı çizgilerle işaretlenmiş yangın şeridinde.
+Karşıdan gelen trafiğe bakıyor.
+Herhangi bir tünelin içinde park etmek.
+Herhangi bir otoyolda park etmek.
+Los Santos şehrinin dışındaki bir köprüde park etmek.
+Trafik akışını engelleyecek şekilde park etmek.
+Bir trafik şeridini kapatacak ve trafiğin düzgün bir şekilde akmasını engelleyecek şekilde park etmek.
+Trafik tarafından kullanılan bir ara yolu kapatacak ve trafiğin ara yola girmesini ve/veya çıkmasını engelleyecek şekilde park etmek.
+Bir park yerini engelleyecek ve araçların park yerinden çıkmasını veya park yerine girmesini engelleyecek şekilde.
+Özel bir araba yolunun veya özel bir yol veya patikanın giriş veya çıkışının önünde veya bunları engelleyecek şekilde park etmek.
+Bir hastane veya kliniğin acil ambulans park ve bölme alanında park etmek.
+Demiryolu raylarının üzerinde veya yakınında, böyle bir mesafenin aracın herhangi bir demiryolu aracına çarpma riski taşıdığı durumlarda park etmek.
+Hava aracı olmayan bir aracın, bir helikopter pistinde veya bir uçak iniş bölgesinde veya yakınında park etmesi.
+İşaretli bir yaya geçidinde park etmek.
+Kaldırımın herhangi bir bölümünde park etmek.
+Yaya trafiğini tamamen engelleyen herhangi bir kaldırımda veya herhangi bir refüjde park etmek.
+Metal bariyerlere bitişik kaldırım da dahil olmak üzere Banka girişinin hemen yakınında park etmek.
+Elektrikli olmayan bir aracın elektrikli şarj cihazı bulunan bir park alanına park etmesi.
+Bir aracın iki park yeri kaplayacak şekilde park edilmesi.
+Park yerinin 2 motosiklet için yeterli genişlikte olması koşuluyla, 1 park yerine en fazla 2 motosiklet arka arkaya park edebilir.
+Kırmızı ile işaretlenmiş kaldırım kenarına aracın tümünü veya bir kısmını dahil edecek şekilde park etmek.

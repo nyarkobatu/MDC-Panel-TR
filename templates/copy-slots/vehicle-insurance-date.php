@@ -4,14 +4,14 @@
 	$c->form('textfield', 'forms', array(
 		'size' => '3 slotInsuranceDate',
 		'type' => 'text',
-		'label' => '<label>Insurance Expired Date</label>',
+		'label' => '<label>Sigorta Bitiş Tarihi</label>',
 		'icon' => 'calendar',
 		'class' => '',
 		'id' => 'inputVehInsuranceDate',
 		'name' => 'inputVehInsuranceDate',
 		'value' => '',
-		'placeholder' => 'DD/MMM/YYYY',
-		'tooltip' => 'DD/MMM/YYYY Format',
+		'placeholder' => 'GG/AAA/YYYY',
+		'tooltip' => 'GG/AAA/YYYY Formatı',
 		'attributes' => 'required',
 		'style' => 'text-transform: uppercase;'
 	));
@@ -19,14 +19,14 @@
 	$c->form('textfield', 'forms', array(
 		'size' => '2 slotInsuranceTime',
 		'type' => 'text',
-		'label' => '<label>Insurance Expired Time</label>',
+		'label' => '<label>Sigorta Bitiş Saati</label>',
 		'icon' => 'clock',
 		'class' => '',
 		'id' => 'inputVehInsuranceTime',
 		'name' => 'inputVehInsuranceTime',
 		'value' => '',
 		'placeholder' => '00:00',
-		'tooltip' => '00:00 Format',
+		'tooltip' => '00:00 Formatı',
 		'attributes' => 'required',
 		'style' => 'text-transform: uppercase;'
 	));

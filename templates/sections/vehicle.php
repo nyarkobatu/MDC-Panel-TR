@@ -1,5 +1,5 @@
 <hr>
-<h4><i class="fas fa-fw fa-car mr-2"></i>Vehicle Details</h4>
+<h4><i class="fas fa-fw fa-car mr-2"></i>Araç Detayları</h4>
 <div class="form-row groupSlotRegistered">
 <?php
 	// Registration
@@ -7,13 +7,13 @@
 		// Form - Toggle - Registered
 		$c->form('toggle', 'forms', array(
 			'size' => '3',
-			'label' => 'Registration Status',
+			'label' => 'Kayıt Durumu',
 			'class' => '',
 			'attributes' => $registeredAttributes,
 			'id' => 'inputVehRegistered',
 			'name' => 'inputVehRegistered',
-			'dataOff' => "<i class='mr-1 fas fa-fw fa-check-circle'></i>Registered",
-			'dataOn' => "<i class='mr-1 fas fa-fw fa-times-circle'></i>Unregistered",
+			'dataOff' => "<i class='mr-1 fas fa-fw fa-check-circle'></i>Kayıtlı",
+			'dataOn' => "<i class='mr-1 fas fa-fw fa-times-circle'></i>Kayıtsız",
 			'dataOffStyle' => 'success',
 			'dataOnStyle' => 'danger',
 			'dataWidth' => '100%',
@@ -29,13 +29,13 @@
 		// Form - Toggle - Insurance
 		$c->form('toggle', 'forms', array(
 			'size' => '3',
-			'label' => 'Insurance Status',
+			'label' => 'Sigorta Durumu',
 			'class' => '',
 			'attributes' => '',
 			'id' => 'inputVehInsurance',
 			'name' => 'inputVehInsurance',
-			'dataOff' => "<i class='mr-1 fas fa-fw fa-check-circle'></i>Insured",
-			'dataOn' => "<i class='mr-1 fas fa-fw fa-times-circle'></i>Uninsured",
+			'dataOff' => "<i class='mr-1 fas fa-fw fa-check-circle'></i>Sigortalı",
+			'dataOn' => "<i class='mr-1 fas fa-fw fa-times-circle'></i>Sigortasız",
 			'dataOffStyle' => 'success',
 			'dataOnStyle' => 'danger',
 			'dataWidth' => '100%',
@@ -49,11 +49,11 @@
 // Form - Datalist - Vehicle's Make & Model
 $c->form('datalist', 'forms', array(
 	'size' => '3',
-	'label' => '<label>Make & Model</label>',
+	'label' => '<label>Marka & Model</label>',
 	'icon' => 'car',
 	'id' => 'inputVeh',
 	'name' => 'inputVeh',
-	'placeholder' => 'Make & Model',
+	'placeholder' => 'Marka & Model',
 	'tooltip' => 'E.g: Benefactor Dubsta',
 	'attributes' => 'required',
 	'list' => 'vehicle_list',
@@ -64,7 +64,7 @@ if ($tints) {
 	// Form - List - Vehicle's Tint Level
 	$c->form('list', 'forms', array(
 		'size' => '2',
-		'label' => '<label>Tint Level</label>',
+		'label' => '<label>Cam Filmi Seviyesi</label>',
 		'icon' => 'adjust',
 		'class' => 'selectpicker',
 		'id' => 'inputVehTint',

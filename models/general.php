@@ -38,7 +38,7 @@ class General {
 
 	public function getUNIX($format) {
 
-		date_default_timezone_set('GMT');
+		date_default_timezone_set('Europe/Istanbul');
 		$unix = time();
 
 		switch($format) {

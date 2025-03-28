@@ -1,7 +1,7 @@
-Offender
-Accomplice
-Accessory
-Conspiracy
-Attempt
-Solicitation
+Suçlu
+Suç Ortağı
+Aksesuar
+Komplo
+Girişim
+Talep
 Parole Violation

@@ -12,8 +12,8 @@
 	}
 
 	if ($report) {
-		echo '<h3 class="my-3"><i class="fas fa-fw fa-eye mr-2"></i>Preview</h3><div class="container" readonly>' . $report . '</div>';
-		echo '<br><h3 class="my-3"><i class="fas fa-fw fa-code mr-2"></i>Code</h3><textarea class="form-control" id="generatedReport">' . $report . '</textarea>';
+		echo '<h3 class="my-3"><i class="fas fa-fw fa-eye mr-2"></i>Önizleme</h3><div class="container" readonly>' . $report . '</div>';
+		echo '<br><h3 class="my-3"><i class="fas fa-fw fa-code mr-2"></i>Kod</h3><textarea class="form-control" id="generatedReport">' . $report . '</textarea>';
 	}
 
 	// Buttons

@@ -33,35 +33,35 @@
 			require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/sections/location.php';
 		?>
 		<hr>
-		<h4><i class="fas fa-fw fa-receipt mr-2"></i>Impound Details</h4>
+		<h4><i class="fas fa-fw fa-receipt mr-2"></i>Impound Detayları</h4>
 		<div class="form-row">
 		<?php
 			// Form - Textfield - Duration of Impound
 			$c->form('textfield', 'forms', array(
 				'size' => '2',
 				'type' => 'number',
-				'label' => '<label>Duration of Impound</label>',
+				'label' => '<label>Impound Süresi</label>',
 				'icon' => 'hourglass',
 				'class' => '',
 				'id' => 'inputDuration',
 				'name' => 'inputDuration',
 				'value' => '',
 				'placeholder' => '#',
-				'tooltip' => 'Duration of the impound in days.',
+				'tooltip' => 'Gün cinsinden impound süresi.',
 				'attributes' => 'required',
 				'style' => 'text-transform: uppercase;'
 			));
 			// Form - Textbox - Narrative & Notes
 			$c->form('textbox', 'forms', array(
 				'size' => '6',
-				'label' => '<label>Impound Reason</label>',
+				'label' => '<label>Impound Sebebi</label>',
 				'icon' => 'clipboard',
 				'id' => 'inputReason',
 				'name' => 'inputReason',
 				'rows' => '4',
-				'placeholder' => 'Vehicle was used in the comission of a crime, see arrest report #.&#10Vehicle was obstructing the flow of traffic, see parking ticket #.',
+				'placeholder' => 'Araç bir suçun işlenmesinde kullanıldı, bkz. Tutuklama Raporu #.&#10Araç trafik akışını engelliyordu, bkz. Park Cezası #.',
 				'attributes' => 'required',
-				'hint' => '<strong>Enter a brief explanation for impounding the listed vehicle.</strong>'
+				'hint' => '<strong>Listelenen aracın el konulmasıyla ilgili kısa bir açıklama girin.</strong>'
 			));
 		?>
 		</div>
@@ -79,7 +79,7 @@ $c->form('vehicle-registered', 'copy-slots', array(
 	'g' => $g,
 	'c' => $c,
 	'attributesRO' => 'required',
-	'tooltipRO' => 'Registered Owner - Firstname Lastname',
+	'tooltipRO' => 'Araç Sahibi - İsim Soyisim',
 ));
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/templates/form-footer.php';

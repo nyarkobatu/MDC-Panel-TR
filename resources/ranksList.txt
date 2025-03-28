@@ -46,9 +46,9 @@ Lieutenant
 Captain
 Commander
 Superintendent
-Parking Enforcement Inspector
-Senior Parking Enforcement Inspector
-Commissioner of Parking Enforcement
+Parking Officer
+Parking Officer II
+Senior Parking Officer
 Investigator
 Senior Investigator
 Deputy Administrator
@@ -76,3 +76,7 @@ Captain
 Associate Warden
 Chief Deputy Warden
 Warden
+Parking Sergeant
+Parking Sergeant
+Parking Lieutenant
+Parking Captain

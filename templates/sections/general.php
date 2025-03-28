@@ -1,5 +1,5 @@
 <hr>
-<h4 class="mb-2"><i class="fas fa-fw fa-archive mr-2"></i>General Section</h4>
+<h4 class="mb-2"><i class="fas fa-fw fa-archive mr-2"></i>Genel Bölüm</h4>
 <div class="form-row">
 	<?php
 		// Form - Textfield - Date
@@ -12,8 +12,8 @@
 			'id' => 'inputDate',
 			'name' => 'inputDate',
 			'value' => $g->getUNIX('date'),
-			'placeholder' => 'DD/MMM/YYYY',
-			'tooltip' => 'DD/MMM/YYYY Format',
+			'placeholder' => 'GG/AAA/YYYY',
+			'tooltip' => 'GG/AAA/YYYY Formatı',
 			'attributes' => 'required',
 			'style' => 'text-transform: uppercase;'
 		));
@@ -29,7 +29,7 @@
 				'name' => 'inputTime',
 				'value' => $g->getUNIX('time'),
 				'placeholder' => '00:00',
-				'tooltip' => '00:00 Format',
+				'tooltip' => '00:00 Formatı',
 				'attributes' => 'required',
 				'style' => 'text-transform: uppercase;'
 			));
@@ -39,14 +39,14 @@
 			$c->form('textfield', 'forms', array(
 				'size' => '2',
 				'type' => 'text',
-				'label' => '<label>Patrol Start Time</label>',
+				'label' => '<label>Devriye Başlangıç Saati</label>',
 				'icon' => 'clock',
 				'class' => '',
 				'id' => 'inputTime',
 				'name' => 'inputTime',
 				'value' => $g->getUNIX('time'),
 				'placeholder' => '00:00',
-				'tooltip' => '00:00 Format',
+				'tooltip' => '00:00 Formatı',
 				'attributes' => 'required',
 				'style' => 'text-transform: uppercase;'
 			));
@@ -54,14 +54,14 @@
 			$c->form('textfield', 'forms', array(
 				'size' => '2',
 				'type' => 'text',
-				'label' => '<label>Patrol End Time</label>',
+				'label' => '<label>Devriye Bitiş Saati</label>',
 				'icon' => 'clock',
 				'class' => '',
 				'id' => 'inputTimeEnd',
 				'name' => 'inputTimeEnd',
 				'value' => '',
 				'placeholder' => '24:00',
-				'tooltip' => '00:00 Format',
+				'tooltip' => '00:00 Formatı',
 				'attributes' => 'required',
 				'style' => 'text-transform: uppercase;'
 			));
@@ -78,7 +78,7 @@
 				'name' => 'inputCallsign',
 				'value' => $g->findCookie('callSign'),
 				'placeholder' => 'Call Sign',
-				'tooltip' => 'E.g: 2-ADAM-1, 2A1',
+				'tooltip' => 'Ör.: 2-ADAM-1, 2A1',
 				'attributes' => 'required',
 				'style' => 'text-transform: uppercase;'
 			));
