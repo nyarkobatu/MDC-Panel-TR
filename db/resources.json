@@ -10,8 +10,8 @@
 		"type": "copy",
 		"disabled": false,
 		"id": "citationAppeal",
-		"title": "Citation Appeal",
-		"text": "Paying for citations is an admission of guilt. Taking them is only an acknowledgement they were received. You have 72 hours to appeal in traffic court or to pay for the citation amount through the government online portal."
+		"title": "Ceza İtirazı",
+		"text": "Cezalar için ödeme yapmak suçu kabul etmektir. Ceza makbuzunu almak, cezanın size ulaştığını kabul etmektir. Trafik mahkemesinde itiraz etmek ya da devletin online portalı üzerinden ceza tutarını ödemek için otuz gününüz var."
 	},
 	"2": {
 		"type": "text",

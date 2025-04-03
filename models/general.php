@@ -39,6 +39,7 @@ class General {
 	public function getUNIX($format) {
 
 		date_default_timezone_set('Europe/Istanbul');
+		setlocale(LC_TIME, 'tr_TR.UTF-8');
 		$unix = time();
 
 		switch($format) {
